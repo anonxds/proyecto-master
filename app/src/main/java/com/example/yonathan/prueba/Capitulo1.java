@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class Capitulo1 extends AppCompatActivity {
    String volteo = "volteo";
    String mira = "mira";
+   int score = 0;
 
    private EditText mPal1, mPal2, mPal3;
    private TextView mScore,mBadscore;
@@ -31,9 +32,11 @@ public class Capitulo1 extends AppCompatActivity {
         mPal2.addTextChangedListener(Cap1);
         mPal3.addTextChangedListener(Cap1);
 
-        if(mPal1.getText().toString().equals("volteo")){
+        if(mPal1.getText().toString().equals(volteo)){
             mPal1.setEnabled(false);
-            mScore = 1 + mScore;
+            score = 1 + score;
+            mScore.setText(score);
+
         }
 
 
