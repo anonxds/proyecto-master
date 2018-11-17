@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,7 +15,7 @@ public class Capitulo1 extends AppCompatActivity {
    int score = 0;
 
    private EditText mPal1, mPal2, mPal3;
-   private TextView mScore,mBadscore;
+   private TextView mScore,mBadscore,mword;
    private Button mNext;
 
     @Override
@@ -27,6 +28,7 @@ public class Capitulo1 extends AppCompatActivity {
         mScore=(TextView)findViewById(R.id.lblscore);
         mBadscore=(TextView)findViewById(R.id.scorebad);
         mNext=findViewById(R.id.btnCont);
+        mword=findViewById(R.id.btn_texto);
 
         mPal1.addTextChangedListener(Cap1);
         mPal2.addTextChangedListener(Cap1);
@@ -38,6 +40,13 @@ public class Capitulo1 extends AppCompatActivity {
             mScore.setText(score);
 
         }
+        mword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPal2.setText("volteo");
+                mScore.setText("5");
+            }
+        });
 
 
     }
