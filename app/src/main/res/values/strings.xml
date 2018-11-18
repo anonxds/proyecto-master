@@ -3,7 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Primeracolm" >
+    <string name="Primeracolm">
        …Clava su espada a la roca, para poder escalar la montana; \n \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020
         hacia arriba ve aves dando vueltas en círculos.
         Slayer no \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020
@@ -13,6 +13,21 @@
         Al llegar a la cima hay una cueva enorme, con tan solo un paso que el daba, sonaba fuerte el eco. Inspeccionaba la entrada, miro huellas de bota que iba a lo mas profundo,
         Slayer entro corriendo.
 
+    </string>
+    <string name="frase1">
+        En mi cuarto abian ciertas voces en mi mente pero yo no creo que puedo
+    </string>
+    <string name="frase2">
+        Todos viven en mi mente y qiero que me la pel.........
+    </string>
+    <string name="frase2_1">
+         Todos viven en mi mente y kiero que me la pel.........
+    </string>
+    <string name="frase2_2">
+         Todos viven en mi mente y quieronto que me la pel.........
+    </string>
+    <string name="frase2_3">
+        Todos viven en mi mente y quiero que me la pel.........
     </string>
 
 </resources>

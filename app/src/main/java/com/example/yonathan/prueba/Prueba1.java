@@ -17,7 +17,7 @@ public class Prueba1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prueba1);
-        mNext=findViewById(R.id.btnCont);
+        mNext=findViewById(R.id.button);
         mNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
