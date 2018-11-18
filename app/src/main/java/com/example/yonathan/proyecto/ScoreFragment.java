@@ -1,4 +1,4 @@
-package com.example.yonathan.prueba;
+package com.example.yonathan.proyecto;
 
 
 import android.os.Bundle;
@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MenuFragment extends Fragment {
+public class ScoreFragment extends Fragment {
 
 
-    public MenuFragment() {
+    public ScoreFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class MenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false);
+        return inflater.inflate(R.layout.fragment_score, container, false);
     }
 
 }

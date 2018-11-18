@@ -1,6 +1,5 @@
-package com.example.yonathan.prueba;
+package com.example.yonathan.proyecto;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -8,13 +7,12 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Capitulo1 extends AppCompatActivity {
    private Button mabian, mavian, mhabian;
     private EditText mpal1;
-     private TextView mscore, mbadsocore;
+
      int score = 0;
 //     Context context = getApplicationContext();
 //      CharSequence text = "equivocado";
@@ -31,8 +29,6 @@ public class Capitulo1 extends AppCompatActivity {
          mavian=findViewById(R.id.btnavian);
          mhabian=findViewById(R.id.btnhabian);
          mpal1=findViewById(R.id.txtres1);
-         mscore=findViewById(R.id.txtpuntos);
-         mbadsocore=findViewById(R.id.txtfaltas);
 
          mabian.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -40,8 +36,7 @@ public class Capitulo1 extends AppCompatActivity {
                  mpal1.setText("abian");
                  if(mpal1.getText().toString().equals("abian")){
                //     mal.show();
-                     score = -5 - score;
-                   mbadsocore.setText(String.valueOf(score));
+
                      Toast.makeText(getBaseContext(), "Your answer is correct!" , Toast.LENGTH_SHORT ).show();
 
                  }
@@ -54,8 +49,7 @@ public class Capitulo1 extends AppCompatActivity {
                  mpal1.setText("avian");
                  if(mpal1.getText().toString().equals("avian")){
                  //    mal.show();
-                     score = -5 - score;
-                     mbadsocore.setText(String.valueOf(score));
+
                  }
              }
          });
@@ -65,8 +59,7 @@ public class Capitulo1 extends AppCompatActivity {
                  mpal1.setText("habian");
                  if(mpal1.getText().toString().equals("habian")){
              //        correct.show();
-                     score = 5 + score;
-                     mscore.setText(String.valueOf(score));
+
                  }
              }
          });

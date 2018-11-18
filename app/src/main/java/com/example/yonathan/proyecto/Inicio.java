@@ -1,4 +1,4 @@
-package com.example.yonathan.prueba;
+package com.example.yonathan.proyecto;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Prueba1 extends AppCompatActivity {
+public class Inicio extends AppCompatActivity {
 
     private Button mNext;
 
@@ -16,12 +16,12 @@ public class Prueba1 extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prueba1);
+        setContentView(R.layout.activity_inicio);
         mNext=findViewById(R.id.button);
         mNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Prueba1.this, Capitulo1.class));
+                startActivity(new Intent(Inicio.this, Capitulo1.class));
             }
         });
     }

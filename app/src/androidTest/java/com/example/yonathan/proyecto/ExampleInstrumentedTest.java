@@ -1,4 +1,4 @@
-package com.example.yonathan.prueba;
+package com.example.yonathan.proyecto;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

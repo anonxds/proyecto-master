@@ -1,4 +1,4 @@
-package com.example.yonathan.prueba;
+package com.example.yonathan.proyecto;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -14,7 +14,7 @@ public class Splashscreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent =new Intent(Splashscreen.this,Prueba1.class);
+                Intent intent =new Intent(Splashscreen.this,Inicio.class);
                 startActivity(intent);
 
             }
