@@ -10,8 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Capitulo1 extends AppCompatActivity {
-   private Button mabian, mavian, mhabian;
-    private EditText mpal1;
+
 
      int score = 0;
 //     Context context = getApplicationContext();
@@ -25,44 +24,6 @@ public class Capitulo1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_capitulo1);
-         mabian=findViewById(R.id.btnabian);
-         mavian=findViewById(R.id.btnavian);
-         mhabian=findViewById(R.id.btnhabian);
-         mpal1=findViewById(R.id.txtres1);
-
-         mabian.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 mpal1.setText("abian");
-                 if(mpal1.getText().toString().equals("abian")){
-               //     mal.show();
-
-                     Toast.makeText(getBaseContext(), "Your answer is correct!" , Toast.LENGTH_SHORT ).show();
-
-                 }
-             }
-         });
-
-         mavian.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 mpal1.setText("avian");
-                 if(mpal1.getText().toString().equals("avian")){
-                 //    mal.show();
-
-                 }
-             }
-         });
-         mhabian.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 mpal1.setText("habian");
-                 if(mpal1.getText().toString().equals("habian")){
-             //        correct.show();
-
-                 }
-             }
-         });
 
 
 
