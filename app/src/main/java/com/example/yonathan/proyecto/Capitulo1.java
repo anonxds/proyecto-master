@@ -13,12 +13,7 @@ public class Capitulo1 extends AppCompatActivity {
 
 
      int score = 0;
-//     Context context = getApplicationContext();
-//      CharSequence text = "equivocado";
-//      CharSequence corr = "correcto";
-//      int duracion = Toast.LENGTH_SHORT;
-//      Toast mal = Toast.makeText(context, text, duracion);
-//    Toast correct = Toast.makeText(context, corr, duracion);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

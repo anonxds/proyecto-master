@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.yonathan.proyecto.Inicio" />
-        <activity android:name="com.example.yonathan.proyecto.Splashscreen">
+        <activity android:name=".Inicio" />
+        <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +22,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name="com.example.yonathan.proyecto.Capitulo1" />
-        <activity android:name="com.example.yonathan.proyecto.MenuActivity"></activity>
+        <activity android:name=".Capitulo1" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".BlitzActivity"></activity>
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package com.example.yonathan.proyecto;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,11 +20,7 @@ public class MenuActivity extends AppCompatActivity {
         mblitz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager manager = getFragmentManager();
-                FragmentTransaction transaction = manager.beginTransaction();
-                transaction.add(R.id.container,new Nivel1Fragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
+                startActivity(new Intent(MenuActivity.this, BlitzActivity.class));
             }
         });
     }
