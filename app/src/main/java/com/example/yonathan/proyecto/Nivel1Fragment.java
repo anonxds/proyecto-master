@@ -21,7 +21,7 @@ public class Nivel1Fragment extends Fragment {
 
     private Button mabian, mavian, mhabian;
     private EditText mpal1;
-    private TextView time;
+
     private CountDownTimer count;
     private long millosencond = 10000;
     private Boolean timerunning;
@@ -39,7 +39,7 @@ public class Nivel1Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_nivel1, container, false);
         // Inflate the layout for this fragment
-        time = v.findViewById(R.id.timer);
+
         mabian=v.findViewById(R.id.btnabian);
         mavian=v.findViewById(R.id.btnavian);
         mhabian=v.findViewById(R.id.btnhabian);
@@ -47,16 +47,6 @@ public class Nivel1Fragment extends Fragment {
 
 
 
-        new CountDownTimer(30000, 1000) {
-
-            public void onTick(long millisUntilFinished) {
-                time.setText("seconds remaining: " + millisUntilFinished / 1000);
-            }
-
-            public void onFinish() {
-                time.setText("done!");
-            }
-        }.start();
 
 
         mabian.setOnClickListener(new View.OnClickListener() {

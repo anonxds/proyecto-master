@@ -14,9 +14,18 @@ public class BlitzActivity extends AppCompatActivity {
         Nivel1Fragment n1 = new Nivel1Fragment();
         FragmentManager manager = getFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.container,n1);
+        transaction.replace(R.id.gamecontainer,n1);
+
+        ScoreFragment score = new ScoreFragment();
+        transaction.replace(R.id.scorecontainer,score);
+
+
         transaction.addToBackStack(null);
         transaction.commit();
+
+
+
+
 
     }
 }
