@@ -5,7 +5,7 @@ import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class BlitzActivity extends AppCompatActivity {
+public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.OnScoreListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,14 @@ public class BlitzActivity extends AppCompatActivity {
 
 
 
+
+    }
+
+    @Override
+    public void setName(int score) {
+
+        ScoreFragment scor = (ScoreFragment) getFragmentManager().findFragmentById(R.id.scorecontainer);
+         scor.updateInfo(score);
 
     }
 }

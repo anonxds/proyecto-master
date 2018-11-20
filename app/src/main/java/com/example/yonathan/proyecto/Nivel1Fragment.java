@@ -1,6 +1,7 @@
 package com.example.yonathan.proyecto;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -21,15 +22,26 @@ public class Nivel1Fragment extends Fragment {
 
     private Button mabian, mavian, mhabian;
     private EditText mpal1;
+    OnScoreListener onScoreListener;
+
+
 
     private CountDownTimer count;
     private long millosencond = 10000;
     private Boolean timerunning;
+    private Nivel1Fragment listend;
 
 
     public Nivel1Fragment() {
         // Required empty public constructor
     }
+
+    public interface OnScoreListener{
+        public void setName(int score);
+    }
+
+
+
 
 
 
@@ -55,6 +67,10 @@ public class Nivel1Fragment extends Fragment {
                 mpal1.setText("abian");
                 if(mpal1.getText().toString().equals("abian")){
                       //   mal.show();
+
+                    int score = 5;
+                    onScoreListener.setName(score);
+
 
                     Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
@@ -86,4 +102,12 @@ public class Nivel1Fragment extends Fragment {
         return v;
     }
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            onScoreListener= (OnScoreListener) activity;
+        }
+    catch (Exception e){}
+    }
 }
