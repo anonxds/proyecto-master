@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,7 +25,7 @@ public class Nivel1Fragment extends Fragment {
     private Button mabian, mavian, mhabian;
     private EditText mpal1;
     OnScoreListener onScoreListener;
-    int score;
+    int score,intentos;
 
 
 
@@ -70,9 +72,9 @@ public class Nivel1Fragment extends Fragment {
                 if(mpal1.getText().toString().equals("abian")){
                       //   mal.show();
 
-                    int badscore = -5;
-                    badscore=score;
-                    onScoreListener.setName(score);
+              //      intentos = 1 + intentos;
+                       int intentos =1;
+                    onScoreListener.setMalopuntos(intentos);
 
 
                     Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
@@ -87,9 +89,9 @@ public class Nivel1Fragment extends Fragment {
                 mpal1.setText("avian");
                 if(mpal1.getText().toString().equals("avian")){
 
-                    int badscore = -5;
+                    intentos = 1 + intentos;
 
-                    onScoreListener.setMalopuntos(badscore);
+                    onScoreListener.setMalopuntos(intentos);
 
 
                 }
@@ -101,7 +103,8 @@ public class Nivel1Fragment extends Fragment {
                 mpal1.setText("habian");
                 if(mpal1.getText().toString().equals("habian")){
                     //        correct.show();
-                    int score = 5;
+
+                    score = 5+ score;
 
                     onScoreListener.setName(score);
                     switch (v.getId()){
@@ -119,7 +122,23 @@ public class Nivel1Fragment extends Fragment {
     }
 
     private void changeFragment(){
-        getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
+        Random r = new Random();
+        int num = r.nextInt(3);
+        switch (num){
+            case 0:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
+            break;
+            }
+            case 1:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel3Fragment()).addToBackStack(null).commit();
+                break;
+            }
+            case 2:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel1Fragment()).addToBackStack(null).commit();
+                break;
+            }
+        }
+
     }
 
     @Override
