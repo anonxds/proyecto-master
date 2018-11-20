@@ -104,6 +104,11 @@ public class Nivel1Fragment extends Fragment {
                     int score = 5;
 
                     onScoreListener.setName(score);
+                    switch (v.getId()){
+                        case  R.id.btnhabian:
+                        changeFragment();
+                        break;
+                    }
 
 
                 }
@@ -111,6 +116,10 @@ public class Nivel1Fragment extends Fragment {
         });
 
         return v;
+    }
+
+    private void changeFragment(){
+        getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
     }
 
     @Override
