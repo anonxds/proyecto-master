@@ -20,7 +20,7 @@ public class ScoreFragment extends Fragment {
     public ScoreFragment() {
         // Required empty public constructor
     }
-    private TextView time,score;
+    private TextView time,score,badscore;
 
 
     @Override
@@ -31,7 +31,7 @@ public class ScoreFragment extends Fragment {
         // Inflate the layout for this fragment
         time = v.findViewById(R.id.timer);
         score= v.findViewById(R.id.txtpuntos);
-
+        badscore=v.findViewById(R.id.badscore);
 
 
         new CountDownTimer(30000, 1000) {
@@ -51,6 +51,10 @@ public class ScoreFragment extends Fragment {
     }
     public void updateInfo(int Score){
          score.setText(String.valueOf(Score));
+
     }
 
+    public void updatebadscore(int Score){
+        badscore.setText(String.valueOf(Score));
+    }
 }

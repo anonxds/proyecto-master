@@ -35,5 +35,14 @@ public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.O
         ScoreFragment scor = (ScoreFragment) getFragmentManager().findFragmentById(R.id.scorecontainer);
          scor.updateInfo(score);
 
+
+    }
+
+    @Override
+    public void setMalopuntos(int score) {
+        ScoreFragment bad = (ScoreFragment) getFragmentManager().findFragmentById(R.id.scorecontainer);
+        bad.updatebadscore(score);
+
+
     }
 }

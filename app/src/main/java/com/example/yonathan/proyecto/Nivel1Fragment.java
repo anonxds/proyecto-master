@@ -23,6 +23,7 @@ public class Nivel1Fragment extends Fragment {
     private Button mabian, mavian, mhabian;
     private EditText mpal1;
     OnScoreListener onScoreListener;
+    int score;
 
 
 
@@ -38,6 +39,7 @@ public class Nivel1Fragment extends Fragment {
 
     public interface OnScoreListener{
         public void setName(int score);
+        public void setMalopuntos(int score);
     }
 
 
@@ -68,7 +70,8 @@ public class Nivel1Fragment extends Fragment {
                 if(mpal1.getText().toString().equals("abian")){
                       //   mal.show();
 
-                    int score = 5;
+                    int badscore = -5;
+                    badscore=score;
                     onScoreListener.setName(score);
 
 
@@ -83,7 +86,11 @@ public class Nivel1Fragment extends Fragment {
             public void onClick(View v) {
                 mpal1.setText("avian");
                 if(mpal1.getText().toString().equals("avian")){
-                    //    mal.show();
+
+                    int badscore = -5;
+
+                    onScoreListener.setMalopuntos(badscore);
+
 
                 }
             }
@@ -94,6 +101,10 @@ public class Nivel1Fragment extends Fragment {
                 mpal1.setText("habian");
                 if(mpal1.getText().toString().equals("habian")){
                     //        correct.show();
+                    int score = 5;
+
+                    onScoreListener.setName(score);
+
 
                 }
             }
