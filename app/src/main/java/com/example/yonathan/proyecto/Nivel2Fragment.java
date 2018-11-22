@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.Random;
 
 
 /**
@@ -47,12 +50,15 @@ public class Nivel2Fragment extends Fragment {
                 //mantener el dato numerico en todos los fragmentos
                 int intentos = 1;
                 onScoreListener.setMalopuntos(intentos);
+                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+
 
             }
         });
         mop2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -60,10 +66,35 @@ public class Nivel2Fragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                    switch (v.getId()){
+                        case  R.id.btnop3:
+                            changeFragment();
+                            break;
+                    }
+
+
+
             }
         });
        return view;
     }
+    private void changeFragment(){
+        Random r = new Random();
+        int num = r.nextInt(2);
+        switch (num){
+            case 0:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
+                break;
+            }
+            case 1:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel1Fragment()).addToBackStack(null).commit();
+                break;
+            }
+
+        }
+
+    }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);

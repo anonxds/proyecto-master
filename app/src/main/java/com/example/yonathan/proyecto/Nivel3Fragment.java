@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +27,7 @@ public class Nivel3Fragment extends Fragment {
     }
 
 
-        private Button mNextl;
+        private Button mNextl,mNext2;
 
 
     @Override
@@ -34,13 +37,49 @@ public class Nivel3Fragment extends Fragment {
 
         // Inflate the layout for this fragment
            mNextl=v.findViewById(R.id.btncor1);
+           mNext2=v.findViewById(R.id.btncor2);
            mNextl.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
 
+
+
+                   Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+
                }
            });
+           mNext2.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+
+
+                   switch (v.getId()){
+                       case  R.id.btncor2:
+                           changeFragment();
+                           break;
+                   }
+
+
+               }
+           });
+
         return v;
+    }
+    private void changeFragment(){
+        Random r = new Random();
+        int num = r.nextInt(2);
+        switch (num){
+            case 0:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel1Fragment()).addToBackStack(null).commit();
+                break;
+            }
+            case 1:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
+                break;
+            }
+
+        }
+
     }
     @Override
     public void onAttach(Activity activity) {
