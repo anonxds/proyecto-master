@@ -4,16 +4,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Primeracolm">
-       …Clava su espada a la roca, para poder escalar la montana; \n \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020
-        hacia arriba ve aves dando vueltas en círculos.
-        Slayer no \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020
-        al peligro sube.\n
-\nEn su camino las aves trataban de atacarlo, no \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020
-        hacerles daño movia su mano para alejarlos y escalaba rápidamente.
-        Al llegar a la cima hay una cueva enorme, con tan solo un paso que el daba, sonaba fuerte el eco. Inspeccionaba la entrada, miro huellas de bota que iba a lo mas profundo,
-        Slayer entro corriendo.
-
+       En la vida hay bastantes netos hay que cruezar
     </string>
+
+    <string name="n3_1">
+        En la vida hay bastantes retos que cursan
+    </string>
+
+    <string name="n3_2">
+        En la vida hay bastantes retos que hay que cruzar
+    </string>
+
     <string name="frase1">
         En mi cuarto abian ciertas voces en mi mente pero yo no creo que puedo
     </string>
@@ -30,4 +31,30 @@
         Todos viven en mi mente y quiero que me la pel.........
     </string>
 
+    <string name="n4">
+
+    </string>
+    <string name="n4_1">
+
+    </string>
+    <string name="n4_2">
+
+    </string>
+    <string name="n4_3">
+
+    </string>
+
+
+    <string name="n5">
+
+    </string>
+    <string name="n5_1">
+
+    </string>
+    <string name="n5_2">
+
+    </string>
+    <string name="n5_3">
+
+    </string>
 </resources>
