@@ -104,7 +104,7 @@ public class Nivel1Fragment extends Fragment {
                 if(mpal1.getText().toString().equals("habian")){
                     //        correct.show();
 
-                    score = 5+ score;
+                    score = 5;
 
                     onScoreListener.setName(score);
                     switch (v.getId()){

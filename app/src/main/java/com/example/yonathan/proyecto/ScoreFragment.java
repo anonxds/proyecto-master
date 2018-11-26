@@ -11,6 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.yonathan.proyecto.Board.BadActivity;
+import com.example.yonathan.proyecto.Board.GoodActivity;
+import com.example.yonathan.proyecto.Board.NeutralActivity;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,7 +29,7 @@ public class ScoreFragment extends Fragment {
     }
     private TextView time,score,badscore;
     int addtime;
-   // int total;
+    int total;
 CountDownTimer timers;
 
     @Override
@@ -39,7 +43,9 @@ CountDownTimer timers;
         badscore=v.findViewById(R.id.badscore);
 
 
-      timers = new CountDownTimer(10000, 1000) {
+
+
+      timers = new CountDownTimer(20000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 time.setText("seconds remaining: " + (millisUntilFinished-addtime) / 1000);
@@ -48,8 +54,21 @@ CountDownTimer timers;
             public void onFinish() {
                 time.setText("done!");
 
-                Intent intent = new Intent(getActivity(), MenuActivity.class);
-                startActivity(intent);
+                    if(total <=10){
+                        Intent intent = new Intent(getActivity(), BadActivity.class);
+                        startActivity(intent);
+                    }
+                    else if(total <= 40){
+                        Intent intent = new Intent(getActivity(), NeutralActivity.class);
+                        startActivity(intent);
+                    }
+                    else if(total <=100){
+                        Intent intent = new Intent(getActivity(), GoodActivity.class);
+                        startActivity(intent);
+                    }
+
+               // Intent intent = new Intent(getActivity(), MenuActivity.class);
+                //startActivity(intent);
 
             }
 
@@ -62,7 +81,10 @@ CountDownTimer timers;
     }
 
     public void updateInfo(int Score){
-         score.setText(String.valueOf(Score));
+       // total = 41;
+         total = total + Score;
+        score.setText(String.valueOf(total));
+        //score.setText(String.valueOf(Score));
 
     }
 
