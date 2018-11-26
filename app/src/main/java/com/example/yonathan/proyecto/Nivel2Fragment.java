@@ -65,7 +65,9 @@ public class Nivel2Fragment extends Fragment {
         mop3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+score  = 5;
 
+                onScoreListener.setName(score);
                     switch (v.getId()){
                         case  R.id.btnop3:
                             changeFragment();
