@@ -9,23 +9,25 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:src="@drawable/giphy" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/city3" />
+
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="74dp"
+        android:layout_height="75dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="176dp"
-        android:background="@drawable/appbar"
+        android:layout_marginBottom="188dp"
+        android:background="@drawable/wax"
+        android:text="Comenzar"
         android:textColor="@android:color/white"
+        android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-       />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"

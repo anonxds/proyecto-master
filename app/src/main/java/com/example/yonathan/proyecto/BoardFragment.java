@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto.Board;
+package com.example.yonathan.proyecto;
 
 
 import android.os.Bundle;

@@ -48,7 +48,7 @@ CountDownTimer timers;
       timers = new CountDownTimer(20000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                time.setText("seconds remaining: " + (millisUntilFinished-addtime) / 1000);
+                time.setText("Tiempo: " + (millisUntilFinished-addtime) / 1000);
             }
 
             public void onFinish() {

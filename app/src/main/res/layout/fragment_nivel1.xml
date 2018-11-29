@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="450dp"
-    tools:context=".Capitulo1">
+    tools:context=".Capitulo1"
+    android:background="@drawable/notebook">
 
     <Button
         android:id="@+id/btnabian"

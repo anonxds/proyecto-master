@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">prueba</string>
 
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="bad"> Se lo que se siente perder, pero nunca sabre lo que se siente rendirse  </string>
+    <string name="neutral"> No importa a que obstaculo te enfrentes, lucha por seguir adelante </string>
+    <string name="good">No te sacrifiques por los sueños de otros, muere por el tuyo.  </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Primeracolm">
        En la vida hay bastantes netos hay que cruezar
