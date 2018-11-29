@@ -59,8 +59,6 @@ public class Nivel1Fragment extends Fragment {
         mabian=v.findViewById(R.id.btnabian);
         mavian=v.findViewById(R.id.btnavian);
         mhabian=v.findViewById(R.id.btnhabian);
-        mpal1=v.findViewById(R.id.txtres1);
-
 
 
 
@@ -68,12 +66,12 @@ public class Nivel1Fragment extends Fragment {
         mabian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mpal1.setText("abian");
+               // mpal1.setText("abian");
                 if(mpal1.getText().toString().equals("abian")){
                       //   mal.show();
 
               //      intentos = 1 + intentos;
-                       int intentos =1;
+                       intentos =1;
                     onScoreListener.setMalopuntos(intentos);
 
 
@@ -86,10 +84,10 @@ public class Nivel1Fragment extends Fragment {
         mavian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mpal1.setText("avian");
+                //mpal1.setText("avian");
                 if(mpal1.getText().toString().equals("avian")){
 
-                    intentos = 1 + intentos;
+                    intentos = 1;
 
                     onScoreListener.setMalopuntos(intentos);
 
@@ -100,7 +98,7 @@ public class Nivel1Fragment extends Fragment {
         mhabian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mpal1.setText("habian");
+                //mpal1.setText("habian");
                 if(mpal1.getText().toString().equals("habian")){
                     //        correct.show();
 

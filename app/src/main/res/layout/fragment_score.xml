@@ -14,8 +14,8 @@
 
     <TextView
         android:id="@+id/txtpuntos"
-        android:layout_width="7dp"
-        android:layout_height="wrap_content"
+        android:layout_width="17dp"
+        android:layout_height="21dp"
         android:layout_alignTop="@+id/txtscore"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
@@ -51,8 +51,8 @@
         android:id="@+id/txtfail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="4dp"
         android:text="Intentos"
@@ -62,22 +62,21 @@
 
     <TextView
         android:id="@+id/badscore"
-        android:layout_width="389dp"
-        android:layout_height="110dp"
+        android:layout_width="29dp"
+        android:layout_height="19dp"
+
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="2dp"
-
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toEndOf="@+id/txtfail"
-        app:layout_constraintTop_toBottomOf="@+id/txtpuntos"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
 
     <TextView
         android:id="@+id/timer"

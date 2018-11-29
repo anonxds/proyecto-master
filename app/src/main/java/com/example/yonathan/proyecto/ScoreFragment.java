@@ -29,7 +29,8 @@ public class ScoreFragment extends Fragment {
     }
     private TextView time,score,badscore;
     int addtime;
-    int total;
+    int total,intentos;
+
 CountDownTimer timers;
 
     @Override
@@ -43,16 +44,17 @@ CountDownTimer timers;
         badscore=v.findViewById(R.id.badscore);
 
 
-<<<<<<< HEAD
-      timers = new CountDownTimer(40000, 1000) {
-=======
 
 
       timers = new CountDownTimer(20000, 1000) {
->>>>>>> 7155ad53164337f64f5fa3d9c8627ec8cd9dd185
 
             public void onTick(long millisUntilFinished) {
-                time.setText("Tiempo: " + (millisUntilFinished-addtime) / 1000);
+                if(intentos == 3){
+                    Intent intent = new Intent(getActivity(), BadActivity.class);
+                }
+                time.setText("Tiempo: " + (millisUntilFinished+addtime) / 1000);
+
+
             }
 
             public void onFinish() {
@@ -87,15 +89,19 @@ CountDownTimer timers;
     public void updateInfo(int Score){
        // total = 41;
          total = total + Score;
+
         score.setText(String.valueOf(total));
+        addtime = 4000;
         //score.setText(String.valueOf(Score));
 
     }
 
     public void updatebadscore(int Score){
 
+            intentos = intentos + Score;
+
        // badscore.setText(String.valueOf(Score));
-        badscore.setText(String.valueOf(Score));
+        badscore.setText(String.valueOf(intentos));
     }
     public void onStop(){
         ScoreFragment.super.onStop();
