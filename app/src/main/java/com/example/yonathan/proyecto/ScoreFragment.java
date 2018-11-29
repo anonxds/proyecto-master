@@ -43,9 +43,13 @@ CountDownTimer timers;
         badscore=v.findViewById(R.id.badscore);
 
 
+<<<<<<< HEAD
+      timers = new CountDownTimer(40000, 1000) {
+=======
 
 
       timers = new CountDownTimer(20000, 1000) {
+>>>>>>> 7155ad53164337f64f5fa3d9c8627ec8cd9dd185
 
             public void onTick(long millisUntilFinished) {
                 time.setText("Tiempo: " + (millisUntilFinished-addtime) / 1000);
