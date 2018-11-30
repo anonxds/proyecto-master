@@ -41,7 +41,7 @@ public class Nivel5Fragment extends Fragment {
         mop1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentos = 6;
+                intentos = 1;
                 onScoreListener.setMalopuntos(intentos);
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
@@ -52,8 +52,7 @@ public class Nivel5Fragment extends Fragment {
         mop2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentos = 4;
-                onScoreListener.setMalopuntos(intentos);
+
                 switch (v.getId()){
 
                     case  R.id.op2:
@@ -66,7 +65,8 @@ public class Nivel5Fragment extends Fragment {
         mop3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                intentos = 1;
+                onScoreListener.setMalopuntos(intentos);
             }
         });
 

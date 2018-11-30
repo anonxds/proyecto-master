@@ -2,6 +2,7 @@ package com.example.yonathan.proyecto;
 
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.os.CountDownTimer;
@@ -27,21 +28,27 @@ public class ScoreFragment extends Fragment {
     public ScoreFragment() {
         // Required empty public constructor
     }
-    private TextView time,score,badscore;
-    int addtime;
+    private TextView time,score,badscore,namescore,nameintentos;
+    long addtime;
     int total,intentos;
 
-CountDownTimer timers;
+    CountDownTimer timers;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.fragment_score, container, false);
+        Typeface ANGEL = Typeface.createFromAsset(getActivity().getAssets(), "ANGEL.ttf");
+
 
         // Inflate the layout for this fragment
         time = v.findViewById(R.id.timer);
         score= v.findViewById(R.id.txtpuntos);
         badscore=v.findViewById(R.id.badscore);
+        namescore=v.findViewById(R.id.txtscore);
+        nameintentos=v.findViewById(R.id.txtfail);
+        namescore.setTypeface(ANGEL);
+        nameintentos.setTypeface(ANGEL);
 
 
 
@@ -49,11 +56,12 @@ CountDownTimer timers;
       timers = new CountDownTimer(20000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                if(intentos == 3){
-                    Intent intent = new Intent(getActivity(), BadActivity.class);
-                }
-                time.setText("Tiempo: " + (millisUntilFinished+addtime) / 1000);
 
+                time.setText("Tiempo: " + (millisUntilFinished) / 1000);
+                if(badscore.getText().toString().equals("3") || badscore.getText().toString().equals("5")){
+                    Intent intent = new Intent(getActivity(), BadActivity.class);
+                    startActivity(intent);
+                }
 
             }
 
@@ -88,10 +96,12 @@ CountDownTimer timers;
 
     public void updateInfo(int Score){
        // total = 41;
-         total = total + Score;
 
         score.setText(String.valueOf(total));
-        addtime = 4000;
+
+         total = total + Score;
+
+
         //score.setText(String.valueOf(Score));
 
     }

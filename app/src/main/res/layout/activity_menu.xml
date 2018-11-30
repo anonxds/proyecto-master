@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuActivity"
-    android:background="@drawable/paper"
+    android:background="@drawable/old2"
    >
 
     <Button
@@ -19,7 +19,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/feather"
-        android:text="Modo Historia"
+        android:text="Historia"
         android:textColor="@android:color/darker_gray"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/btnblitz"
@@ -30,19 +30,20 @@
 
     <Button
         android:id="@+id/btnblitz"
-        android:layout_width="68dp"
-        android:layout_height="97dp"
+        android:layout_width="91dp"
+        android:layout_height="88dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="228dp"
         android:background="@drawable/fire"
-        android:text="Blitz"
+        android:text="Velocidad"
         android:textColor="@android:color/black"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -83,16 +83,13 @@ public class Nivel2Fragment extends Fragment {
     }
     private void changeFragment(){
         Random r = new Random();
-        int num = r.nextInt(2);
+        int num = r.nextInt(1);
         switch (num){
             case 0:{
                 getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
                 break;
             }
-            case 1:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel1Fragment()).addToBackStack(null).commit();
-                break;
-            }
+
 
         }
 

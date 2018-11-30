@@ -21,6 +21,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Typeface Architex = Typeface.createFromAsset(getAssets(), "Architex.ttf");
         Typeface TheShaker = Typeface.createFromAsset(getAssets(), "TheShaker.ttf");
+        Typeface BLUNT = Typeface.createFromAsset(getAssets(), "BLUNT.TTF");
 
 
         final Animation anim = AnimationUtils.loadAnimation(this,R.anim.alpha);
@@ -28,8 +29,8 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         mblitz=findViewById(R.id.btnblitz);
         mstory=findViewById(R.id.btnstory);
-        mblitz.setTypeface(Architex);
-        mstory.setTypeface(TheShaker);
+        mblitz.setTypeface(BLUNT);
+        mstory.setTypeface(BLUNT);
         mstory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
