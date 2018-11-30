@@ -30,7 +30,7 @@ public class Nivel1Fragment extends Fragment {
 
 
     private CountDownTimer count;
-    private long millosencond = 10000;
+
     private Boolean timerunning;
     private Nivel1Fragment listend;
 
@@ -66,18 +66,18 @@ public class Nivel1Fragment extends Fragment {
         mabian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // mpal1.setText("abian");
-                if(mpal1.getText().toString().equals("abian")){
-                      //   mal.show();
+                // mpal1.setText("abian");
 
-              //      intentos = 1 + intentos;
-                       intentos =1;
-                    onScoreListener.setMalopuntos(intentos);
+                //   mal.show();
+
+                //      intentos = 1 + intentos;
+                intentos =1;
+                onScoreListener.setMalopuntos(intentos);
 
 
-                    Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
-                }
+
             }
         });
 
@@ -85,35 +85,35 @@ public class Nivel1Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //mpal1.setText("avian");
-                if(mpal1.getText().toString().equals("avian")){
-
-                    intentos = 1;
-
-                    onScoreListener.setMalopuntos(intentos);
 
 
-                }
+                intentos = 1;
+
+                onScoreListener.setMalopuntos(intentos);
+
+
+
             }
         });
         mhabian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //mpal1.setText("habian");
-                if(mpal1.getText().toString().equals("habian")){
-                    //        correct.show();
 
-                    score = 5;
+                //        correct.show();
 
-                    onScoreListener.setName(score);
-                    switch (v.getId()){
-                        case  R.id.btnhabian:
+                score = 5;
+
+                onScoreListener.setName(score);
+                switch (v.getId()){
+                    case  R.id.btnhabian:
                         changeFragment();
                         break;
-                    }
-
-
                 }
+
+
             }
+
         });
 
         return v;
@@ -125,7 +125,7 @@ public class Nivel1Fragment extends Fragment {
         switch (num){
             case 0:{
                 getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
-            break;
+                break;
             }
             case 1:{
                 getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel4Fragment()).addToBackStack(null).commit();
@@ -142,6 +142,7 @@ public class Nivel1Fragment extends Fragment {
         try {
             onScoreListener= (OnScoreListener) activity;
         }
-    catch (Exception e){}
+        catch (Exception e){}
     }
 }
+

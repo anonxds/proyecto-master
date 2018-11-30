@@ -1,6 +1,7 @@
 package com.example.yonathan.proyecto;
 
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,11 +17,16 @@ import java.util.Random;
  */
 public class Nivel4Fragment extends Fragment {
 
-
+    Nivel1Fragment.OnScoreListener onScoreListener;
     public Nivel4Fragment() {
         // Required empty public constructor
     }
+    public interface OnScoreListener {
+        public void setName(int puntos);
+        public  void setMalopuntos(int intentos);
+    }
 
+    private int puntos, intentos;
     private Button nop1,nop2,nop3;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +40,8 @@ public class Nivel4Fragment extends Fragment {
         nop1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                intentos = 2;
+                onScoreListener.setMalopuntos(intentos);
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
             }
@@ -42,6 +50,8 @@ public class Nivel4Fragment extends Fragment {
         nop2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                intentos = 1;
+                onScoreListener.setMalopuntos(intentos);
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
             }
@@ -50,6 +60,8 @@ public class Nivel4Fragment extends Fragment {
         nop3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                puntos = 3;
+                onScoreListener.setName(puntos);
                 switch (v.getId()){
                     case  R.id.Op3:
                         changeFragment();
@@ -77,5 +89,16 @@ public class Nivel4Fragment extends Fragment {
         }
 
     }
-
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            onScoreListener= (Nivel1Fragment.OnScoreListener) activity;
+        }
+        catch (Exception e){}
+    }
 }
+
+
+
+

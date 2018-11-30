@@ -17,7 +17,7 @@ import java.util.Random;
  * A simple {@link Fragment} subclass.
  */
 public class Nivel2Fragment extends Fragment {
-     private Button mop1, mop2,mop3;
+    private Button mop1, mop2,mop3;
     int score,intentos;
 
 
@@ -48,7 +48,7 @@ public class Nivel2Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //mantener el dato numerico en todos los fragmentos
-                int intentos = 1;
+                intentos = 1;
                 onScoreListener.setMalopuntos(intentos);
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
@@ -58,6 +58,8 @@ public class Nivel2Fragment extends Fragment {
         mop2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                intentos = 1;
+                onScoreListener.setMalopuntos(intentos);
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
             }
@@ -65,20 +67,19 @@ public class Nivel2Fragment extends Fragment {
         mop3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-score  = 5;
-
+                score  = 5;
                 onScoreListener.setName(score);
-                    switch (v.getId()){
-                        case  R.id.btnop3:
-                            changeFragment();
-                            break;
-                    }
+                switch (v.getId()){
+                    case  R.id.btnop3:
+                        changeFragment();
+                        break;
+                }
 
 
 
             }
         });
-       return view;
+        return view;
     }
     private void changeFragment(){
         Random r = new Random();
@@ -106,6 +107,7 @@ score  = 5;
         catch (Exception e){}
     }
 }
+
 
 
 

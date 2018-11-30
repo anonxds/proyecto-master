@@ -27,8 +27,8 @@ public class Nivel3Fragment extends Fragment {
     }
 
 
-        private Button mNextl,mNext2;
-
+    private Button mNextl,mNext2;
+    private int intentos, puntos;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,32 +36,34 @@ public class Nivel3Fragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_nivel3, container, false);
 
         // Inflate the layout for this fragment
-           mNextl=v.findViewById(R.id.btncor1);
-           mNext2=v.findViewById(R.id.btncor2);
-           mNextl.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View v) {
+        mNextl=v.findViewById(R.id.btncor1);
+        mNext2=v.findViewById(R.id.btncor2);
+
+        mNextl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                intentos = 1;
+                onScoreListener.setMalopuntos(intentos);
+
+                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        mNext2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                puntos = 2;
+                onScoreListener.setName(puntos);
+                switch (v.getId()){
+                    case  R.id.btncor2:
+                        changeFragment();
+                        break;
+                }
 
 
-
-                   Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
-
-               }
-           });
-           mNext2.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View v) {
-
-
-                   switch (v.getId()){
-                       case  R.id.btncor2:
-                           changeFragment();
-                           break;
-                   }
-
-
-               }
-           });
+            }
+        });
 
         return v;
     }

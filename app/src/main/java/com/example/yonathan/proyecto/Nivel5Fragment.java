@@ -1,12 +1,14 @@
 package com.example.yonathan.proyecto;
 
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -19,8 +21,14 @@ public class Nivel5Fragment extends Fragment {
     public Nivel5Fragment() {
         // Required empty public constructor
     }
+    public interface OnScoreListener{
+        public void setName(int puntos);
+        public void setMalosPuntos(int intentos);
+    }
 
-private Button mop1,mop2,mop3;
+    private Button mop1,mop2,mop3;
+    Nivel1Fragment.OnScoreListener onScoreListener;
+    int puntos, intentos;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,6 +41,10 @@ private Button mop1,mop2,mop3;
         mop1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                intentos = 6;
+                onScoreListener.setMalopuntos(intentos);
+                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+
 
             }
         });
@@ -40,7 +52,10 @@ private Button mop1,mop2,mop3;
         mop2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                intentos = 4;
+                onScoreListener.setMalopuntos(intentos);
                 switch (v.getId()){
+
                     case  R.id.op2:
                         changeFragment();
                         break;
@@ -73,5 +88,14 @@ private Button mop1,mop2,mop3;
         }
 
     }
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            onScoreListener= (Nivel1Fragment.OnScoreListener) activity;
+        }
+        catch (Exception e){}
+    }
 
 }
+
