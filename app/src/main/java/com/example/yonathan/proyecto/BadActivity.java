@@ -1,8 +1,7 @@
-package com.example.yonathan.proyecto.Board;
+package com.example.yonathan.proyecto;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,9 +12,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.yonathan.proyecto.ScoreFragment;
 import com.example.yonathan.proyecto.model.NameScoreend;
-import com.example.yonathan.proyecto.R;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,7 +29,7 @@ public class BadActivity extends AppCompatActivity {
     ListView nombreEnd;
     Button add;
     TextView total;
-    private List<NameScoreend> Listperson = new ArrayList<>();
+    private List<NameScoreend> Listperson = new ArrayList<NameScoreend>();
   ArrayAdapter <NameScoreend> arrayAdapter;
   FirebaseDatabase mFirebaseDatabase;
   DatabaseReference mdatabaseReference;
@@ -46,17 +43,14 @@ public class BadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_bad);
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction t = manager.beginTransaction();
-        ScoreFragment s = new ScoreFragment();
-   //     t.add(R.id.linea1,s);
-     //   t.commit();
+
         nombre = findViewById(R.id.nametxt);
         nombreEnd = findViewById(R.id.scoreboard);
         add=findViewById(R.id.btnconti);
         total=findViewById(R.id.totalscore);
         initializeFirebase();
         listData();
+        this.recieveData();
 
         nombreEnd.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -84,7 +78,7 @@ public class BadActivity extends AppCompatActivity {
 
     }
     public void fl(String n1){
-        total.setText(n1);
+      //  total.setText(n1);
     }
 
     private void listData(){
@@ -95,7 +89,7 @@ public class BadActivity extends AppCompatActivity {
                 for(DataSnapshot objSnapShot:dataSnapshot.getChildren()){
                     NameScoreend p = objSnapShot.getValue(NameScoreend.class);
                     Listperson.add(p);
-                    arrayAdapter = new ArrayAdapter<>(BadActivity.this,android.R.layout.simple_list_item_1,Listperson);
+                    arrayAdapter = new ArrayAdapter<NameScoreend>(BadActivity.this,android.R.layout.simple_list_item_1,Listperson);
                     nombreEnd.setAdapter(arrayAdapter);
                 }
             }
@@ -111,6 +105,10 @@ public class BadActivity extends AppCompatActivity {
         mFirebaseDatabase=FirebaseDatabase.getInstance();
         mdatabaseReference=mFirebaseDatabase.getReference();
     }
-
+private void recieveData(){
+    Intent i =getIntent();
+    String totals = i.getStringExtra("NAME+KEY");
+    total.setText( String.valueOf(totals) );
+}
 
 }

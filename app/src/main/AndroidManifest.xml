@@ -25,7 +25,7 @@
         <activity android:name=".Capitulo1" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".BlitzActivity" />
-        <activity android:name=".Board.BadActivity" />
+        <activity android:name=".BadActivity" />
         <activity android:name=".Board.NeutralActivity" />
         <activity android:name=".Board.GoodActivity"></activity>
     </application>

@@ -24,9 +24,6 @@ public class NameScoreend {
 
     String name,score;
 
-    public NameScoreend(String uid) {
-        this.uid = uid;
-    }
 
     public String getUid() {
         return uid;

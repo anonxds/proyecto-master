@@ -6,13 +6,11 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.os.CountDownTimer;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.yonathan.proyecto.Board.BadActivity;
 import com.example.yonathan.proyecto.Board.GoodActivity;
 import com.example.yonathan.proyecto.Board.NeutralActivity;
 
@@ -69,11 +67,9 @@ public class ScoreFragment extends Fragment {
             public void onFinish() {
                 time.setText("done!");
 
-                String totals = score.getText().toString();
-                BadActivity m1 =(BadActivity) getActivity();
-                m1.fl(totals);
 
                     if(total <=10){
+                        sendData();
 
 
 
@@ -87,9 +83,9 @@ public class ScoreFragment extends Fragment {
                     else if(total <=100){
                         Intent intent = new Intent(getActivity(), GoodActivity.class);
                         startActivity(intent);
+                        // Intent intent = new Intent(getActivity(), MenuActivity.class);
                     }
 
-               // Intent intent = new Intent(getActivity(), MenuActivity.class);
                 //startActivity(intent);
 
             }
@@ -125,6 +121,12 @@ public class ScoreFragment extends Fragment {
         ScoreFragment.super.onStop();
         timers.cancel();
     }
+    private void sendData(){
+        Intent i = new Intent(getActivity().getBaseContext(),BadActivity.class);
+        i.putExtra("NAME+KEY",total);
+        getActivity().startActivity(i);
+    }
+
 
 
 
