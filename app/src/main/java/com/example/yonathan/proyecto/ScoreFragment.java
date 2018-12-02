@@ -30,7 +30,7 @@ public class ScoreFragment extends Fragment {
     }
     private TextView time,score,badscore,namescore,nameintentos;
     long addtime;
-    int total,intentos;
+   public int total,intentos;
 
     CountDownTimer timers;
 
@@ -52,15 +52,16 @@ public class ScoreFragment extends Fragment {
 
 
 
-
-      timers = new CountDownTimer(20000, 1000) {
+      timers = new CountDownTimer(10000, 1000) {
 
             public void onTick(long millisUntilFinished) {
 
                 time.setText("Tiempo: " + (millisUntilFinished) / 1000);
                 if(badscore.getText().toString().equals("3") || badscore.getText().toString().equals("5")){
+
                     Intent intent = new Intent(getActivity(), BadActivity.class);
                     startActivity(intent);
+
                 }
 
             }
@@ -68,7 +69,14 @@ public class ScoreFragment extends Fragment {
             public void onFinish() {
                 time.setText("done!");
 
+                String totals = score.getText().toString();
+                BadActivity m1 =(BadActivity) getActivity();
+                m1.fl(totals);
+
                     if(total <=10){
+
+
+
                         Intent intent = new Intent(getActivity(), BadActivity.class);
                         startActivity(intent);
                     }
@@ -96,10 +104,10 @@ public class ScoreFragment extends Fragment {
 
     public void updateInfo(int Score){
        // total = 41;
+        total = total + Score;
 
         score.setText(String.valueOf(total));
 
-         total = total + Score;
 
 
         //score.setText(String.valueOf(Score));
