@@ -50,6 +50,7 @@ public class ScoreFragment extends Fragment {
 
 
 
+
       timers = new CountDownTimer(10000, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -69,12 +70,12 @@ public class ScoreFragment extends Fragment {
 
 
                     if(total <=10){
+
+
+
+                      //  Intent intent = new Intent(getActivity(), BadActivity.class);
+                        //startActivity(intent);
                         sendData();
-
-
-
-                        Intent intent = new Intent(getActivity(), BadActivity.class);
-                        startActivity(intent);
                     }
                     else if(total <= 40){
                         Intent intent = new Intent(getActivity(), NeutralActivity.class);
@@ -121,9 +122,10 @@ public class ScoreFragment extends Fragment {
         ScoreFragment.super.onStop();
         timers.cancel();
     }
+
     private void sendData(){
         Intent i = new Intent(getActivity().getBaseContext(),BadActivity.class);
-        i.putExtra("NAME+KEY",total);
+        i.putExtra("NAME_KEY",score.getText().toString());
         getActivity().startActivity(i);
     }
 

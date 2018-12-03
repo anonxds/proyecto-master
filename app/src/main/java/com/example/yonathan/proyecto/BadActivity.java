@@ -67,19 +67,18 @@ public class BadActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String nombrel = nombre.getText().toString();
+                String toal = total.getText().toString();
                 NameScoreend p = new NameScoreend();
                 p.setUid(UUID.randomUUID().toString());
                 p.setName(nombrel);
-                p.setScore(String.valueOf(Score));
+                p.setScore(toal);
                 mdatabaseReference.child("Datos").child(p.getUid()).setValue(p);
             }
         });
         //--
 
     }
-    public void fl(String n1){
-      //  total.setText(n1);
-    }
+
 
     private void listData(){
         mdatabaseReference.child("Datos").addValueEventListener(new ValueEventListener() {
@@ -107,8 +106,8 @@ public class BadActivity extends AppCompatActivity {
     }
 private void recieveData(){
     Intent i =getIntent();
-    String totals = i.getStringExtra("NAME+KEY");
-    total.setText( String.valueOf(totals) );
+    String totals = i.getStringExtra("NAME_KEY");
+    total.setText( String.valueOf(totals));
 }
 
 }
