@@ -1,17 +1,22 @@
-package com.example.yonathan.proyecto;
+package com.example.yonathan.proyecto.Board;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.yonathan.proyecto.MenuActivity;
+import com.example.yonathan.proyecto.R;
 import com.example.yonathan.proyecto.model.NameScoreend;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -27,8 +32,9 @@ import java.util.UUID;
 public class BadActivity extends AppCompatActivity {
     EditText nombre;
     ListView nombreEnd;
-    Button add;
-    TextView total;
+    Button add,confirmar;
+    TextView total,shite,name;
+    ImageView medal;
     private List<NameScoreend> Listperson = new ArrayList<NameScoreend>();
   ArrayAdapter <NameScoreend> arrayAdapter;
   FirebaseDatabase mFirebaseDatabase;
@@ -48,9 +54,23 @@ public class BadActivity extends AppCompatActivity {
         nombreEnd = findViewById(R.id.scoreboard);
         add=findViewById(R.id.btnconti);
         total=findViewById(R.id.totalscore);
+        confirmar=findViewById(R.id.confirmar);
+        shite=findViewById(R.id.txtbad);
+        name=findViewById(R.id.Tunombre);
+        medal=findViewById(R.id.imageView);
+        //visibilidad
+        shite.setVisibility(View.GONE);
+        add.setVisibility(View.GONE);
+        medal.setVisibility(View.GONE);
+        nombreEnd.setVisibility(View.GONE);
+        //
+        nombre.requestFocus();
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED,InputMethodManager.HIDE_IMPLICIT_ONLY);
         initializeFirebase();
         listData();
         this.recieveData();
+
 
         nombreEnd.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -66,16 +86,38 @@ public class BadActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nombrel = nombre.getText().toString();
-                String toal = total.getText().toString();
-                NameScoreend p = new NameScoreend();
-                p.setUid(UUID.randomUUID().toString());
-                p.setName(nombrel);
-                p.setScore(toal);
-                mdatabaseReference.child("Datos").child(p.getUid()).setValue(p);
+               Intent i = new Intent(BadActivity.this, MenuActivity.class);
+               startActivity(i);
             }
         });
-        //--
+        confirmar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nombres = nombre.getText().toString();
+                if (nombres.equals("")) {
+                    validation();
+                } else {
+
+                    String nombrel = nombre.getText().toString();
+                    String toal = total.getText().toString();
+                    NameScoreend p = new NameScoreend();
+                    p.setUid(UUID.randomUUID().toString());
+                    p.setName(nombrel);
+                    p.setScore(toal);
+                    mdatabaseReference.child("Datos").child(p.getUid()).setValue(p);
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(nombre.getWindowToken(), 0);
+                    shite.setVisibility(View.VISIBLE);
+                    add.setVisibility(View.VISIBLE);
+                    medal.setVisibility(View.VISIBLE);
+                    confirmar.setVisibility(View.GONE);
+                    nombre.setVisibility(View.GONE);
+                    name.setVisibility(View.GONE);
+                    nombreEnd.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
 
     }
 
@@ -107,7 +149,17 @@ public class BadActivity extends AppCompatActivity {
 private void recieveData(){
     Intent i =getIntent();
     String totals = i.getStringExtra("NAME_KEY");
-    total.setText( String.valueOf(totals));
+    total.setText("Puntos "+ String.valueOf(totals));
 }
 
+    @Override
+    public void onBackPressed() {
+      //  super.onBackPressed();
+    }
+    public void validation(){
+        String nombres = nombre.getText().toString();
+        if (nombres.equals("")) {
+            nombre.setError("Requerido");
+        }
+    }
 }

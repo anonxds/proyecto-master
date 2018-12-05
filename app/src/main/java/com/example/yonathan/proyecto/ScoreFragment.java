@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.yonathan.proyecto.Board.BadActivity;
 import com.example.yonathan.proyecto.Board.GoodActivity;
 import com.example.yonathan.proyecto.Board.NeutralActivity;
 
@@ -51,7 +52,7 @@ public class ScoreFragment extends Fragment {
 
 
 
-      timers = new CountDownTimer(10000, 1000) {
+      timers = new CountDownTimer(5000, 1000) {
 
             public void onTick(long millisUntilFinished) {
 
@@ -71,20 +72,20 @@ public class ScoreFragment extends Fragment {
 
                     if(total <=10){
 
-
-
                       //  Intent intent = new Intent(getActivity(), BadActivity.class);
                         //startActivity(intent);
-                        sendData();
+                        sendData1();
                     }
                     else if(total <= 40){
-                        Intent intent = new Intent(getActivity(), NeutralActivity.class);
-                        startActivity(intent);
+                      //  Intent intent = new Intent(getActivity(), NeutralActivity.class);
+                        //startActivity(intent);
+                        sendData2();
                     }
                     else if(total <=100){
-                        Intent intent = new Intent(getActivity(), GoodActivity.class);
-                        startActivity(intent);
+                     //   Intent intent = new Intent(getActivity(), GoodActivity.class);
+                       // startActivity(intent);
                         // Intent intent = new Intent(getActivity(), MenuActivity.class);
+                        sendData3();
                     }
 
                 //startActivity(intent);
@@ -123,8 +124,18 @@ public class ScoreFragment extends Fragment {
         timers.cancel();
     }
 
-    private void sendData(){
+    private void sendData1(){
         Intent i = new Intent(getActivity().getBaseContext(),BadActivity.class);
+        i.putExtra("NAME_KEY",score.getText().toString());
+        getActivity().startActivity(i);
+    }
+    private void sendData2(){
+        Intent i = new Intent(getActivity().getBaseContext(),NeutralActivity.class);
+        i.putExtra("NAME_KEY",score.getText().toString());
+        getActivity().startActivity(i);
+    }
+    private void sendData3(){
+        Intent i = new Intent(getActivity().getBaseContext(),GoodActivity.class);
         i.putExtra("NAME_KEY",score.getText().toString());
         getActivity().startActivity(i);
     }

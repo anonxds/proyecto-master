@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto;
+package com.example.yonathan.proyecto.Niveles;
 
 
 import android.app.Activity;
@@ -10,64 +10,65 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.yonathan.proyecto.R;
+
 import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Nivel4Fragment extends Fragment {
+public class Nivel5Fragment extends Fragment {
 
-    Nivel1Fragment.OnScoreListener onScoreListener;
-    public Nivel4Fragment() {
+
+    public Nivel5Fragment() {
         // Required empty public constructor
     }
-    public interface OnScoreListener {
+    public interface OnScoreListener{
         public void setName(int puntos);
-        public  void setMalopuntos(int intentos);
+        public void setMalosPuntos(int intentos);
     }
 
-    private int puntos, intentos;
-    private Button nop1,nop2,nop3;
+    private Button mop1,mop2,mop3;
+    Nivel1Fragment.OnScoreListener onScoreListener;
+    int puntos, intentos;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_nivel5, container, false);
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_nivel4, container, false);
-        nop1=v.findViewById(R.id.op1);
-        nop2=v.findViewById(R.id.op2);
-        nop3=v.findViewById(R.id.Op3);
+        mop1=v.findViewById(R.id.op1);
+        mop2=v.findViewById(R.id.op2);
+        mop3=v.findViewById(R.id.op3);
 
-        nop1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intentos = 2;
-                onScoreListener.setMalopuntos(intentos);
-                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        nop2.setOnClickListener(new View.OnClickListener() {
+        mop1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intentos = 1;
                 onScoreListener.setMalopuntos(intentos);
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
+
             }
         });
 
-        nop3.setOnClickListener(new View.OnClickListener() {
+        mop2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                puntos = 3;
-                onScoreListener.setName(puntos);
+
                 switch (v.getId()){
-                    case  R.id.Op3:
+
+                    case  R.id.op2:
                         changeFragment();
                         break;
                 }
+            }
+        });
 
+        mop3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentos = 1;
+                onScoreListener.setMalopuntos(intentos);
             }
         });
 
@@ -82,7 +83,7 @@ public class Nivel4Fragment extends Fragment {
                 break;
             }
             case 1:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel1Fragment()).addToBackStack(null).commit();
                 break;
             }
 
@@ -97,8 +98,6 @@ public class Nivel4Fragment extends Fragment {
         }
         catch (Exception e){}
     }
+
 }
-
-
-
 

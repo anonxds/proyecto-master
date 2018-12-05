@@ -1,100 +1,96 @@
-package com.example.yonathan.proyecto;
+package com.example.yonathan.proyecto.Niveles;
 
 
 import android.app.Activity;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.util.Random;
+import com.example.yonathan.proyecto.R;
 
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Nivel2Fragment extends Fragment {
-    private Button mop1, mop2,mop3;
-    int score,intentos;
-
+public class Nivel4Fragment extends Fragment {
 
     Nivel1Fragment.OnScoreListener onScoreListener;
-    public Nivel2Fragment() {
+    public Nivel4Fragment() {
         // Required empty public constructor
     }
-
-    public interface OnScoreListener{
-        public void setName(int score);
-        public void setMalopuntos(int score);
+    public interface OnScoreListener {
+        public void setName(int puntos);
+        public  void setMalopuntos(int intentos);
     }
 
-
-
-
-
+    private int puntos, intentos;
+    private Button nop1,nop2,nop3;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_nivel2, container, false);
         // Inflate the layout for this fragment
-        mop1=view.findViewById(R.id.btnop1);
-        mop2=view.findViewById(R.id.btnop2);
-        mop3=view.findViewById(R.id.btnop3);
+        View v = inflater.inflate(R.layout.fragment_nivel4, container, false);
+        nop1=v.findViewById(R.id.op1);
+        nop2=v.findViewById(R.id.op2);
+        nop3=v.findViewById(R.id.Op3);
 
-        mop1.setOnClickListener(new View.OnClickListener() {
+        nop1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //mantener el dato numerico en todos los fragmentos
-                intentos = 1;
-                onScoreListener.setMalopuntos(intentos);
-                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
-
-
-            }
-        });
-        mop2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intentos = 1;
+                intentos = 2;
                 onScoreListener.setMalopuntos(intentos);
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
             }
         });
-        mop3.setOnClickListener(new View.OnClickListener() {
+
+        nop2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                score  = 5;
-                onScoreListener.setName(score);
+                intentos = 1;
+                onScoreListener.setMalopuntos(intentos);
+                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        nop3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                puntos = 3;
+                onScoreListener.setName(puntos);
                 switch (v.getId()){
-                    case  R.id.btnop3:
+                    case  R.id.Op3:
                         changeFragment();
                         break;
                 }
 
-
-
             }
         });
-        return view;
+
+        return v;
     }
     private void changeFragment(){
         Random r = new Random();
-        int num = r.nextInt(1);
+        int num = r.nextInt(2);
         switch (num){
             case 0:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
+                break;
+            }
+            case 1:{
                 getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
                 break;
             }
 
-
         }
 
     }
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);

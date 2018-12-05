@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="450dp"
-    tools:context="com.example.yonathan.proyecto.Nivel4Fragment">
+    tools:context="com.example.yonathan.proyecto.Niveles.Nivel4Fragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -16,11 +16,12 @@
         android:layout_marginTop="116dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="una oracion"
+        android:text="¿Que hay detras del sol?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/op1"

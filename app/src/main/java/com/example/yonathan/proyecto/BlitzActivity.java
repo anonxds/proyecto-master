@@ -2,11 +2,12 @@ package com.example.yonathan.proyecto;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
+
+import com.example.yonathan.proyecto.Niveles.Nivel1Fragment;
+import com.example.yonathan.proyecto.Niveles.Nivel2Fragment;
+import com.example.yonathan.proyecto.Niveles.Nivel3Fragment;
 
 import java.util.Random;
 
@@ -95,7 +96,7 @@ public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.O
     public void onBackPressed() {
 
 
-        BlitzActivity.this.finish();
+      //  BlitzActivity.this.finish();
 
     }
 
@@ -106,4 +107,5 @@ public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.O
 
 
     }
+
 }

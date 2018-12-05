@@ -2,9 +2,16 @@
     <string name="app_name">prueba</string>
 
 
-
-
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="historia"><![CDATA[<b><font color=#FF0000>hola</font></b>]]>con Will Brandford con sus problemas mentales y estreses que se ha ganado
+    con el trabajo duro.</string>
+
+
+
+    <string name="blitz">
+        Identifica rapidamente los errores ortograficos, con un limite de tiempo.
+    </string>
 
     <string name="bad"> Se lo que se siente perder, pero nunca sabre lo que se siente rendirse  </string>
     <string name="neutral"> No importa a que obstaculo te enfrentes, lucha por seguir adelante </string>

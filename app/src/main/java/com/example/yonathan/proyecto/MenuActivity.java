@@ -13,6 +13,9 @@ import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
+import com.example.yonathan.proyecto.Info.BlitzInfoActivity;
+import com.example.yonathan.proyecto.Info.HisInfoActivity;
+
 public class MenuActivity extends AppCompatActivity {
     private Button mstory,mblitz;
 
@@ -35,6 +38,8 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.startAnimation(anim);
+                Intent i = new Intent(getApplicationContext(), HisInfoActivity.class);
+                startActivity(i);
             }
         });
         mblitz.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +47,9 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 v.startAnimation(anim);
 
-                startActivity(new Intent(MenuActivity.this, BlitzActivity.class));
+               // startActivity(new Intent(MenuActivity.this, BlitzActivity.class));
+                Intent i = new Intent(getApplicationContext(), BlitzInfoActivity.class);
+                startActivity(i);
 
             }
         });

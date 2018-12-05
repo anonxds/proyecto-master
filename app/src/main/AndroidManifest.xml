@@ -25,9 +25,16 @@
         <activity android:name=".Capitulo1" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".BlitzActivity" />
-        <activity android:name=".BadActivity" />
+        <activity android:name=".Board.BadActivity" />
         <activity android:name=".Board.NeutralActivity" />
-        <activity android:name=".Board.GoodActivity"></activity>
+        <activity android:name=".Board.GoodActivity" />
+        <activity
+            android:name=".Trivia.trivia1Activity"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity android:name=".Info.HisInfoActivity"
+            android:theme="@style/AppTheme.PopMe"/>
+        <activity android:name=".Info.BlitzInfoActivity"
+            android:theme="@style/AppTheme.PopMe"></activity>
     </application>
 
 </manifest>
