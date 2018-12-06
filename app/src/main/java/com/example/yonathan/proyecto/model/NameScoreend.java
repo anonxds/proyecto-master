@@ -1,6 +1,12 @@
 package com.example.yonathan.proyecto.model;
 
 public class NameScoreend {
+
+    public String toString(){
+        String info = name + " " + score;
+        return info;
+    }
+
     public String getName() {
         return name;
     }
@@ -17,10 +23,7 @@ public class NameScoreend {
         this.score = score;
     }
 
-    public NameScoreend(String name, String score) {
-        this.name = name;
-        this.score = score;
-    }
+
 
     String name,score;
 

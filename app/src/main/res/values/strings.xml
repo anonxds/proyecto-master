@@ -4,10 +4,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
 
-    <string name="historia"><![CDATA[<b><font color=#FF0000>hola</font></b>]]>con Will Brandford con sus problemas mentales y estreses que se ha ganado
+    <string name="trivia1">algo de trivia</string>
+
+    <string name="ps"><![CDATA[<b><font color=#FF0000>hola</font></b>]]>con Will Brandford con sus problemas mentales y estreses que se ha ganado
     con el trabajo duro.</string>
 
 
+    <string name="historia">Conoce a Will Brandford una persona con gran espiritu y escritor.
+
+        identifica los errores ortograficos en esta novela interactiva
+    </string>
 
     <string name="blitz">
         Identifica rapidamente los errores ortograficos, con un limite de tiempo.
@@ -18,7 +24,8 @@
     <string name="good">No te sacrifiques por los sueños de otros, muere por el tuyo.  </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Primeracolm">
-       En la vida hay bastantes netos hay que cruezar
+       En la vida hay bastantes netos hay que <![CDATA[<b><font color=#FF0000>cruear</font></b>]]>
+
     </string>
 
     <string name="n3_1">
@@ -30,7 +37,7 @@
     </string>
 
     <string name="frase1">
-        En mi cuarto abian ciertas voces en mi mente pero yo no creo que puedo
+        En mi cuarto  <![CDATA[<b><font color=#FF0000>abian</font></b>]]> ciertas voces en mi mente pero yo no creo que puedo
     </string>
     <string name="frase2">
         Todos viven en mi mente y qiero que me la pel.........

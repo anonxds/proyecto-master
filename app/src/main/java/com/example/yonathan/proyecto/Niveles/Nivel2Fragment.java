@@ -4,10 +4,12 @@ package com.example.yonathan.proyecto.Niveles;
 import android.app.Activity;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
@@ -21,6 +23,8 @@ import java.util.Random;
 public class Nivel2Fragment extends Fragment {
     private Button mop1, mop2,mop3;
     int score,intentos;
+    private TextView p2;
+
 
 
     Nivel1Fragment.OnScoreListener onScoreListener;
@@ -45,6 +49,11 @@ public class Nivel2Fragment extends Fragment {
         mop1=view.findViewById(R.id.btnop1);
         mop2=view.findViewById(R.id.btnop2);
         mop3=view.findViewById(R.id.btnop3);
+        p2=view.findViewById(R.id.textView);
+
+        p2.setText(Html.fromHtml(getString(R.string.frase1)));
+
+
 
         mop1.setOnClickListener(new View.OnClickListener() {
             @Override

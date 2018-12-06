@@ -36,7 +36,8 @@ public class BadActivity extends AppCompatActivity {
     TextView total,shite,name;
     ImageView medal;
     private List<NameScoreend> Listperson = new ArrayList<NameScoreend>();
-  ArrayAdapter <NameScoreend> arrayAdapter;
+ //   ArrayList<String> list = new ArrayList<>();
+  ArrayAdapter <NameScoreend> arrayAdapters;
   FirebaseDatabase mFirebaseDatabase;
   DatabaseReference mdatabaseReference;
   NameScoreend select;
@@ -68,7 +69,7 @@ public class BadActivity extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED,InputMethodManager.HIDE_IMPLICIT_ONLY);
         initializeFirebase();
-        listData();
+       listData();
         this.recieveData();
 
 
@@ -130,8 +131,8 @@ public class BadActivity extends AppCompatActivity {
                 for(DataSnapshot objSnapShot:dataSnapshot.getChildren()){
                     NameScoreend p = objSnapShot.getValue(NameScoreend.class);
                     Listperson.add(p);
-                    arrayAdapter = new ArrayAdapter<NameScoreend>(BadActivity.this,android.R.layout.simple_list_item_1,Listperson);
-                    nombreEnd.setAdapter(arrayAdapter);
+                    arrayAdapters = new ArrayAdapter<>(BadActivity.this,android.R.layout.simple_list_item_1,Listperson);
+                    nombreEnd.setAdapter(arrayAdapters);
                 }
             }
 
@@ -141,6 +142,7 @@ public class BadActivity extends AppCompatActivity {
             }
         });
     }
+
     private void initializeFirebase(){
         FirebaseApp.initializeApp(this);
         mFirebaseDatabase=FirebaseDatabase.getInstance();

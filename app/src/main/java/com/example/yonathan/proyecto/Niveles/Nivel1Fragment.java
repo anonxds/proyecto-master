@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.os.CountDownTimer;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
@@ -28,6 +30,7 @@ public class Nivel1Fragment extends Fragment {
     private EditText mpal1;
     OnScoreListener onScoreListener;
     int score,intentos;
+    private TextView p1;
 
 
 
@@ -61,8 +64,10 @@ public class Nivel1Fragment extends Fragment {
         mabian=v.findViewById(R.id.btnabian);
         mavian=v.findViewById(R.id.btnavian);
         mhabian=v.findViewById(R.id.btnhabian);
+        p1=v.findViewById(R.id.textView5);
 
 
+        p1.setText(Html.fromHtml(getString(R.string.Primeracolm)));
 
 
         mabian.setOnClickListener(new View.OnClickListener() {

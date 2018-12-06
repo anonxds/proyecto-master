@@ -52,7 +52,7 @@ public class ScoreFragment extends Fragment {
 
 
 
-      timers = new CountDownTimer(5000, 1000) {
+      timers = new CountDownTimer(20000, 1000) {
 
             public void onTick(long millisUntilFinished) {
 
