@@ -3,6 +3,7 @@ package com.example.yonathan.proyecto.Niveles;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.os.CountDownTimer;
@@ -65,7 +66,12 @@ public class Nivel1Fragment extends Fragment {
         mavian=v.findViewById(R.id.btnavian);
         mhabian=v.findViewById(R.id.btnhabian);
         p1=v.findViewById(R.id.textView5);
-
+        Typeface BLUNT = Typeface.createFromAsset(getActivity().getAssets(), "BLUNT.TTF");
+mabian.setTypeface(BLUNT);
+mavian.setTypeface(BLUNT);
+mhabian.setTypeface(BLUNT);
+        Typeface Architex = Typeface.createFromAsset(getActivity().getAssets(), "Architex.ttf");
+        p1.setTypeface(Architex);
 
         p1.setText(Html.fromHtml(getString(R.string.Primeracolm)));
 

@@ -22,8 +22,7 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Typeface Architex = Typeface.createFromAsset(getAssets(), "Architex.ttf");
-        Typeface TheShaker = Typeface.createFromAsset(getAssets(), "TheShaker.ttf");
+
         Typeface BLUNT = Typeface.createFromAsset(getAssets(), "BLUNT.TTF");
 
 

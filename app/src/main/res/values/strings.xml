@@ -4,7 +4,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
 
-    <string name="trivia1">algo de trivia</string>
+    <string name="trivia1">“haber + sustantivo” es utilizada para expresar la existencia de algo</string>
 
     <string name="ps"><![CDATA[<b><font color=#FF0000>hola</font></b>]]>con Will Brandford con sus problemas mentales y estreses que se ha ganado
     con el trabajo duro.</string>
@@ -12,7 +12,8 @@
 
     <string name="historia">Conoce a Will Brandford una persona con gran espiritu y escritor.
 
-        identifica los errores ortograficos en esta novela interactiva
+        identifica los errores ortograficos en esta novela interactiva,
+        este modo aun no esta completado
     </string>
 
     <string name="blitz">

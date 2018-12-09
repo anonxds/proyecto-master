@@ -19,7 +19,7 @@ public class trivia1Activity extends AppCompatActivity {
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mDatabaseReference;
 
-
+TextView trival;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,7 @@ public class trivia1Activity extends AppCompatActivity {
         TextView t =findViewById(R.id.triva);
         initializeFirebase();
 add();
+
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
@@ -52,10 +53,12 @@ add();
     }
 
     public void add(){
-        String uno = "algo de trivia";
+        String uno = "trivia1";
+        trival=findViewById(R.id.triva);
+        String t1 = trival.getText().toString();
 
        triviamodel p = new triviamodel();
-       p.setTrivia(uno);
+       p.setTrivia(t1);
         mDatabaseReference.child("trivia").child(p.getTrivia()).setValue(p);
     }
 

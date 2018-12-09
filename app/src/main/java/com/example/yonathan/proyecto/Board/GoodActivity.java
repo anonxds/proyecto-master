@@ -144,7 +144,7 @@ if(nombre.getText().toString().equals("")){
     private void recieveData(){
         Intent i =getIntent();
         String totals = i.getStringExtra("NAME_KEY");
-        total.setText( String.valueOf(totals));
+        total.setText("Puntos: "+ String.valueOf(totals));
     }
     public void validation(){
         if(nombre.getText().toString().equals("")){

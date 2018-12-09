@@ -3,6 +3,7 @@ package com.example.yonathan.proyecto.Niveles;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -44,8 +45,11 @@ public class Nivel3Fragment extends Fragment {
         mNext2=v.findViewById(R.id.btncor2);
         TextView p2 =v.findViewById(R.id.txtn3);
         p2.setText(Html.fromHtml(getString(R.string.Primeracolm)));
-
-
+        Typeface Architex = Typeface.createFromAsset(getActivity().getAssets(), "Architex.ttf");
+        p2.setTypeface(Architex);
+        Typeface BLUNT = Typeface.createFromAsset(getActivity().getAssets(), "BLUNT.TTF");
+mNext2.setTypeface(BLUNT);
+mNextl.setTypeface(BLUNT);
         mNextl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.example.yonathan.proyecto.Board.BadActivity;
 import com.example.yonathan.proyecto.Board.GoodActivity;
 import com.example.yonathan.proyecto.Board.NeutralActivity;
+import com.example.yonathan.proyecto.Board.gameover;
 
 
 /**
@@ -59,7 +60,7 @@ public class ScoreFragment extends Fragment {
                 time.setText("Tiempo: " + (millisUntilFinished) / 1000);
                 if(badscore.getText().toString().equals("3") || badscore.getText().toString().equals("5")){
 
-                    Intent intent = new Intent(getActivity(), BadActivity.class);
+                    Intent intent = new Intent(getActivity(), gameover.class);
                     startActivity(intent);
 
                 }

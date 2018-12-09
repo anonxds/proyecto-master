@@ -1,6 +1,7 @@
 package com.example.yonathan.proyecto.Info;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -16,12 +17,14 @@ import com.example.yonathan.proyecto.MenuActivity;
 import com.example.yonathan.proyecto.R;
 
 public class BlitzInfoActivity extends AppCompatActivity {
-
+Button btnplay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Button btnplay = findViewById(R.id.jugarw);
+         btnplay = findViewById(R.id.jugarw);
 
+       // Typeface Theshaker = Typeface.createFromAsset(getAssets(), "ANGEL.ttf");
+        //btnplay.setTypeface(Theshaker);
         setContentView(R.layout.activity_blitz_info);
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -36,6 +39,8 @@ public class BlitzInfoActivity extends AppCompatActivity {
         p.x = 0;
         p.y=-20;
         getWindow().setAttributes(p);
+
+
     }
     public void change (View view){
         final Animation anim = AnimationUtils.loadAnimation(this,R.anim.alpha);
