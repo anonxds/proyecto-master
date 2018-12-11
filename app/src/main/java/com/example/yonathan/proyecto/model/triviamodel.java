@@ -18,7 +18,10 @@ public class triviamodel {
         this.trivia = trivia;
     }
 
-
+    public String toString(){
+        String info = uid;
+        return info;
+    }
 
     String uid,trivia;
 

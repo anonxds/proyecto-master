@@ -15,9 +15,17 @@ import android.widget.Button;
 
 import com.example.yonathan.proyecto.Info.BlitzInfoActivity;
 import com.example.yonathan.proyecto.Info.HisInfoActivity;
+import com.example.yonathan.proyecto.Trivia.ExtrasActivity;
 
 public class MenuActivity extends AppCompatActivity {
     private Button mstory,mblitz;
+
+
+
+    public void extras(View view){
+        Intent i = new Intent(getApplicationContext(), ExtrasActivity.class);
+        startActivity(i);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

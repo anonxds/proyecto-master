@@ -52,7 +52,8 @@
             android:name=".Info.BlitzInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.PopMe" />
-        <activity android:name=".Board.gameover"></activity>
+        <activity android:name=".Board.gameover" />
+        <activity android:name=".Trivia.ExtrasActivity"></activity>
     </application>
 
 </manifest>

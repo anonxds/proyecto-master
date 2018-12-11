@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
@@ -30,24 +31,20 @@ public class Nivel4Fragment extends Fragment {
 
     private int puntos, intentos;
     private Button nop1,nop2,nop3;
+EditText res;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_nivel4, container, false);
         nop1=v.findViewById(R.id.op1);
-        nop2=v.findViewById(R.id.op2);
-        nop3=v.findViewById(R.id.Op3);
 
-        nop1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intentos = 2;
-                onScoreListener.setMalopuntos(intentos);
-                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+        res = v.findViewById(R.id.txtres4);
 
-            }
-        });
+
+
+               /*
+
 
         nop2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,20 +55,34 @@ public class Nivel4Fragment extends Fragment {
 
             }
         });
+*/
+nop1.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
 
-        nop3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                puntos = 3;
-                onScoreListener.setName(puntos);
-                switch (v.getId()){
-                    case  R.id.Op3:
-                        changeFragment();
-                        break;
-                }
+        if(res.getText().toString().equals("aguila") || res.getText().toString().equals("águila") || res.getText().toString().equals("Águila")) {
 
-            }
-        });
+                    puntos = 3;
+                    onScoreListener.setName(puntos);
+
+                    switch (v.getId()) {
+                        case R.id.op1:
+                            changeFragment();
+                            break;
+                    }
+
+
+        }
+        else{
+            intentos = 1;
+            onScoreListener.setMalopuntos(intentos);
+            Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+
+        }
+    }
+});
+
+
 
         return v;
     }

@@ -59,7 +59,8 @@ add();
 
        triviamodel p = new triviamodel();
        p.setTrivia(t1);
-        mDatabaseReference.child("trivia").child(p.getTrivia()).setValue(p);
+       p.setUid(uno);
+        mDatabaseReference.child("trivia").child(p.getUid()).setValue(p);
     }
 
 }
