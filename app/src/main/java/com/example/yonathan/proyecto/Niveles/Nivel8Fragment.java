@@ -31,6 +31,7 @@ public class Nivel8Fragment extends Fragment {
 
 private Button resp1, resp2;
    private TextView oracion1;
+   int puntos,intentos;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,8 +41,16 @@ private Button resp1, resp2;
 
         oracion1.setTypeface(Architex);
         // Inflate the layout for this fragment
-     //   resp1=v.findViewById(R.id.);
-       // resp2=v.findViewById(R.id.);
+     resp1=v.findViewById(R.id.btncor1);
+       resp2=v.findViewById(R.id.btncor1);
+
+        resp1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentos = 1;
+                onScoreListener.setMalopuntos(intentos);
+            }
+        });
         return v;
     }
 
