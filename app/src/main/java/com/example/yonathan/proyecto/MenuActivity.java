@@ -18,7 +18,7 @@ import com.example.yonathan.proyecto.Info.HisInfoActivity;
 import com.example.yonathan.proyecto.Trivia.ExtrasActivity;
 
 public class MenuActivity extends AppCompatActivity {
-    private Button mstory,mblitz;
+    private Button mstory,mblitz,mextras;
 
 
 
@@ -39,6 +39,8 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         mblitz=findViewById(R.id.btnblitz);
         mstory=findViewById(R.id.btnstory);
+        mextras=findViewById(R.id.btnextras);
+        mextras.setTypeface(BLUNT);
         mblitz.setTypeface(BLUNT);
         mstory.setTypeface(BLUNT);
         mstory.setOnClickListener(new View.OnClickListener() {

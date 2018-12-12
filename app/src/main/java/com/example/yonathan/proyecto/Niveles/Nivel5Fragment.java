@@ -61,8 +61,16 @@ TextView oracion,adv;
          onScoreListener.setName(puntos);
          Intent i = new Intent(getActivity(), trvia2Activity.class);
          startActivity(i);
+         switch (v.getId()){
+
+             case  R.id.btnconfimar:
+                 changeFragment();
+                 break;
+         }
      }
      else {
+         intentos = 1;
+         onScoreListener.setMalopuntos(intentos);
          Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
      }
@@ -70,12 +78,7 @@ TextView oracion,adv;
              });
 
 /*
-                switch (v.getId()){
 
-                    case  R.id.op2:
-                        changeFragment();
-                        break;
-                }
                 */
 
 
@@ -88,11 +91,11 @@ TextView oracion,adv;
         int num = r.nextInt(2);
         switch (num){
             case 0:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel6Fragment()).addToBackStack(null).commit();
                 break;
             }
             case 1:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel1Fragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel7Fragment()).addToBackStack(null).commit();
                 break;
             }
 

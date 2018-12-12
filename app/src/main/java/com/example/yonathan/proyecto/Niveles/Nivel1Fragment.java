@@ -139,11 +139,11 @@ mhabian.setTypeface(BLUNT);
         int num = r.nextInt(2);
         switch (num){
             case 0:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel3Fragment()).addToBackStack(null).commit();
                 break;
             }
             case 1:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel4Fragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
                 break;
             }
 

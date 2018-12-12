@@ -2,6 +2,7 @@ package com.example.yonathan.proyecto.Board;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,6 +56,9 @@ public class NeutralActivity extends AppCompatActivity {
         neutral=findViewById(R.id.txtneutral);
         name=findViewById(R.id.Tunombre);
         medal=findViewById(R.id.imageView);
+
+        Typeface ANGEL = Typeface.createFromAsset(getAssets(), "ANGEL.ttf");
+       neutral.setTypeface(ANGEL);
 
 
 

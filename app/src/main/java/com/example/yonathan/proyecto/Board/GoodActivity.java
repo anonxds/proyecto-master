@@ -2,6 +2,7 @@ package com.example.yonathan.proyecto.Board;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -56,6 +57,8 @@ public class GoodActivity extends AppCompatActivity {
         good=findViewById(R.id.txtgood);
         name=findViewById(R.id.Tunombre);
         medal=findViewById(R.id.imageView);
+        Typeface ANGEL = Typeface.createFromAsset(getAssets(), "ANGEL.ttf");
+       good.setTypeface(ANGEL);
         //
         //visibilidad
         good.setVisibility(View.GONE);

@@ -67,7 +67,7 @@ mNextl.setTypeface(BLUNT);
                 puntos = 2;
                 onScoreListener.setName(puntos);
                 switch (v.getId()){
-                    case  R.id.btncor2:
+                    case  R.id.btncor1:
                         changeFragment();
                         break;
                 }
@@ -80,10 +80,14 @@ mNextl.setTypeface(BLUNT);
     }
     private void changeFragment(){
         Random r = new Random();
-        int num = r.nextInt(1);
+        int num = r.nextInt(2);
         switch (num){
             case 0:{
                 getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel4Fragment()).addToBackStack(null).commit();
+                break;
+            }
+            case 1:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
                 break;
             }
 

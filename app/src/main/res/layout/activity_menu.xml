@@ -14,7 +14,7 @@
         android:layout_height="69dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -24,9 +24,10 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/btnblitz"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <Button
         android:id="@+id/btnblitz"
@@ -36,9 +37,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="204dp"
         android:background="@drawable/fire"
-        android:text="Velocidad"
+        android:text="Mente Rapida"
         android:textColor="@android:color/black"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,20 +49,21 @@
 
     <Button
         android:id="@+id/btnextras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="66dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginLeft="148dp"
-        android:layout_marginRight="148dp"
+        android:layout_width="86dp"
+        android:layout_height="82dp"
         android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
         android:layout_marginTop="453dp"
-        android:text="Extras"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/extras"
         android:onClick="extras"
+        android:text="Extras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

@@ -102,7 +102,7 @@ mop3.setTypeface(BLUNT);
         int num = r.nextInt(1);
         switch (num){
             case 0:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel3Fragment()).addToBackStack(null).commit();
                 break;
             }
 

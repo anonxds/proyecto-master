@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/darkpaper"
     android:layout_height="match_parent"
     tools:context="com.example.yonathan.proyecto.Board.NeutralActivity">
-
 
 
     <TextView
         android:id="@+id/txtneutral"
         android:layout_width="233dp"
-        android:layout_height="35dp"
+        android:layout_height="79dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="39dp"
@@ -19,6 +19,7 @@
         android:layout_marginRight="72dp"
         android:layout_marginBottom="55dp"
         android:text="@string/neutral"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/board"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.957"

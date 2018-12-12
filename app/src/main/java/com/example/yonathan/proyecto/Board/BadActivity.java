@@ -2,6 +2,7 @@ package com.example.yonathan.proyecto.Board;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,6 +46,7 @@ public class BadActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +61,10 @@ public class BadActivity extends AppCompatActivity {
         shite=findViewById(R.id.txtbad);
         name=findViewById(R.id.Tunombre);
         medal=findViewById(R.id.imageView);
+
+        Typeface ANGEL = Typeface.createFromAsset(getAssets(), "ANGEL.ttf");
+        shite.setTypeface(ANGEL);
+
         //visibilidad
         shite.setVisibility(View.GONE);
         add.setVisibility(View.GONE);
@@ -68,6 +74,7 @@ public class BadActivity extends AppCompatActivity {
         nombre.requestFocus();
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED,InputMethodManager.HIDE_IMPLICIT_ONLY);
+
         initializeFirebase();
        listData();
         this.recieveData();

@@ -23,9 +23,9 @@
         Identifica rapidamente los errores ortograficos, con un limite de tiempo.
     </string>
 
-    <string name="bad"> Se lo que se siente perder, pero nunca sabre lo que se siente rendirse  </string>
-    <string name="neutral"> No importa a que obstaculo te enfrentes, lucha por seguir adelante </string>
-    <string name="good">No te sacrifiques por los sueños de otros, muere por el tuyo.  </string>
+    <string name="bad"> Se lo que se siente perder pero nunca sabre lo que se siente rendirse  </string>
+    <string name="neutral"> No importa a que obstaculo te enfrentes lucha por seguir adelante </string>
+    <string name="good">No te sacrifiques por los sueños de otros muere por el tuyo  </string>
     <string name="gameover">Aprende a apreciar lo que tienes antes de que el tiempo te enseñe a apreciar lo que tuviste...
 </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
