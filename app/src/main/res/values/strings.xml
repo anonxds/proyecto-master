@@ -6,6 +6,9 @@
 
     <string name="trivia1">“haber + sustantivo” es utilizada para expresar la existencia de algo</string>
 
+    <string name="trivia2"></string>
+
+
     <string name="ps"><![CDATA[<b><font color=#FF0000>hola</font></b>]]>con Will Brandford con sus problemas mentales y estreses que se ha ganado
     con el trabajo duro.</string>
 
@@ -23,9 +26,11 @@
     <string name="bad"> Se lo que se siente perder, pero nunca sabre lo que se siente rendirse  </string>
     <string name="neutral"> No importa a que obstaculo te enfrentes, lucha por seguir adelante </string>
     <string name="good">No te sacrifiques por los sueños de otros, muere por el tuyo.  </string>
+    <string name="gameover">Aprende a apreciar lo que tienes antes de que el tiempo te enseñe a apreciar lo que tuviste...
+</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Primeracolm">
-       En la vida hay bastantes netos hay que <![CDATA[<b><font color=#FF0000>cruear</font></b>]]>
+       Se me  <![CDATA[<b><font color=#FF0000>callo</font></b>]]> la mujer de la vida
 
     </string>
 
@@ -68,9 +73,13 @@
 
 
     <string name="n5">
-
+    Esta es una adivinanza, una adivinanza caprichosa, Adivina tú, despitasdo juglar,
+        los versos que tienes que adivinar:
     </string>
     <string name="n5_1">
+        ¿cómo se llama la casa de cuatro recáramas enrajada por blancos garrotes en la que viven dos señores:
+        unom sale y otro viene?, piensas mucho y no lo resuelves, respira un poco y mejor siente te aclaro con estos versos:
+        es el reloj mecanico el enamorado ciego el corredor incansable y vidrio mas fragil...
 
     </string>
     <string name="n5_2">

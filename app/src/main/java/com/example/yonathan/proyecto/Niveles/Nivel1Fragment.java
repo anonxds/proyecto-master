@@ -73,7 +73,7 @@ mhabian.setTypeface(BLUNT);
         Typeface Architex = Typeface.createFromAsset(getActivity().getAssets(), "Architex.ttf");
         p1.setTypeface(Architex);
 
-        p1.setText(Html.fromHtml(getString(R.string.Primeracolm)));
+        p1.setText(Html.fromHtml(getString(R.string.frase1)));
 
 
         mabian.setOnClickListener(new View.OnClickListener() {

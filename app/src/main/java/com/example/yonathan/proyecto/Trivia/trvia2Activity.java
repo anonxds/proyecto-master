@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.WindowManager;
-import android.os.CountDownTimer;
 import android.widget.TextView;
 
 import com.example.yonathan.proyecto.R;
@@ -14,20 +13,20 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class trivia1Activity extends AppCompatActivity {
+public class trvia2Activity extends AppCompatActivity {
+
 
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mDatabaseReference;
+    TextView trival;
 
-TextView trival;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trivia1);
+        setContentView(R.layout.activity_trvia2);
         TextView t =findViewById(R.id.triva);
-        initializeFirebase();
-add();
-
+    initializeFirebase();
+    add();
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
@@ -53,14 +52,13 @@ add();
     }
 
     public void add(){
-        String uno = "haber";
+        String uno = "Adivinanza";
         trival=findViewById(R.id.triva);
         String t1 = trival.getText().toString();
 
-       triviamodel p = new triviamodel();
-       p.setTrivia(t1);
-       p.setUid(uno);
+        triviamodel p = new triviamodel();
+        p.setTrivia(t1);
+        p.setUid(uno);
         mDatabaseReference.child("trivia").child(p.getUid()).setValue(p);
     }
-
 }

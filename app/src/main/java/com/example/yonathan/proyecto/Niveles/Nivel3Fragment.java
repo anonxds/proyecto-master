@@ -50,7 +50,7 @@ public class Nivel3Fragment extends Fragment {
         Typeface BLUNT = Typeface.createFromAsset(getActivity().getAssets(), "BLUNT.TTF");
 mNext2.setTypeface(BLUNT);
 mNextl.setTypeface(BLUNT);
-        mNextl.setOnClickListener(new View.OnClickListener() {
+        mNext2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -61,7 +61,7 @@ mNextl.setTypeface(BLUNT);
 
             }
         });
-        mNext2.setOnClickListener(new View.OnClickListener() {
+        mNextl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 puntos = 2;

@@ -3,14 +3,19 @@ package com.example.yonathan.proyecto.Niveles;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
+import com.example.yonathan.proyecto.Trivia.trivia1Activity;
+import com.example.yonathan.proyecto.Trivia.trvia2Activity;
 
 import java.util.Random;
 
@@ -27,50 +32,54 @@ public class Nivel5Fragment extends Fragment {
         public void setName(int puntos);
         public void setMalosPuntos(int intentos);
     }
+TextView oracion,adv;
 
-    private Button mop1,mop2,mop3;
     Nivel1Fragment.OnScoreListener onScoreListener;
     int puntos, intentos;
+    Button conf;
+    TextView res;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_nivel5, container, false);
+
         // Inflate the layout for this fragment
-        mop1=v.findViewById(R.id.op1);
-        mop2=v.findViewById(R.id.op2);
-        mop3=v.findViewById(R.id.op3);
-
-        mop1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intentos = 1;
-                onScoreListener.setMalopuntos(intentos);
-                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+       oracion=v.findViewById(R.id.or2);
+       adv=v.findViewById(R.id.adivinanzaultma);
+       res=v.findViewById(R.id.editText);
+       conf=v.findViewById(R.id.btnconfimar);
+        Typeface Architex = Typeface.createFromAsset(getActivity().getAssets(), "Architex.ttf");
+        oracion.setTypeface(Architex);
+        adv.setTypeface(Architex);
 
 
-            }
-        });
+             conf.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+     if(res.getText().toString().equals("corazon")|| res.getText().toString().equals("Corazon")){
+         puntos = 20;
+         onScoreListener.setName(puntos);
+         Intent i = new Intent(getActivity(), trvia2Activity.class);
+         startActivity(i);
+     }
+     else {
+         Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
-        mop2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+     }
+                 }
+             });
 
+/*
                 switch (v.getId()){
 
                     case  R.id.op2:
                         changeFragment();
                         break;
                 }
-            }
-        });
+                */
 
-        mop3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intentos = 1;
-                onScoreListener.setMalopuntos(intentos);
-            }
-        });
+
+
 
         return v;
     }
