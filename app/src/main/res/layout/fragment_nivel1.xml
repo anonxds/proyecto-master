@@ -80,11 +80,12 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="96dp"
-        android:gravity="center"
         android:background="@drawable/notebook"
+        android:gravity="center"
         android:shadowColor="@color/colorAccent"
         android:text="@string/frase1"
         android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

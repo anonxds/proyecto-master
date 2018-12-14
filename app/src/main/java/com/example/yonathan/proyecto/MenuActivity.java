@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto;
+ package com.example.yonathan.proyecto;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -42,6 +42,7 @@ public class MenuActivity extends AppCompatActivity {
         mextras=findViewById(R.id.btnextras);
         mextras.setTypeface(BLUNT);
         mblitz.setTypeface(BLUNT);
+        mstory.setVisibility(View.GONE);
         mstory.setTypeface(BLUNT);
         mstory.setOnClickListener(new View.OnClickListener() {
             @Override
