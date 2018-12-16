@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.yonathan.proyecto.BlitzActivity;
 import com.example.yonathan.proyecto.R;
 import com.example.yonathan.proyecto.Trivia.trivia1Activity;
 
@@ -48,6 +49,7 @@ public class Nivel1Fragment extends Fragment {
     public interface OnScoreListener{
         public void setName(int score);
         public void setMalopuntos(int score);
+        public void changefragment();
     }
 
 
@@ -119,10 +121,11 @@ mhabian.setTypeface(BLUNT);
 
                 score = 5;
 
+
                 onScoreListener.setName(score);
                 switch (v.getId()){
                     case  R.id.btnhabian:
-                        changeFragment();
+                        onScoreListener.changefragment();
                         break;
                 }
 
@@ -134,22 +137,35 @@ mhabian.setTypeface(BLUNT);
         return v;
     }
 
-    private void changeFragment(){
-        Random r = new Random();
-        int num = r.nextInt(2);
-        switch (num){
-            case 0:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel3Fragment()).addToBackStack(null).commit();
-                break;
-            }
-            case 1:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
-                break;
-            }
-
-        }
-
-    }
+//    private void changeFragment(){
+//
+//
+//
+//        switch (0){
+//            case 0 :{
+//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel3Fragment()).addToBackStack(null).commit();
+//                break;
+//            }
+//            case 1:{
+//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
+//                break;
+//            }
+//            case 2:{
+//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel4Fragment()).addToBackStack(null).commit();
+//                break;
+//            }
+//            case 3:{
+//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
+//                break;
+//            }
+//            case 4:{
+//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel6Fragment()).addToBackStack(null).commit();
+//                break;
+//            }
+//
+//        }
+//
+//    }
 
     @Override
     public void onAttach(Activity activity) {

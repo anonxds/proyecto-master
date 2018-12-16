@@ -29,6 +29,7 @@ public class Nivel3Fragment extends Fragment {
     public interface OnScoreListener{
         public void setName(int score);
         public void setMalopuntos(int score);
+        public void changefragment();
     }
 
 
@@ -68,7 +69,7 @@ mNextl.setTypeface(BLUNT);
                 onScoreListener.setName(puntos);
                 switch (v.getId()){
                     case  R.id.btncor1:
-                        changeFragment();
+                        onScoreListener.changefragment();
                         break;
                 }
 
@@ -79,18 +80,28 @@ mNextl.setTypeface(BLUNT);
         return v;
     }
     private void changeFragment(){
-        Random r = new Random();
-        int num = r.nextInt(2);
-        switch (num){
-            case 0:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel4Fragment()).addToBackStack(null).commit();
+
+        switch (2){
+            case 0 :{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel3Fragment()).addToBackStack(null).commit();
                 break;
             }
             case 1:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
+                break;
+            }
+            case 2:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel4Fragment()).addToBackStack(null).commit();
+                break;
+            }
+            case 3:{
                 getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
                 break;
             }
-
+            case 4:{
+                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel6Fragment()).addToBackStack(null).commit();
+                break;
+            }
 
         }
 
