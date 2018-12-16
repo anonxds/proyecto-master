@@ -54,10 +54,6 @@ public class Nivel1Fragment extends Fragment {
 
 
 
-
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -81,11 +77,7 @@ mhabian.setTypeface(BLUNT);
         mabian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // mpal1.setText("abian");
 
-                //   mal.show();
-
-                //      intentos = 1 + intentos;
                 intentos =1;
                 onScoreListener.setMalopuntos(intentos);
 
@@ -99,8 +91,6 @@ mhabian.setTypeface(BLUNT);
         mavian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //mpal1.setText("avian");
-
 
                 intentos = 1;
 
@@ -115,9 +105,6 @@ mhabian.setTypeface(BLUNT);
         mhabian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //mpal1.setText("habian");
-
-                //        correct.show();
 
                 score = 5;
 
@@ -137,35 +124,6 @@ mhabian.setTypeface(BLUNT);
         return v;
     }
 
-//    private void changeFragment(){
-//
-//
-//
-//        switch (0){
-//            case 0 :{
-//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel3Fragment()).addToBackStack(null).commit();
-//                break;
-//            }
-//            case 1:{
-//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
-//                break;
-//            }
-//            case 2:{
-//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel4Fragment()).addToBackStack(null).commit();
-//                break;
-//            }
-//            case 3:{
-//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
-//                break;
-//            }
-//            case 4:{
-//                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel6Fragment()).addToBackStack(null).commit();
-//                break;
-//            }
-//
-//        }
-//
-//    }
 
     @Override
     public void onAttach(Activity activity) {

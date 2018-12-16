@@ -43,20 +43,6 @@ EditText res;
         res = v.findViewById(R.id.txtres4);
 
 
-
-               /*
-
-
-        nop2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intentos = 1;
-                onScoreListener.setMalopuntos(intentos);
-                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-*/
 nop1.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
@@ -87,33 +73,7 @@ nop1.setOnClickListener(new View.OnClickListener() {
 
         return v;
     }
-    private void changeFragment(){
 
-        switch (1){
-            case 0 :{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel3Fragment()).addToBackStack(null).commit();
-                break;
-            }
-            case 1:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel2Fragment()).addToBackStack(null).commit();
-                break;
-            }
-            case 2:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel4Fragment()).addToBackStack(null).commit();
-                break;
-            }
-            case 3:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel5Fragment()).addToBackStack(null).commit();
-                break;
-            }
-            case 4:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel6Fragment()).addToBackStack(null).commit();
-                break;
-            }
-
-        }
-
-    }
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
