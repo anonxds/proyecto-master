@@ -1,10 +1,12 @@
 package com.example.yonathan.proyecto.Info;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -12,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.yonathan.proyecto.R;
+import com.example.yonathan.proyecto.StoryMode.Capitulo1.CapituloIActivity;
 
 public class HisInfoActivity extends AppCompatActivity {
 TextView hi;
@@ -36,7 +39,8 @@ hi.setText(Html.fromHtml(getString(R.string.historia)));
         p.y=-20;
         getWindow().setAttributes(p);
     }
-    public void messaje(){
-
+    public void messaje(View view){
+        Intent i = new Intent(getApplicationContext(), CapituloIActivity.class);
+        startActivity(i);
     }
 }

@@ -42,7 +42,7 @@ public class MenuActivity extends AppCompatActivity {
         mextras=findViewById(R.id.btnextras);
         mextras.setTypeface(BLUNT);
         mblitz.setTypeface(BLUNT);
-        mstory.setVisibility(View.GONE);
+
         mstory.setTypeface(BLUNT);
         mstory.setOnClickListener(new View.OnClickListener() {
             @Override

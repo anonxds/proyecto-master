@@ -54,13 +54,15 @@
             android:theme="@style/AppTheme.PopMe" />
         <activity android:name=".Board.gameover" />
         <activity android:name=".Trivia.ExtrasActivity" />
-        <activity android:name=".Trivia.trvia2Activity"
-            android:theme="@style/AppTheme.PopMe"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Trivia.trivia3Activity"
-            android:theme="@style/AppTheme.PopMe"
-            android:screenOrientation="portrait"></activity>
-
+        <activity
+            android:name=".Trivia.trvia2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity
+            android:name=".Trivia.trivia3Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity android:name=".StoryMode.Capitulo1.CapituloIActivity"></activity>
     </application>
 
 </manifest>
