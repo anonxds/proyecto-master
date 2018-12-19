@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto;
+package com.example.yonathan.proyecto.Blitz;
 
 
 import android.content.Intent;
@@ -11,10 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.yonathan.proyecto.Board.BadActivity;
-import com.example.yonathan.proyecto.Board.GoodActivity;
-import com.example.yonathan.proyecto.Board.NeutralActivity;
-import com.example.yonathan.proyecto.Board.gameover;
+import com.example.yonathan.proyecto.Blitz.Board.BadActivity;
+import com.example.yonathan.proyecto.Blitz.Board.GoodActivity;
+import com.example.yonathan.proyecto.Blitz.Board.NeutralActivity;
+import com.example.yonathan.proyecto.Blitz.Board.gameover;
+import com.example.yonathan.proyecto.R;
 
 
 /**

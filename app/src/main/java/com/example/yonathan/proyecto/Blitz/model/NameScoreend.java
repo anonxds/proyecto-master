@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto.model;
+package com.example.yonathan.proyecto.Blitz.model;
 
 public class NameScoreend {
 

@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto.Niveles;
+package com.example.yonathan.proyecto.Blitz.Niveles;
 
 
 import android.app.Activity;
@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
-
-import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.

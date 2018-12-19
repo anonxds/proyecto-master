@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto.Niveles;
+package com.example.yonathan.proyecto.Blitz.Niveles;
 
 
 import android.app.Activity;
@@ -13,12 +13,10 @@ import android.widget.TextView;
 
 import com.example.yonathan.proyecto.R;
 
-import java.util.Random;
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Nivel7Fragment extends Fragment {
+public class Nivel8Fragment extends Fragment {
     public interface OnScoreListener{
         public void setName(int puntos);
         public void setMalosPuntos(int intentos);
@@ -27,7 +25,7 @@ public class Nivel7Fragment extends Fragment {
     Nivel1Fragment.OnScoreListener onScoreListener;
 
 
-    public Nivel7Fragment() {
+    public Nivel8Fragment() {
         // Required empty public constructor
     }
 
@@ -37,51 +35,23 @@ private Button resp1, resp2;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.fragment_nivel7, container, false);
+        View v = inflater.inflate(R.layout.fragment_nivel8, container, false);
         oracion1=v.findViewById(R.id.txtn3);
         Typeface Architex = Typeface.createFromAsset(getActivity().getAssets(), "Architex.ttf");
 
         oracion1.setTypeface(Architex);
-        resp1=v.findViewById(R.id.btncor1);
-       resp2=v.findViewById(R.id.btncor2);
-
-       resp1.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               puntos = 2;
-               onScoreListener.setName(puntos);
-               switch (v.getId()){
-
-                   case  R.id.btncor1:
-                       changeFragment();
-                       break;
-               }
-           }
-       });
-       resp2.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               intentos = 1;
-               onScoreListener.setMalopuntos(intentos);
-           }
-       });
-
         // Inflate the layout for this fragment
-        return v;
-    }
+     resp1=v.findViewById(R.id.btncor1);
+       resp2=v.findViewById(R.id.btncor1);
 
-    private void changeFragment(){
-        Random r = new Random();
-        int num = r.nextInt(1);
-        switch (num){
-            case 0:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel8Fragment()).addToBackStack(null).commit();
-                break;
+        resp1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentos = 1;
+                onScoreListener.setMalopuntos(intentos);
             }
-
-
-        }
-
+        });
+        return v;
     }
 
     @Override
@@ -92,5 +62,6 @@ private Button resp1, resp2;
         }
         catch (Exception e){}
     }
+
 
 }

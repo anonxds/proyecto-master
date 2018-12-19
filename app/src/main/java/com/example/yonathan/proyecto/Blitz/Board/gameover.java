@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto.Board;
+package com.example.yonathan.proyecto.Blitz.Board;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

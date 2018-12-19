@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto.Board;
+package com.example.yonathan.proyecto.Blitz.Board;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import com.example.yonathan.proyecto.MenuActivity;
 import com.example.yonathan.proyecto.R;
-import com.example.yonathan.proyecto.model.NameScoreend;
+import com.example.yonathan.proyecto.Blitz.model.NameScoreend;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

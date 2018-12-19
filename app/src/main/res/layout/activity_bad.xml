@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/balckpapelr"
-    tools:context="com.example.yonathan.proyecto.Board.BadActivity">
+    tools:context="com.example.yonathan.proyecto.Blitz.Board.BadActivity">
 
     <TextView
         android:id="@+id/txtbad"

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="450dp"
-    tools:context="com.example.yonathan.proyecto.Niveles.Nivel6Fragment">
+    tools:context="com.example.yonathan.proyecto.Blitz.Niveles.Nivel6Fragment">
 
     <!-- TODO: Update blank fragment layout -->
 

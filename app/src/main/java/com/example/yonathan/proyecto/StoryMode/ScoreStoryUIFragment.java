@@ -1,7 +1,6 @@
 package com.example.yonathan.proyecto.StoryMode;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.yonathan.proyecto.Board.GoodActivity;
 import com.example.yonathan.proyecto.R;
 
 /**
@@ -57,7 +55,7 @@ int heart;
         if(score.getText().toString().equals("3")){
 
             heart3.setVisibility(View.GONE);
-            
+
         }
 
     }

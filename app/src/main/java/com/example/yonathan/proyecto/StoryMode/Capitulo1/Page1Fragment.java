@@ -13,7 +13,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.yonathan.proyecto.Niveles.Nivel1Fragment;
 import com.example.yonathan.proyecto.R;
 
 /**

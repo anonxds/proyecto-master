@@ -1,21 +1,17 @@
  package com.example.yonathan.proyecto;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.transition.Fade;
 import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 import com.example.yonathan.proyecto.Info.BlitzInfoActivity;
 import com.example.yonathan.proyecto.Info.HisInfoActivity;
-import com.example.yonathan.proyecto.Trivia.ExtrasActivity;
+import com.example.yonathan.proyecto.Blitz.Trivia.ExtrasActivity;
 
 public class MenuActivity extends AppCompatActivity {
     private Button mstory,mblitz,mextras;

@@ -29,19 +29,19 @@
             android:name=".MenuActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BlitzActivity"
+            android:name=".Blitz.BlitzActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Board.BadActivity"
+            android:name=".Blitz.Board.BadActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Board.NeutralActivity"
+            android:name=".Blitz.Board.NeutralActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Board.GoodActivity"
+            android:name=".Blitz.Board.GoodActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Trivia.trivia1Activity"
+            android:name=".Blitz.Trivia.trivia1Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.PopMe" />
         <activity
@@ -52,14 +52,14 @@
             android:name=".Info.BlitzInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.PopMe" />
-        <activity android:name=".Board.gameover" />
-        <activity android:name=".Trivia.ExtrasActivity" />
+        <activity android:name=".Blitz.Board.gameover" />
+        <activity android:name=".Blitz.Trivia.ExtrasActivity" />
         <activity
-            android:name=".Trivia.trvia2Activity"
+            android:name=".Blitz.Trivia.trvia2Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.PopMe" />
         <activity
-            android:name=".Trivia.trivia3Activity"
+            android:name=".Blitz.Trivia.trivia3Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.PopMe" />
         <activity android:name=".StoryMode.Capitulo1.CapituloIActivity"></activity>

@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto.Niveles;
+package com.example.yonathan.proyecto.Blitz.Niveles;
 
 
 import android.app.Activity;
@@ -14,10 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
-import com.example.yonathan.proyecto.Trivia.trivia1Activity;
-import com.example.yonathan.proyecto.Trivia.trvia2Activity;
-
-import java.util.Random;
+import com.example.yonathan.proyecto.Blitz.Trivia.trvia2Activity;
 
 /**
  * A simple {@link Fragment} subclass.

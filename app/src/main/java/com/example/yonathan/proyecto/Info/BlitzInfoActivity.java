@@ -1,7 +1,6 @@
 package com.example.yonathan.proyecto.Info;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -12,8 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
-import com.example.yonathan.proyecto.BlitzActivity;
-import com.example.yonathan.proyecto.MenuActivity;
+import com.example.yonathan.proyecto.Blitz.BlitzActivity;
 import com.example.yonathan.proyecto.R;
 
 public class BlitzInfoActivity extends AppCompatActivity {

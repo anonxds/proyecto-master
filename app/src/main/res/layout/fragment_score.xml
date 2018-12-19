@@ -6,7 +6,7 @@
 
     android:layout_height="120dp"
     android:padding="16dp"
-    tools:context=".ScoreFragment"
+    tools:context=".Blitz.ScoreFragment"
     tools:layout_editor_absoluteY="25dp">
 
     <!-- TODO: Update blank fragment layout -->

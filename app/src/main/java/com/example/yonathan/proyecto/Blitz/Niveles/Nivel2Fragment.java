@@ -1,10 +1,10 @@
-package com.example.yonathan.proyecto.Niveles;
+package com.example.yonathan.proyecto.Blitz.Niveles;
 
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,17 +15,22 @@ import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
 
-import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Nivel3Fragment extends Fragment {
+public class Nivel2Fragment extends Fragment {
+    private Button mop1, mop2,mop3;
+    int score,intentos;
+    private TextView p2;
+
+
 
     Nivel1Fragment.OnScoreListener onScoreListener;
-    public Nivel3Fragment() {
+    public Nivel2Fragment() {
         // Required empty public constructor
     }
+
     public interface OnScoreListener{
         public void setName(int score);
         public void setMalopuntos(int score);
@@ -33,52 +38,65 @@ public class Nivel3Fragment extends Fragment {
     }
 
 
-    private Button mNextl,mNext2;
-    private int intentos, puntos;
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_nivel3, container, false);
-
+        View view =  inflater.inflate(R.layout.fragment_nivel2, container, false);
         // Inflate the layout for this fragment
-        mNextl=v.findViewById(R.id.btncor1);
-        mNext2=v.findViewById(R.id.btncor2);
-        TextView p2 =v.findViewById(R.id.txtn3);
-        p2.setText(Html.fromHtml(getString(R.string.Primeracolm)));
+        mop1=view.findViewById(R.id.btnop1);
+        mop2=view.findViewById(R.id.btnop2);
+        mop3=view.findViewById(R.id.btnop3);
+        p2=view.findViewById(R.id.textView);
+
+        p2.setText(Html.fromHtml(getString(R.string.frase1)));
+        Typeface BLUNT = Typeface.createFromAsset(getActivity().getAssets(), "BLUNT.TTF");
+mop1.setTypeface(BLUNT);
+mop2.setTypeface(BLUNT);
+mop3.setTypeface(BLUNT);
         Typeface Architex = Typeface.createFromAsset(getActivity().getAssets(), "Architex.ttf");
         p2.setTypeface(Architex);
-        Typeface BLUNT = Typeface.createFromAsset(getActivity().getAssets(), "BLUNT.TTF");
-mNext2.setTypeface(BLUNT);
-mNextl.setTypeface(BLUNT);
-        mNext2.setOnClickListener(new View.OnClickListener() {
+
+        mop1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //mantener el dato numerico en todos los fragmentos
                 intentos = 1;
                 onScoreListener.setMalopuntos(intentos);
+                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
+
+            }
+        });
+        mop2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentos = 1;
+                onScoreListener.setMalopuntos(intentos);
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
             }
         });
-        mNextl.setOnClickListener(new View.OnClickListener() {
+        mop3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                puntos = 2;
-                onScoreListener.setName(puntos);
+                score  = 5;
+                onScoreListener.setName(score);
                 switch (v.getId()){
-                    case  R.id.btncor1:
+                    case  R.id.btnop3:
                         onScoreListener.changefragment();
                         break;
                 }
 
 
+
             }
         });
-
-        return v;
+        return view;
     }
+
 
     @Override
     public void onAttach(Activity activity) {
@@ -89,5 +107,7 @@ mNextl.setTypeface(BLUNT);
         catch (Exception e){}
     }
 }
+
+
 
 

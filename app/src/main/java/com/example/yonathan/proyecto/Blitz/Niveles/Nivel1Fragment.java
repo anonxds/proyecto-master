@@ -1,35 +1,45 @@
-package com.example.yonathan.proyecto.Niveles;
+package com.example.yonathan.proyecto.Blitz.Niveles;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.os.CountDownTimer;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
-
-import java.util.Random;
+import com.example.yonathan.proyecto.Blitz.Trivia.trivia1Activity;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Nivel2Fragment extends Fragment {
-    private Button mop1, mop2,mop3;
+public class Nivel1Fragment extends Fragment {
+
+    private Button mabian, mavian, mhabian;
+    private EditText mpal1;
+    OnScoreListener onScoreListener;
     int score,intentos;
-    private TextView p2;
+    private TextView p1;
 
 
 
-    Nivel1Fragment.OnScoreListener onScoreListener;
-    public Nivel2Fragment() {
+    private CountDownTimer count;
+
+    private Boolean timerunning;
+    private Nivel1Fragment listend;
+
+
+    public Nivel1Fragment() {
         // Required empty public constructor
     }
 
@@ -41,62 +51,74 @@ public class Nivel2Fragment extends Fragment {
 
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_nivel2, container, false);
+        View v = inflater.inflate(R.layout.fragment_nivel1, container, false);
         // Inflate the layout for this fragment
-        mop1=view.findViewById(R.id.btnop1);
-        mop2=view.findViewById(R.id.btnop2);
-        mop3=view.findViewById(R.id.btnop3);
-        p2=view.findViewById(R.id.textView);
 
-        p2.setText(Html.fromHtml(getString(R.string.frase1)));
+        mabian=v.findViewById(R.id.btnabian);
+        mavian=v.findViewById(R.id.btnavian);
+        mhabian=v.findViewById(R.id.btnhabian);
+        p1=v.findViewById(R.id.textView5);
         Typeface BLUNT = Typeface.createFromAsset(getActivity().getAssets(), "BLUNT.TTF");
-mop1.setTypeface(BLUNT);
-mop2.setTypeface(BLUNT);
-mop3.setTypeface(BLUNT);
+mabian.setTypeface(BLUNT);
+mavian.setTypeface(BLUNT);
+mhabian.setTypeface(BLUNT);
         Typeface Architex = Typeface.createFromAsset(getActivity().getAssets(), "Architex.ttf");
-        p2.setTypeface(Architex);
+        p1.setTypeface(Architex);
 
-        mop1.setOnClickListener(new View.OnClickListener() {
+        p1.setText(Html.fromHtml(getString(R.string.frase1)));
+
+
+        mabian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //mantener el dato numerico en todos los fragmentos
-                intentos = 1;
+
+                intentos =1;
                 onScoreListener.setMalopuntos(intentos);
+
+
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
 
 
             }
         });
-        mop2.setOnClickListener(new View.OnClickListener() {
+
+        mavian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 intentos = 1;
+
                 onScoreListener.setMalopuntos(intentos);
-                Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getActivity(),trivia1Activity.class);
+                startActivity(i);
+
+
 
             }
         });
-        mop3.setOnClickListener(new View.OnClickListener() {
+        mhabian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                score  = 5;
+
+                score = 5;
+
+
                 onScoreListener.setName(score);
                 switch (v.getId()){
-                    case  R.id.btnop3:
+                    case  R.id.btnhabian:
                         onScoreListener.changefragment();
                         break;
                 }
 
 
-
             }
+
         });
-        return view;
+
+        return v;
     }
 
 
@@ -104,12 +126,9 @@ mop3.setTypeface(BLUNT);
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            onScoreListener= (Nivel1Fragment.OnScoreListener) activity;
+            onScoreListener= (OnScoreListener) activity;
         }
         catch (Exception e){}
     }
 }
-
-
-
 

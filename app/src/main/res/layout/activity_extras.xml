@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/darkpaper"
-    tools:context="com.example.yonathan.proyecto.Trivia.ExtrasActivity">
+    tools:context="com.example.yonathan.proyecto.Blitz.Trivia.ExtrasActivity">
 
     <ListView
         android:id="@+id/listatrivia"

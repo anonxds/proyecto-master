@@ -1,19 +1,11 @@
 package com.example.yonathan.proyecto.StoryMode.Capitulo1;
 
-import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.TextView;
 
-import com.example.yonathan.proyecto.Niveles.Nivel1Fragment;
 import com.example.yonathan.proyecto.R;
-import com.example.yonathan.proyecto.ScoreFragment;
 import com.example.yonathan.proyecto.StoryMode.ScoreStoryUIFragment;
 
 public class CapituloIActivity extends AppCompatActivity implements Page1Fragment.Mod {

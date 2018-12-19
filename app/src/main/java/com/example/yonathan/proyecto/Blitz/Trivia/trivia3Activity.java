@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto.Trivia;
+package com.example.yonathan.proyecto.Blitz.Trivia;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

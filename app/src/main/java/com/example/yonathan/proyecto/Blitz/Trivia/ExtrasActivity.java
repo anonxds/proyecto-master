@@ -1,4 +1,4 @@
-package com.example.yonathan.proyecto.Trivia;
+package com.example.yonathan.proyecto.Blitz.Trivia;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.yonathan.proyecto.MenuActivity;
 import com.example.yonathan.proyecto.R;
-import com.example.yonathan.proyecto.model.triviamodel;
+import com.example.yonathan.proyecto.Blitz.model.triviamodel;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

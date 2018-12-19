@@ -1,20 +1,20 @@
-package com.example.yonathan.proyecto;
+package com.example.yonathan.proyecto.Blitz;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.yonathan.proyecto.Niveles.Nivel1Fragment;
-import com.example.yonathan.proyecto.Niveles.Nivel2Fragment;
-import com.example.yonathan.proyecto.Niveles.Nivel3Fragment;
-import com.example.yonathan.proyecto.Niveles.Nivel4Fragment;
-import com.example.yonathan.proyecto.Niveles.Nivel5Fragment;
-import com.example.yonathan.proyecto.Niveles.randomizer;
+import com.example.yonathan.proyecto.Blitz.Niveles.Nivel1Fragment;
+import com.example.yonathan.proyecto.Blitz.Niveles.Nivel2Fragment;
+import com.example.yonathan.proyecto.Blitz.Niveles.Nivel3Fragment;
+import com.example.yonathan.proyecto.Blitz.Niveles.Nivel4Fragment;
+import com.example.yonathan.proyecto.Blitz.Niveles.Nivel5Fragment;
+import com.example.yonathan.proyecto.Blitz.Niveles.randomizer;
+import com.example.yonathan.proyecto.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.OnScoreListener {
 
