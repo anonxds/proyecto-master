@@ -42,13 +42,22 @@ public interface Mod{
         paf1=v.findViewById(R.id.txtparrafo1);
         paf1.setVisibility(View.GONE);
         prueba=v.findViewById(R.id.perder);
-        prueba.setVisibility(View.GONE);
+     //   prueba.setVisibility(View.GONE);
         resp1=v.findViewById(R.id.oracion1);
         resp2=v.findViewById(R.id.oracion2);
         op1=v.findViewById(R.id.respuesta);
         op2=v.findViewById(R.id.txtresp2);
 
 
+
+prueba.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        if(op1.getText().toString().equals("correcto")){
+            resp1.setText("hola");
+        }
+    }
+});
 
 
      //   final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
@@ -80,7 +89,7 @@ public interface Mod{
         */
         resp2.setOnTouchListener(new ChoiceTouchListener());
         op1.setOnDragListener(dragListener);
-       // resp1.setOnLongClickListener(longClickListener);
+
         return v;
     }
     private final class ChoiceTouchListener implements View.OnTouchListener {
@@ -124,12 +133,16 @@ public interface Mod{
                 case DragEvent.ACTION_DRAG_ENTERED:
                     if (vData.getId() == R.id.oracion1);
                 {
-                 op1.setText("in correcto");
+                //    resp1.setVisibility(View.GONE);
+                    resp2.setVisibility(View.GONE);
+                 op1.setText("correcto");
                 }
                 break;
                 case DragEvent.ACTION_DRAG_ENDED:
+
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
+
                     break;
             }
             return true;
