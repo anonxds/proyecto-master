@@ -3,10 +3,10 @@ package com.example.yonathan.proyecto.StoryMode.Capitulo1;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.ClipData;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
-import android.app.Fragment;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -64,7 +64,7 @@ public interface Mod{
         btnaceptar.setVisibility(View.GONE);
         btnreset.setVisibility(View.GONE);
 
-        prueba=v.findViewById(R.id.perder);
+      //  prueba=v.findViewById(R.id.perder);
 
 
 
@@ -87,13 +87,13 @@ public interface Mod{
         });
 
         //matar un corazon
-        prueba.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int intento = 1;
-                mod.hearts(intento);
-            }
-        });
+//        prueba.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                int intento = 1;
+//                mod.hearts(intento);
+//            }
+//        });
 
 
         btnaceptar.setOnClickListener(new View.OnClickListener() {
