@@ -28,9 +28,11 @@ public class Page1Fragment extends Fragment {
     public Page1Fragment() {
         // Required empty public constructor
     }
-    TextView paf1,resp1,resp2,op1,op2;
-Button prueba;
+
+Button prueba,btnmotiva,btnmotivar,btnaceptar,btnreset;
 Mod mod;
+TextView parrafo1,ttemblando,ttemblaba,parrafo2,replace,oracion;
+
 
 public interface Mod{
     public void hearts(int i);
@@ -39,38 +41,43 @@ public interface Mod{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.fragment_page1, container, false);;
-        paf1=v.findViewById(R.id.txtparrafo1);
-        paf1.setVisibility(View.GONE);
+      //textviews
+        parrafo1=v.findViewById(R.id.txtparrafo1);
+      parrafo2=v.findViewById(R.id.txtparrafo2);
+      parrafo2.setVisibility(View.GONE);
+      parrafo1.setVisibility(View.GONE);
+      ttemblaba=v.findViewById(R.id.dtemblaba);
+      ttemblando=v.findViewById(R.id.dtemblando);
+      ttemblaba.setVisibility(View.GONE);
+      ttemblando.setVisibility(View.GONE);
+      oracion=v.findViewById(R.id.or1);
+      oracion.setVisibility(View.GONE);
+      replace=v.findViewById(R.id.or1_22);
+      replace.setVisibility(View.GONE);
+      //botones
+        btnmotiva=v.findViewById(R.id.btnmotiva);
+        btnmotivar=v.findViewById(R.id.btnmotivar);
+        btnmotivar.setVisibility(View.GONE);
+        btnmotiva.setVisibility(View.GONE);
+        btnaceptar=v.findViewById(R.id.btnaceptar);
+        btnreset=v.findViewById(R.id.btnreset);
+        btnaceptar.setVisibility(View.GONE);
+        btnreset.setVisibility(View.GONE);
+
         prueba=v.findViewById(R.id.perder);
-     //   prueba.setVisibility(View.GONE);
-        resp1=v.findViewById(R.id.oracion1);
-        resp2=v.findViewById(R.id.oracion2);
-        op1=v.findViewById(R.id.respuesta);
-        op2=v.findViewById(R.id.txtresp2);
 
 
 
-prueba.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        if(op1.getText().toString().equals("correcto")){
-            resp1.setText("hola");
-        }
-    }
-});
+        final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
+       ConstraintLayout constraintLayout= v.findViewById(R.id.texto);
 
-
-     //   final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
-       // ConstraintLayout constraintLayout= v.findViewById(R.id.texto);
-/*
         constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (paf1.getVisibility() == View.GONE){
-                    paf1.setVisibility(View.VISIBLE);
-                    paf1.startAnimation(anim);
-                    prueba.setVisibility(View.VISIBLE);
+                if (parrafo1.getVisibility() == View.GONE){
+                    parrafo1.setVisibility(View.VISIBLE);
+                    parrafo1.startAnimation(anim);
                 }
                 else {
 
@@ -79,6 +86,7 @@ prueba.setOnClickListener(new View.OnClickListener() {
             }
         });
 
+        //matar un corazon
         prueba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,10 +94,23 @@ prueba.setOnClickListener(new View.OnClickListener() {
                 mod.hearts(intento);
             }
         });
-        */
-        resp2.setOnTouchListener(new ChoiceTouchListener());
-        op1.setOnDragListener(dragListener);
 
+
+        btnaceptar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(replace.getText().toString().equals("temblaba")){
+
+                }
+            }
+        });
+
+
+
+        ttemblando.setOnTouchListener(new ChoiceTouchListener());
+        ttemblando.setOnDragListener(dragListener);
+        ttemblaba.setOnDragListener((dragListener));
+        ttemblaba.setOnTouchListener(new ChoiceTouchListener());
         return v;
     }
     private final class ChoiceTouchListener implements View.OnTouchListener {
@@ -131,11 +152,17 @@ prueba.setOnClickListener(new View.OnClickListener() {
             final View vData = (View)event.getLocalState();
             switch (dragEvent){
                 case DragEvent.ACTION_DRAG_ENTERED:
-                    if (vData.getId() == R.id.oracion1);
+                    if (vData.getId() == R.id.dtemblaba);
                 {
-                //    resp1.setVisibility(View.GONE);
-                    resp2.setVisibility(View.GONE);
-                 op1.setText("correcto");
+                         ttemblaba.setVisibility(View.GONE);
+                         replace.setText(ttemblaba.toString());
+
+                }
+                if (vData.getId() == R.id.dtemblando){
+
+                    ttemblando.setVisibility(View.GONE);
+                     replace.setText(ttemblando.toString());
+
                 }
                 break;
                 case DragEvent.ACTION_DRAG_ENDED:

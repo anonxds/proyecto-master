@@ -7,44 +7,20 @@
     tools:context=".Capitulo1">
 
 
-    <android.support.constraint.ConstraintLayout
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="23dp"
+        android:text="@string/Demo1"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="78dp">
+        tools:layout_editor_absoluteY="38dp" />
 
-        <ImageView
-            android:id="@+id/hp1"
-            android:layout_width="53dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/hp" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Demo"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="16dp" />
 
-        <ImageView
-            android:id="@+id/hp2"
-            android:layout_width="53dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/hp1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/hp" />
-
-        <ImageView
-            android:id="@+id/hp3"
-            android:layout_width="53dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/hp2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/hp" />
-    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

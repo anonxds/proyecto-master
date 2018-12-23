@@ -57,21 +57,6 @@
     <string name="frase2_3">
         Todos viven en mi mente y quiero que me la pel.........
     </string>
-
-    <string name="n4">
-
-    </string>
-    <string name="n4_1">
-
-    </string>
-    <string name="n4_2">
-
-    </string>
-    <string name="n4_3">
-
-    </string>
-
-
     <string name="n5">
     Esta es una adivinanza, una adivinanza caprichosa, Adivina tú, despitasdo juglar,
         los versos que tienes que adivinar:
@@ -82,10 +67,15 @@
         es el reloj mecanico el enamorado ciego el corredor incansable y vidrio mas fragil...
 
     </string>
-    <string name="storypar1">
-       en esta
-    </string>
-    <string name="n5_3">
 
+
+   <string name="Parf1">
+       Vientos fuerte pegan a la espalda de Slayer, sus brazos ya temblando de cansancio,
+        sentía que se podía soltar en cualquier momento, pero la cima que veía lo motivava a continuar.
+   </string>
+    <string name="Parf2">
+        Primero subió su primer brazo, luego su cuerpo y arrastrándose levanto su cuerpo hasta llegar a lo más plano.
+        Respirando profundamente levanto su mirada una niebla espesa [engulf the place]
+        se levantó y  camino lentamente tenia preparado su espada por cualquier posible ataque.
     </string>
 </resources>
