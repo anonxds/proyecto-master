@@ -7,6 +7,12 @@ import android.app.Fragment;
 import android.content.ClipData;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -15,7 +21,9 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
 
@@ -29,10 +37,10 @@ public class Page1Fragment extends Fragment {
         // Required empty public constructor
     }
 
-Button prueba,btnmotiva,btnmotivar,btnaceptar,btnreset;
+Button prueba,btnmotiva2,btnmotivar2,btnaceptar,btnreset;
 Mod mod;
 TextView parrafo1,ttemblando,ttemblaba,parrafo2,replace,oracion;
-
+ConstraintLayout frase,boton;
 
 public interface Mod{
     public void hearts(int i);
@@ -46,23 +54,24 @@ public interface Mod{
       parrafo2=v.findViewById(R.id.txtparrafo2);
       parrafo2.setVisibility(View.GONE);
       parrafo1.setVisibility(View.GONE);
-      ttemblaba=v.findViewById(R.id.dtemblaba);
-      ttemblando=v.findViewById(R.id.dtemblando);
-      ttemblaba.setVisibility(View.GONE);
-      ttemblando.setVisibility(View.GONE);
-      oracion=v.findViewById(R.id.or1);
-      oracion.setVisibility(View.GONE);
-      replace=v.findViewById(R.id.or1_22);
-      replace.setVisibility(View.GONE);
+   //   ttemblaba=v.findViewById(R.id.dtemblaba);
+     // ttemblando=v.findViewById(R.id.dtemblando);
+     // ttemblaba.setVisibility(View.GONE);
+     // ttemblando.setVisibility(View.GONE);
+    //  oracion=v.findViewById(R.id.or1);
+//      replace=v.findViewById(R.id.or1_22);
+  //   frase=v.findViewById(R.id.linearLayout);
+    // frase.setVisibility(View.GONE);
+
       //botones
-        btnmotiva=v.findViewById(R.id.btnmotiva);
-        btnmotivar=v.findViewById(R.id.btnmotivar);
-        btnmotivar.setVisibility(View.GONE);
-        btnmotiva.setVisibility(View.GONE);
-        btnaceptar=v.findViewById(R.id.btnaceptar);
-        btnreset=v.findViewById(R.id.btnreset);
-        btnaceptar.setVisibility(View.GONE);
-        btnreset.setVisibility(View.GONE);
+        btnmotiva2=v.findViewById(R.id.btnmotiva);
+        btnmotivar2=v.findViewById(R.id.btnmotivar);
+     boton=v.findViewById(R.id.botones);
+     boton.setVisibility(View.GONE);
+//        btnaceptar=v.findViewById(R.id.btnaceptar);
+//        btnreset=v.findViewById(R.id.btnreset);
+//        btnaceptar.setVisibility(View.GONE);
+//        btnreset.setVisibility(View.GONE);
 
       //  prueba=v.findViewById(R.id.perder);
 
@@ -78,10 +87,25 @@ public interface Mod{
                 if (parrafo1.getVisibility() == View.GONE){
                     parrafo1.setVisibility(View.VISIBLE);
                     parrafo1.startAnimation(anim);
-                }
-                else {
+
+                   word();
+
+                    btnmotiva2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                           SpannableStringBuilder spannable = new SpannableStringBuilder(parrafo1.getText().toString());
+                            spannable.replace(56,69,"motivjuhuhuuua");
+                            parrafo1.setText(spannable);
+                        }
+                    });
+
 
                 }
+                else if(parrafo2.getVisibility() == View.GONE ){
+                    parrafo2.startAnimation(anim);
+                    parrafo2.setVisibility(View.VISIBLE);
+                }
+
 
             }
         });
@@ -96,21 +120,23 @@ public interface Mod{
 //        });
 
 
-        btnaceptar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(replace.getText().toString().equals("temblaba")){
+//        btnaceptar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(replace.getText().toString().equals("temblaba")){
+//
+//                }
+//            }
+//        });
 
-                }
-            }
-        });
 
 
+  //   ttemblando.setOnTouchListener(new ChoiceTouchListener());
 
-        ttemblando.setOnTouchListener(new ChoiceTouchListener());
-        ttemblando.setOnDragListener(dragListener);
-        ttemblaba.setOnDragListener((dragListener));
-        ttemblaba.setOnTouchListener(new ChoiceTouchListener());
+    //    ttemblaba.setOnTouchListener(new ChoiceTouchListener());
+
+      //  replace.setOnDragListener(dragListener);
+
         return v;
     }
     private final class ChoiceTouchListener implements View.OnTouchListener {
@@ -152,18 +178,16 @@ public interface Mod{
             final View vData = (View)event.getLocalState();
             switch (dragEvent){
                 case DragEvent.ACTION_DRAG_ENTERED:
-                    if (vData.getId() == R.id.dtemblaba);
+                    if (vData.getId() == R.id.dtemblaba)
                 {
-                         ttemblaba.setVisibility(View.GONE);
-                         replace.setText(ttemblaba.toString());
+                       //  ttemblaba.setVisibility(View.GONE);
+                         replace.setText(ttemblaba.getText());
 
                 }
-                if (vData.getId() == R.id.dtemblando){
+                else if(vData.getId() == R.id.dtemblando){
+                        replace.setText(ttemblando.getText());
+                    }
 
-                    ttemblando.setVisibility(View.GONE);
-                     replace.setText(ttemblando.toString());
-
-                }
                 break;
                 case DragEvent.ACTION_DRAG_ENDED:
 
@@ -175,6 +199,32 @@ public interface Mod{
             return true;
         }
     };
+
+
+
+public void word(){
+    SpannableString ss = new SpannableString(parrafo1.getText().toString());
+
+    ClickableSpan click1 = new ClickableSpan() {
+        @Override
+        public void onClick(View widget) {
+            Toast.makeText(getActivity(), "correcto", Toast.LENGTH_SHORT).show();
+        }
+    };
+    ClickableSpan click2 = new ClickableSpan() {
+        @Override
+        public void onClick(View widget) {
+            boton.setVisibility(View.VISIBLE);
+        }
+    };
+
+    ss.setSpan(click1, 56,69, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+    ss.setSpan(click2, 157, 165, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+    parrafo1.setText(ss);
+    parrafo1.setMovementMethod(LinkMovementMethod.getInstance());
+
+}
 
 
 
