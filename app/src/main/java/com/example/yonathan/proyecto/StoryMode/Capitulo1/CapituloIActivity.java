@@ -4,6 +4,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.yonathan.proyecto.R;
 import com.example.yonathan.proyecto.StoryMode.ScoreStoryUIFragment;
@@ -36,4 +37,6 @@ public class CapituloIActivity extends AppCompatActivity implements Page1Fragmen
         ScoreStoryUIFragment scor = (ScoreStoryUIFragment) getFragmentManager().findFragmentById(R.id.UIScore);
         scor.loseheart(i);
     }
+
+
 }

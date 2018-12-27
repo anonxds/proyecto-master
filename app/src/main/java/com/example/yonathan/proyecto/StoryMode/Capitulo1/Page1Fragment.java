@@ -37,10 +37,10 @@ public class Page1Fragment extends Fragment {
         // Required empty public constructor
     }
 
-Button prueba,btnmotiva2,btnmotivar2,btnaceptar,btnreset;
+Button reset,btnmotiva2,btnmotivar2,btntiemblan,btnstemblaba;
 Mod mod;
 TextView parrafo1,ttemblando,ttemblaba,parrafo2,replace,oracion;
-ConstraintLayout frase,boton;
+ConstraintLayout dragger,botone2,text,boton;
 
 public interface Mod{
     public void hearts(int i);
@@ -54,26 +54,23 @@ public interface Mod{
       parrafo2=v.findViewById(R.id.txtparrafo2);
       parrafo2.setVisibility(View.GONE);
       parrafo1.setVisibility(View.GONE);
-   //   ttemblaba=v.findViewById(R.id.dtemblaba);
-     // ttemblando=v.findViewById(R.id.dtemblando);
-     // ttemblaba.setVisibility(View.GONE);
-     // ttemblando.setVisibility(View.GONE);
-    //  oracion=v.findViewById(R.id.or1);
-//      replace=v.findViewById(R.id.or1_22);
-  //   frase=v.findViewById(R.id.linearLayout);
-    // frase.setVisibility(View.GONE);
+
 
       //botones
+        reset=v.findViewById(R.id.btnreset);
         btnmotiva2=v.findViewById(R.id.btnmotiva);
         btnmotivar2=v.findViewById(R.id.btnmotivar);
+        btntiemblan=v.findViewById(R.id.btntembla);
+        btnstemblaba=v.findViewById(R.id.btntemblaba);
      boton=v.findViewById(R.id.botones);
      boton.setVisibility(View.GONE);
-//        btnaceptar=v.findViewById(R.id.btnaceptar);
-//        btnreset=v.findViewById(R.id.btnreset);
-//        btnaceptar.setVisibility(View.GONE);
-//        btnreset.setVisibility(View.GONE);
+     dragger=v.findViewById(R.id.layoutdrag);
+     botone2=v.findViewById(R.id.layouttemblar);
+     text=v.findViewById(R.id.layouttxt);
+     dragger.setVisibility(View.GONE);
+     botone2.setVisibility(View.GONE);
+     text.setVisibility(View.GONE);
 
-      //  prueba=v.findViewById(R.id.perder);
 
 
 
@@ -94,7 +91,7 @@ public interface Mod{
                         @Override
                         public void onClick(View v) {
                            SpannableStringBuilder spannable = new SpannableStringBuilder(parrafo1.getText().toString());
-                            spannable.replace(56,69,"motivjuhuhuuua");
+                            spannable.replace(56,69,"");
                             parrafo1.setText(spannable);
                         }
                     });
@@ -110,14 +107,37 @@ public interface Mod{
             }
         });
 
-        //matar un corazon
-//        prueba.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                int intento = 1;
-//                mod.hearts(intento);
-//            }
-//        });
+        btntiemblan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SpannableStringBuilder spannable = new SpannableStringBuilder(parrafo1.getText().toString());
+                spannable.replace(56,69,"tiemblan ");
+                parrafo1.setText(spannable);
+                word();
+            }
+        });
+        btnstemblaba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SpannableStringBuilder spannable = new SpannableStringBuilder(parrafo1.getText().toString());
+                spannable.replace(56,69,"temblaba ");
+                parrafo1.setText(spannable);
+                word();
+            }
+        });
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String resets = getString(R.string.Parf1);
+                parrafo1.setText(resets.toString());
+                word();
+            }
+        });
+
+
 
 
 //        btnaceptar.setOnClickListener(new View.OnClickListener() {
@@ -208,7 +228,7 @@ public void word(){
     ClickableSpan click1 = new ClickableSpan() {
         @Override
         public void onClick(View widget) {
-            Toast.makeText(getActivity(), "correcto", Toast.LENGTH_SHORT).show();
+            botone2.setVisibility(View.VISIBLE);
         }
     };
     ClickableSpan click2 = new ClickableSpan() {
@@ -225,7 +245,6 @@ public void word(){
     parrafo1.setMovementMethod(LinkMovementMethod.getInstance());
 
 }
-
 
 
 
