@@ -69,13 +69,83 @@
     </string>
 
 
-   <string name="Parf1">
+    <string name="Parf1">
        Vientos fuerte pegan a la espalda de Slayer, sus brazos ya temblando  de cansancio,
         sentía que se podía soltar en cualquier momento, pero la cima que veía lo motivava a continuar.
    </string>
-    <string name="Parf2">
-        Primero subió su primer brazo, luego su cuerpo y arrastrándose levanto su cuerpo hasta llegar a lo más plano.
-        Respirando profundamente levanto su mirada una niebla espesa [engulf the place]
-        se levantó y  camino lentamente tenia preparado su espada por cualquier posible ataque.
+
+
+    <!--story mode-->
+
+    <string name="parrafo1Cap1">
+El viento helado golpea en la espalda de Slayer, el sentía que se podía dejar caer a lo más alto, pero al ver la cima se motivó a continuar.
     </string>
+    <string name="parrafo2Cap1">
+Primero subió su brazo, luego el otro, con los arrastro todo su cuerpo; respiraba profundamente, pero no podía perder tiempo y se levantó.
+    </string>
+    <string name="parrafo3Cap1">
+En la cima estaba enfulf of fog estaba muy densa, Slayer lentamente empezó a caminar mientras tenía preparado su arma.
+    </string>
+
+    <string name="parrafo4Cap1">
+Escuchaba ruidos extraños; como gruñido, seguido por gritos de agonía y risas.
+“Nadie me dijo que esta montaña estaba maldita” rezongo Slayer.
+
+    </string>
+
+    <string name="parrafo5Cap1Decision">
+        Seguía caminando la niebla se podían mas densa, hasta que llego un punto donde no podía ver sus brazos o sus piernas.
+    </string>
+
+    <string name="pregunta1">
+        ¿Qué debería ser Slayer?
+    </string>
+
+    <string name="pregunta1Op1">
+        1. Correr como loco
+    </string>
+    <string name="pregunta1Op2">
+        2. Mantener la calma
+    </string>
+    <string name="pregunta1Op3">
+       3. Sacar la espada y atacar como loco
+    </string>
+
+    <string name="resultadoOp3">
+        Saca la espada y empieza a moverla como loco esperando que con todo el movimiento la niebla va a desaparecer, pero no resulto, entonces decidió:
+    </string>
+
+    <string name="Ruta2">
+        Slayer mantuvo la calma y miro hacia arriba, en la niebla blanca noto una luz y empezó a caminar hacia el. Entre mas se acercaba esa luz o reflejo era solamente un metal gigante que estaba arriba de una torre, donde había una ciudad.
+    </string>
+
+    <string name="Ruta2Parrafo6">
+        Finalmente Slayer encontró la supuesta “ciudad de los cielos”. Al acercarse mas la niebla se desvaneció rápidamente, era un pueblo normal como cualquier otro, una persona se le acerco para darle la bienvenida.
+    </string>
+    <string name="Ruta2Dialogo1">
+        Saludos viajero, ¿espero que la niebla no haya espantado?
+    </string>
+
+    <string name="Ruta1">
+        Slayer tuvo pánico y empezó a correr, pensando que la niebla iba desaparecer, pero parecía un camino sin fin, se hinco de rodillas y se agarro la cabeza pensando en que podia hacer como:
+    </string>
+
+    <string name="pregunta2Op1">
+       Retroceder los pasos
+    </string>
+    <string name="pregunta2Op2">
+	Tirar la gemas
+    </string>
+    <string name="pregunta2Op3">
+	Continuar corriendo
+    </string>
+
+    <string name="ruta1Pregunta2">
+        Slayer tomo un respiro y retrocede sus pasos en su camino noto un
+    </string>
+    <string name="ruta2Pregunta2">
+        2	Slayer saca las gemas, le grita a ellas, culpándolas de todo el peligro que ha sufrido, ya no le importa salvar la ciudad, ya no le importa que le dicen las personas, prefiere que todas se mueran , cuando miro hacia arriba noto una luz blanca, ¿podia ser una salvación? Slayer corre hacia la luz.
+    </string>
+
+
 </resources>

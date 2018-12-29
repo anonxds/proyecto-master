@@ -46,8 +46,8 @@ public class Nivel2Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_nivel2, container, false);
         // Inflate the layout for this fragment
-        mop1=view.findViewById(R.id.btnop1);
-        mop2=view.findViewById(R.id.btnop2);
+        mop1=view.findViewById(R.id.btnopcion1);
+        mop2=view.findViewById(R.id.btnopcion2);
         mop3=view.findViewById(R.id.btnop3);
         p2=view.findViewById(R.id.textView);
 
