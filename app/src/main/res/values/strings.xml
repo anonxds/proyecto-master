@@ -151,5 +151,58 @@ Escuchaba ruidos extraños; como gruñido, seguido por gritos de agonía y risas
         Slayer continúa corriendo, hasta que accidentalmente cae al abismo. E aquí el guerrero que fracaso salvar a su ciudad.
     </string>
 
+    <string name="ruta1resp2">
+        Slayer saca las gemas, le grita a ellas, culpándolas de todo el peligro que ha sufrido, ya no le importa salvar la ciudad, ya no le importa que le dicen las personas, prefiere que todas se mueran , cuando miro hacia arriba noto una luz blanca, ¿podia ser una salvación? Slayer corre hacia la luz.
+    </string>
+
+    <string name="ruta1parrafo6">
+        Vio un arco de entrada, andaba muy alterado, una persona rapidamente se le acerca.
+        “estas bien”-pregunto
+    </string>
+
+
+    <string name="ruta1pergunta1">
+¿Qué es este lugar?
+    </string>
+    <string name="ruta1pregunta2">
+¡Aléjate de mi maldito fenómeno!
+    </string>
+
+    <string name="rutal1respuesta2">
+Calmado, estas espantado por la niebla, muchos viajeros también sufren de ese pánico, pero ahora estas en el pueblo.
+    </string>
+    <string name="rutal1respuesta2_1">
+Venia por una gema, pero realice que es una pérdida de tiempo, porque arriesgo mi vida para salvar unas vidas ¡hipócritas!
+    </string>
+
+    <string name="ruta1parrafo7">
+        ¿Dónde estoy? pregunto Slayer
+    </string>
+    <string name="ruta1parrafo7_1">
+        Estas en la ciudad de los cielos, creo que la niebla te puso mucho en pánico, estas a salvo, respira profundamente.
+    </string>
+    <string name="ruta1parrafo7_2">
+        “¿A que vienes aquí viajero lejano?”
+    </string>
+    <string name="ruta1parrafo7_3">
+        Vengo por una gema, pero ya no me interesa de eso, todo este viaje solo fue estúpido.
+    </string>
+    <string name="ruta1parrafo7_4">
+        Ya veo tienes la misma mentalidad como nosotros.
+    </string>
+    <string name="rutal1parrafo7_5">
+        ¿A qué te refieres? Pregunta Slayer
+    </string>
+    <string name="ruta1parrafo8">
+        Pensamos que los humanos, no piensan antes de hacer sus acciones, lo que resultaría a ellos culpándose a otros y tener peleas innecesarias, este pueblo de aquí solo existen aquellos que han dejado todo hacia atrás de su vida, donde no requieren de pensar de ser el mejor de todos o esconder su inseguridad como los demás, no quiero decir que nosotros somos mejores que ellos si no nosotros no escondemos la honestidad, es lo que pensamos, a diferencias de otros que solo se van a contradecirse o encontrar una manera para negar mi opinión y….
+    </string>
+    <string name="ruta1parrafoEND">
+        La persona continuaba hablando, Slayer lentamente cierra sus ojos y cae al suelo…
+    </string>
+
+
+
+
+
 
 </resources>

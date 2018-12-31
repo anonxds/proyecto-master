@@ -125,6 +125,7 @@ opcion1.setOnClickListener(new View.OnClickListener() {
 });
 
 
+
         return v;
     }
 
@@ -205,7 +206,7 @@ public void bootner(){
                 opcion1.startAnimation(anim);
                opcion1.setVisibility(View.VISIBLE);
             }
-        },5000);
+        },1000);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -213,7 +214,7 @@ public void bootner(){
                 opcion2.startAnimation(anim);
  opcion2.setVisibility(View.VISIBLE);
             }
-        },6000);
+        },2000);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -221,7 +222,7 @@ public void bootner(){
                 opcion3.startAnimation(anim);
                 opcion3.setVisibility(View.VISIBLE);
             }
-        },7000);
+        },3000);
 }
 
 
