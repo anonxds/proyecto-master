@@ -38,5 +38,11 @@ public class CapituloIActivity extends AppCompatActivity implements Page1Fragmen
         scor.loseheart(i);
     }
 
+    @Override
+    public void gettext(String i) {
+        ScoreStoryUIFragment scor = (ScoreStoryUIFragment) getFragmentManager().findFragmentById(R.id.UIScore);
+        scor.gettext(i);
+    }
+
 
 }

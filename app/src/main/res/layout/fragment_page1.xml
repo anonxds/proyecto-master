@@ -17,7 +17,42 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
+    <LinearLayout
+        android:id="@+id/botones"
+        android:layout_width="367dp"
+        android:layout_height="266dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971">
 
+        <Button
+            android:id="@+id/btnopcion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pregunta1Op1" />
+
+        <Button
+            android:id="@+id/btnopcion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pregunta1Op2" />
+
+        <Button
+            android:id="@+id/btnopcion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pregunta1Op3" />
+    </LinearLayout>
     <TextView
         android:id="@+id/txtparrafo1"
         android:layout_width="272dp"
@@ -58,23 +93,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="99dp" />
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/regresar"
-        android:layout_width="83dp"
-        android:layout_height="513dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"

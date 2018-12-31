@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.constraint.ConstraintLayout;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -32,6 +33,8 @@ import android.widget.Toast;
 
 import com.example.yonathan.proyecto.R;
 import com.example.yonathan.proyecto.StoryMode.ModelSt;
+import com.example.yonathan.proyecto.StoryMode.ReviewActivity;
+import com.example.yonathan.proyecto.StoryMode.ScoreStoryUIFragment;
 
 import java.util.ArrayList;
 
@@ -47,13 +50,14 @@ public class Page1Fragment extends Fragment {
 
 Mod mod;
     ModelSt model;
-    ConstraintLayout next,previ;
+    ConstraintLayout next;
     TextView parrafo1, parrafo2;
-   Button demo;
-
+   Button opcion1,opcion2,opcion3;
+LinearLayout opciones;
 
 public interface Mod{
     public void hearts(int i);
+    public void gettext(String i);
 }
 
 
@@ -66,46 +70,35 @@ public interface Mod{
          View v =inflater.inflate(R.layout.fragment_page1, container, false);;
 
 
+
+opciones= v.findViewById(R.id.botones);
+//opciones.setVisibility(View.GONE);
+opcion1=v.findViewById(R.id.btnopcion1);
+opcion2=v.findViewById(R.id.btnopcion2);
+opcion3=v.findViewById(R.id.btnopcion3);
+opcion1.setVisibility(View.GONE);
+opcion2.setVisibility(View.GONE);
+opcion3.setVisibility(View.GONE);
         final ModelSt [] mParrafos = new ModelSt[]{
 
                 new ModelSt(getString(R.string.parrafo1Cap1),1),
                 new ModelSt(getString(R.string.parrafo2Cap1),2),
                 new ModelSt(getString(R.string.parrafo3Cap1),3),
-                new ModelSt(getString(R.string.parrafo4Cap1),4)
+                new ModelSt(getString(R.string.parrafo4Cap1),4),
+                new ModelSt(getString(R.string.parrafo5Cap1Decision),5)
                 //  new ModelSt(getResources().getString(R.string.parrafo2Cap1),2)
         };
-
-
           next=v.findViewById(R.id.siguiente);
-          previ=v.findViewById(R.id.regresar);
+     //     previ=v.findViewById(R.id.regresar);
            parrafo1=v.findViewById(R.id.txtparrafo1);
            parrafo2=v.findViewById(R.id.txtparrafo2);
+
+
+
         update();
 
 
-//           parrafo2.setVisibility(View.GONE);
-//           parrafo1.setVisibility(View.GONE);
-//demo=v.findViewById(R.id.button6);
 
-//        btnaceptar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(replace.getText().toString().equals("temblaba")){
-//
-//                }
-//            }
-//        });
-
-
-//demo.setOnClickListener(new View.OnClickListener() {
-//    @Override
-//    public void onClick(View v) {
-//        parrafo2.setText(getString(R.string.parrafo4Cap1));
-//    }
-//});
-//
-//
-//pagina1();
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,24 +107,62 @@ public interface Mod{
             }
         });
 
+
+
         return v;
     }
+
     private void update(){
         ModelSt [] mParrafos = new ModelSt[]{
 
                 new ModelSt(getString(R.string.parrafo1Cap1),1),
                 new ModelSt(getString(R.string.parrafo2Cap1),2),
                 new ModelSt(getString(R.string.parrafo3Cap1),3),
-                new ModelSt(getString(R.string.parrafo4Cap1),4)
+                new ModelSt(getString(R.string.parrafo4Cap1),4),
+                new ModelSt(getString(R.string.parrafo5Cap1Decision),5)
                 //  new ModelSt(getResources().getString(R.string.parrafo2Cap1),2)
         };
+
         final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
         parrafo1.startAnimation(anim);
         parrafo1.setText(mParrafos[index].getParrafo());
 
+        mod.gettext(mParrafos[index].getParrafo());
+
+
+        if(parrafo1.getText() == getString(R.string.parrafo5Cap1Decision)){
+            next.setVisibility(View.GONE);
+            bootner();
+        }
     }
 
+public void bootner(){
+    final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
 
+    new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                opcion1.startAnimation(anim);
+               opcion1.setVisibility(View.VISIBLE);
+            }
+        },5000);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                opcion2.startAnimation(anim);
+ opcion2.setVisibility(View.VISIBLE);
+            }
+        },6000);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                opcion3.startAnimation(anim);
+                opcion3.setVisibility(View.VISIBLE);
+            }
+        },7000);
+}
 
 
     public void pagina1() {
