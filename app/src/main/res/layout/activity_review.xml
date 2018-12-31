@@ -18,6 +18,7 @@
         android:layout_marginRight="163dp"
         android:layout_marginBottom="369dp"
         android:text=""
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

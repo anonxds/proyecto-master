@@ -131,7 +131,7 @@ Escuchaba ruidos extraños; como gruñido, seguido por gritos de agonía y risas
     </string>
 
     <string name="pregunta2Op1">
-       Retroceder los pasos
+       Mantener la Calma
     </string>
     <string name="pregunta2Op2">
 	Tirar la gemas
@@ -140,11 +140,15 @@ Escuchaba ruidos extraños; como gruñido, seguido por gritos de agonía y risas
 	Continuar corriendo
     </string>
 
-    <string name="ruta1Pregunta2">
+
+    <string name="ruta1Pregunta1">
         Slayer tomo un respiro y retrocede sus pasos en su camino noto un
     </string>
-    <string name="ruta2Pregunta2">
-        2	Slayer saca las gemas, le grita a ellas, culpándolas de todo el peligro que ha sufrido, ya no le importa salvar la ciudad, ya no le importa que le dicen las personas, prefiere que todas se mueran , cuando miro hacia arriba noto una luz blanca, ¿podia ser una salvación? Slayer corre hacia la luz.
+    <string name="ruta1Pregunta2">
+        Slayer saca las gemas, le grita a ellas, culpándolas de todo el peligro que ha sufrido, ya no le importa salvar la ciudad, ya no le importa que le dicen las personas, prefiere que todas se mueran , cuando miro hacia arriba noto una luz blanca, ¿podia ser una salvación? Slayer corre hacia la luz.
+    </string>
+    <string name="ruta1pregunta3">
+        Slayer continúa corriendo, hasta que accidentalmente cae al abismo. E aquí el guerrero que fracaso salvar a su ciudad.
     </string>
 
 

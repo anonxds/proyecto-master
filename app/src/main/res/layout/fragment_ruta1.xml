@@ -1,0 +1,57 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yonathan.proyecto.StoryMode.Capitulo1.Ruta1Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/opciones"
+        android:layout_width="368dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="113dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnruta1op1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pregunta2Op1" />
+
+        <Button
+            android:id="@+id/btnruta1Op2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pregunta2Op2" />
+
+        <Button
+            android:id="@+id/btnruta1op3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pregunta2Op3" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtparrafo"
+        android:layout_width="222dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginLeft="81dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginRight="81dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/opciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

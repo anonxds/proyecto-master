@@ -31,6 +31,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.yonathan.proyecto.Blitz.ScoreFragment;
 import com.example.yonathan.proyecto.R;
 import com.example.yonathan.proyecto.StoryMode.ModelSt;
 import com.example.yonathan.proyecto.StoryMode.ReviewActivity;
@@ -96,6 +97,12 @@ opcion3.setVisibility(View.GONE);
 
         update();
 
+        opcion2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calma();
+            }
+        });
 opcion3.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
@@ -110,7 +117,12 @@ opcion3.setOnClickListener(new View.OnClickListener() {
                 update();
             }
         });
-
+opcion1.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        ruta1();
+    }
+});
 
 
         return v;
@@ -165,6 +177,24 @@ opcion3.setOnClickListener(new View.OnClickListener() {
             }
         },4000);
     }
+    private void calma(){
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        Page2Fragment ruta2 = new Page2Fragment();
+        transaction.replace(R.id.texto, ruta2);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void ruta1(){
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        Ruta1Fragment ruta1 = new Ruta1Fragment();
+        transaction.replace(R.id.texto, ruta1);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
 
 public void bootner(){
     final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
