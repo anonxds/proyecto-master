@@ -77,13 +77,13 @@
 
         <Button
             android:id="@+id/btnreview"
-            android:layout_width="wrap_content"
+            android:layout_width="62dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="26dp"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="27dp"
-            android:text="Button"
+            android:text="Log"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout"

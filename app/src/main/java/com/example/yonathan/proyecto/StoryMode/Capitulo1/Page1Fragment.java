@@ -85,19 +85,23 @@ opcion3.setVisibility(View.GONE);
                 new ModelSt(getString(R.string.parrafo2Cap1),2),
                 new ModelSt(getString(R.string.parrafo3Cap1),3),
                 new ModelSt(getString(R.string.parrafo4Cap1),4),
-                new ModelSt(getString(R.string.parrafo5Cap1Decision),5)
+                new ModelSt(getString(R.string.parrafo5Cap1Decision),5),
+                new ModelSt(getString(R.string.resultadoOp3),6),
                 //  new ModelSt(getResources().getString(R.string.parrafo2Cap1),2)
         };
           next=v.findViewById(R.id.siguiente);
      //     previ=v.findViewById(R.id.regresar);
            parrafo1=v.findViewById(R.id.txtparrafo1);
-           parrafo2=v.findViewById(R.id.txtparrafo2);
-
 
 
         update();
 
-
+opcion3.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        espada();
+    }
+});
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,7 +123,8 @@ opcion3.setVisibility(View.GONE);
                 new ModelSt(getString(R.string.parrafo2Cap1),2),
                 new ModelSt(getString(R.string.parrafo3Cap1),3),
                 new ModelSt(getString(R.string.parrafo4Cap1),4),
-                new ModelSt(getString(R.string.parrafo5Cap1Decision),5)
+                new ModelSt(getString(R.string.parrafo5Cap1Decision),5),
+                new ModelSt(getString(R.string.resultadoOp3),6),
                 //  new ModelSt(getResources().getString(R.string.parrafo2Cap1),2)
         };
 
@@ -134,6 +139,31 @@ opcion3.setVisibility(View.GONE);
             next.setVisibility(View.GONE);
             bootner();
         }
+    }
+
+    public void espada(){
+        parrafo1.setText(getString(R.string.resultadoOp3));
+        //opciones.setVisibility(View.GONE);
+        opcion3.setVisibility(View.GONE);
+        mod.gettext(getString(R.string.resultadoOp3));
+        opcion1.setVisibility(View.GONE);
+        opcion2.setVisibility(View.GONE);
+        final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                opcion1.startAnimation(anim);
+                opcion1.setVisibility(View.VISIBLE);
+            }
+        },3000);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                opcion2.startAnimation(anim);
+                opcion2.setVisibility(View.VISIBLE);
+            }
+        },4000);
     }
 
 public void bootner(){
@@ -176,10 +206,7 @@ public void bootner(){
                parrafo1.setVisibility(View.VISIBLE);
 
                }
-              else if(parrafo2.getVisibility()==View.GONE){
-                    parrafo2.startAnimation(anim);
-                    parrafo2.setVisibility(View.VISIBLE);
-                }
+
 
                 else if(parrafo1.getVisibility() == View.VISIBLE && parrafo2.getVisibility() == View.VISIBLE)
              //       parrafo1.setVisibility(View.GONE);
@@ -190,19 +217,6 @@ public void bootner(){
     }
     public void pagina2(){
 
-
-            next.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-      //              parrafo2.setVisibility(View.GONE);
-                    if(parrafo1.getText() == parrafo1.getText()){
-                        parrafo1.setText(getString(R.string.parrafo3Cap1));
-                    }
-                   else if(parrafo2.getText() == parrafo2.getText()){
-
-                    }
-                }
-            });
 
 
     }

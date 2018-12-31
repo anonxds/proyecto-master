@@ -51,8 +51,10 @@
             android:id="@+id/btnopcion3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:text="@string/pregunta1Op3" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/txtparrafo1"
         android:layout_width="272dp"
@@ -67,25 +69,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtparrafo2"
-        android:layout_width="275dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="162dp"
-        android:layout_marginLeft="162dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginRight="163dp"
-        android:layout_marginBottom="297dp"
-        android:text="@string/parrafo2Cap1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtparrafo1"
-        app:layout_constraintVertical_bias="0.622" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -117,22 +102,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </android.support.constraint.ConstraintLayout>
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="182dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginRight="51dp"
-        android:layout_marginBottom="44dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toEndOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/txtparrafo2" />
 
 
 </android.support.constraint.ConstraintLayout>
