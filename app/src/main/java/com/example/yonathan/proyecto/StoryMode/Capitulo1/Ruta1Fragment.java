@@ -33,7 +33,7 @@ public class Ruta1Fragment extends Fragment {
    Page1Fragment.Mod mod;
 Button op1,op2,op3,op4,op5;
 LinearLayout botones,siguiente,botones2;
-    TextView parrafo;
+    TextView parrafo,nombreruta;
     ConstraintLayout next2;
 
     @Override
@@ -55,9 +55,10 @@ botones2.setVisibility(View.GONE);
         parrafo=v.findViewById(R.id.txtparrafo);
 siguiente=v.findViewById(R.id.next);
 siguiente.setVisibility(View.GONE);
+nombreruta=v.findViewById(R.id.txtruta);
         final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
 
-
+nombreruta.setVisibility(View.INVISIBLE);
 
         final ModelSt[] mparrafo = new ModelSt[]{
                 new ModelSt(getString(R.string.ruta1resp2),1),
@@ -113,6 +114,7 @@ siguiente.setVisibility(View.GONE);
             @Override
             public void onClick(View v) {
                 parrafo.setText("");
+                nombreruta.setText("pregunta");
                 botones2.setVisibility(View.GONE);
                 next2.setVisibility(View.VISIBLE);
             }
@@ -120,15 +122,25 @@ siguiente.setVisibility(View.GONE);
         op5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                next2.setVisibility(View.VISIBLE);
+                nombreruta.setText("ira");
 parrafo.setText("");
-ruta1_1();
+//ruta1_1();
             }
         });
 
      next2.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        update2();
+if(nombreruta.getText().equals("pregunta")) {
+
+    update2();
+}
+else if(nombreruta.getText().equals("ira")){
+    ruta1_1();
+}
+
+
     }
     });
         return v;
@@ -202,7 +214,7 @@ private void ruta1_1(){
             new ModelSt(getString(R.string.ruta1parrafoEND),5)
     };
 
-    parrafo.append(mparrafo[index].getParrafo());
+    parrafo.append(mparrafo[index].getParrafo()+"\n"+"\n");
     index =(index+1)%(mparrafo.length);
     if(mparrafo[index].getId()>=4){
         SpannableStringBuilder span = new SpannableStringBuilder( mparrafo[index].getParrafo());
@@ -211,6 +223,7 @@ private void ruta1_1(){
     }
     if(mparrafo[index].getId() == 5){
         parrafo.setText(getString(R.string.ruta1parrafoEND));
+        next2.setVisibility(View.GONE);  //final
     }
 }
 

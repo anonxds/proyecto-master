@@ -202,7 +202,61 @@ Venia por una gema, pero realice que es una pérdida de tiempo, porque arriesgo 
 
 
 
+<!--ruta3-->
+
+<string name="ruta2botonop1">
+     ¿Por qué hay mucha niebla?
+</string>
+
+    <string name="ruta2botonop2">
+¡vengo por la sexta gema!
+    </string>
+    <string name="ruta2parrafo7">
+“No lo se en verdad, será por la naturaleza de este lugar, esa es la razón por que se llama la ciudad de los cielos, por que esta cubierto de niebla”
+
+    </string>
+    <string name="ruta2parrafo7_1">
+        Vengo por un gema en especial, tiene una figura algo diferente sabes-le pregunto Slayer
+    </string>
+    <string name="ruta2parrafo7_2">
+       Te refieres a esta gema-la persona la saco de su bolso, la sexta gema finalmente estaba enfrente de los ojos de Slayer finamente podrá salvar la ciudad del ataque.
+
+    </string>
+<string name="ruta2botonop3">
+Tengo que partir a mi viaje, pero gracias.
+</string>
+    <string name="ruta2botonop4">
 
 
+Puedo tomar un descanzo pequeño.
 
+    </string>
+    <string name="ruta2parrafo8">
+        Ten te la puedes llevar- la persona le da la gema en sus mano.
+“Es todo? No tengo que hacer ningún favor por ti, matar a alguien, robar, ir a lo mas profundo del mas ¡nada!”
+    </string>
+    <string name="ruta2parrafo9">
+        Por supuesto que no, en este pueblo no necesitamos nada, mientras caminemos,
+        veamos y nuestro cuerpo funcione bien, no hay necesidad de cosas elegantes,
+        la personas de abajo se encierran en su propia fantasía, llenas de envidia porque no pueden tener esa cosa extra en su vida, como un carro, una casa, televisión o la mejor ropa. Solo para sentirse menos inseguros de si mismos, si hay una mentalidad del humano que nunca va cambiar es… que ellos nunca piensan
+        y solo quieren mejorar, pero esconden esas emociones y las disfrazan.
+    </string>
+    <string name="ruta2parrafo10">
+        La persona parecía que hablaba sin sentido, pero Slayer finamente tiene la ultima gema, es tiempo de regresar.
+    </string>
+<string name="ruta2parrafo10_1">
+    -“Bueno es tiempo de partir tengo que hacer algo importante”-le respondió Slayer
+
+
+</string>
+    <string name="ruta2parrafo10_2">
+   -No deseas quedarte por un rato, por tu actitud siento que has sufrido por un largo viaje, con mucho estrés y días sin descanso.
+
+    </string>
+<string name="ruta2parrafoEND">
+    Lo siento pero tengo que salvar una ciudad- Slayer se despide y entra de nuevo a la niebla espesa, para salvar su ciudad.
+</string>
+    <string name="ruta2parrafo11">
+
+    </string>
 </resources>
