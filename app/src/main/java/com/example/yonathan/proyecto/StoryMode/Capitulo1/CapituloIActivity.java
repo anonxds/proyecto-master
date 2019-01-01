@@ -43,6 +43,9 @@ public class CapituloIActivity extends AppCompatActivity implements Page1Fragmen
         ScoreStoryUIFragment scor = (ScoreStoryUIFragment) getFragmentManager().findFragmentById(R.id.UIScore);
         scor.gettext(i);
     }
+    @Override
+    public void onBackPressed() {
+    }
 
 
 }

@@ -62,8 +62,10 @@
             android:name=".Blitz.Trivia.trivia3Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.PopMe" />
-        <activity android:name=".StoryMode.Capitulo1.CapituloIActivity" />
-        <activity android:name=".StoryMode.ReviewActivity"></activity>
+        <activity android:name=".StoryMode.Capitulo1.CapituloIActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".StoryMode.ReviewActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

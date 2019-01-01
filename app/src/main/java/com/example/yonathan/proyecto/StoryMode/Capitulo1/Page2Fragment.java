@@ -38,9 +38,11 @@ public class Page2Fragment extends Fragment {
        op2=v.findViewById(R.id.btnruta2op2);
        op3=v.findViewById(R.id.btnop1);
        op4=v.findViewById(R.id.btnop2);
+
        siguiente=v.findViewById(R.id.next);
       // siguiente.setVisibility(View.GONE);
        ruta=v.findViewById(R.id.txtruta);
+        ruta.setVisibility(View.GONE);
        sig2=v.findViewById(R.id.next2);
        sig2.setVisibility(View.GONE);
        botones=v.findViewById(R.id.opciones);

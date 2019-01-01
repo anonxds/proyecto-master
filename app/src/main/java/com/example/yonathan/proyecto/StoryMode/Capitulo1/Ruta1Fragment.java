@@ -67,9 +67,10 @@ nombreruta.setVisibility(View.INVISIBLE);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                parrafo.startAnimation(anim);
+
                 parrafo.setText(R.string.Ruta1);
                  mod.gettext(getString(R.string.Ruta1));
+                parrafo.startAnimation(anim);
             }
         },1000);
 
@@ -96,7 +97,8 @@ nombreruta.setVisibility(View.INVISIBLE);
         op2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                update();
+        parrafo.setText("");
+                //update();
                 botones.setVisibility(View.INVISIBLE);
                 siguiente.setVisibility(View.VISIBLE);
             }
@@ -106,7 +108,7 @@ nombreruta.setVisibility(View.INVISIBLE);
             @Override
             public void onClick(View v) {
                 update();
-                index =(index+1)%(mparrafo.length);
+               index =(index+1)%(mparrafo.length);
             }
         });
 
@@ -125,6 +127,7 @@ nombreruta.setVisibility(View.INVISIBLE);
                 next2.setVisibility(View.VISIBLE);
                 nombreruta.setText("ira");
 parrafo.setText("");
+botones2.setVisibility(View.GONE);
 //ruta1_1();
             }
         });
@@ -147,9 +150,12 @@ else if(nombreruta.getText().equals("ira")){
     }
 
     private void FIN(){
+        final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
+
         botones.setVisibility(View.GONE);
         mod.gettext(getString(R.string.ruta1pregunta3));
         parrafo.setText(getString(R.string.ruta1pregunta3));
+    parrafo.startAnimation(anim);
     }
     private void Retrocede(){
         FragmentManager manager = getFragmentManager();
@@ -161,14 +167,18 @@ else if(nombreruta.getText().equals("ira")){
     }
 
     private int index = 0;
+    private int indice=0;
 
 private void update(){
         ModelSt[] mparrafo = new ModelSt[]{
-          new ModelSt(getString(R.string.ruta1resp2),1),
+        new ModelSt(getString(R.string.ruta1resp2),1),
           new ModelSt(getString(R.string.ruta1parrafo6),2),
         };
-        mod.gettext(mparrafo[index].getParrafo());
+    final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
+
+    mod.gettext(mparrafo[index].getParrafo());
         parrafo.setText(mparrafo[index].getParrafo());
+        parrafo.startAnimation(anim);
         if(parrafo.getText() == getString(R.string.ruta1parrafo6)){
             siguiente.setVisibility(View.GONE);
 botones2.setVisibility(View.VISIBLE);
@@ -189,14 +199,18 @@ private void update2(){
 
 
     };
-   // parrafo.setText(mparrafo[index].getParrafo());
+    final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
+
+    // parrafo.setText(mparrafo[index].getParrafo());
     parrafo.append(mparrafo[index].getParrafo() +"\n"+"\n");
     index =(index+1)%(mparrafo.length);
     mod.gettext(mparrafo[index].getParrafo());
-
+    parrafo.startAnimation(anim);
     if(mparrafo[index].getId() >= 8){
-        parrafo.setText(mparrafo[index].getParrafo());
 
+        parrafo.setText(mparrafo[index].getParrafo());
+mod.gettext(mparrafo[index].getParrafo());
+        parrafo.startAnimation(anim);
     }
     if(mparrafo[index].getId() == 9){
         next2.setVisibility(View.GONE);  //final
@@ -213,17 +227,24 @@ private void ruta1_1(){
             new ModelSt(getString(R.string.ruta1parrafo8),4),
             new ModelSt(getString(R.string.ruta1parrafoEND),5)
     };
+    final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
 
     parrafo.append(mparrafo[index].getParrafo()+"\n"+"\n");
     index =(index+1)%(mparrafo.length);
+    mod.gettext(mparrafo[index].getParrafo());
+    parrafo.startAnimation(anim);
     if(mparrafo[index].getId()>=4){
         SpannableStringBuilder span = new SpannableStringBuilder( mparrafo[index].getParrafo());
         span.replace(0,1,"p");
         parrafo.setText("Ya veo y vienes a este lugar para alejarte de esos problemas, en este pueblo, "+span);
+         mod.gettext(parrafo.getText().toString());
+         parrafo.startAnimation(anim);
     }
     if(mparrafo[index].getId() == 5){
         parrafo.setText(getString(R.string.ruta1parrafoEND));
         next2.setVisibility(View.GONE);  //final
+        mod.gettext(parrafo.getText().toString());
+        parrafo.startAnimation(anim);
     }
 }
 
