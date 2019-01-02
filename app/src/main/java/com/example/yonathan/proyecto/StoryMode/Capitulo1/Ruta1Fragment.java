@@ -203,8 +203,9 @@ private void update2(){
 
     // parrafo.setText(mparrafo[index].getParrafo());
     parrafo.append(mparrafo[index].getParrafo() +"\n"+"\n");
-    index =(index+1)%(mparrafo.length);
     mod.gettext(mparrafo[index].getParrafo());
+    index =(index+1)%(mparrafo.length);
+
     parrafo.startAnimation(anim);
     if(mparrafo[index].getId() >= 8){
 
@@ -230,8 +231,9 @@ private void ruta1_1(){
     final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
 
     parrafo.append(mparrafo[index].getParrafo()+"\n"+"\n");
-    index =(index+1)%(mparrafo.length);
     mod.gettext(mparrafo[index].getParrafo());
+    index =(index+1)%(mparrafo.length);
+
     parrafo.startAnimation(anim);
     if(mparrafo[index].getId()>=4){
         SpannableStringBuilder span = new SpannableStringBuilder( mparrafo[index].getParrafo());

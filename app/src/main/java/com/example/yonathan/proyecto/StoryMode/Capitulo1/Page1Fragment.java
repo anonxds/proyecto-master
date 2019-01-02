@@ -51,10 +51,11 @@ public class Page1Fragment extends Fragment {
 
 Mod mod;
     ModelSt model;
-    ConstraintLayout next;
+    ConstraintLayout next,background;
     TextView parrafo1, parrafo2;
    Button opcion1,opcion2,opcion3;
 LinearLayout opciones;
+
 
 public interface Mod{
     public void hearts(int i);
@@ -73,29 +74,25 @@ public interface Mod{
 
 
 opciones= v.findViewById(R.id.botones);
-//opciones.setVisibility(View.GONE);
 opcion1=v.findViewById(R.id.btnopcion1);
 opcion2=v.findViewById(R.id.btnopcion2);
 opcion3=v.findViewById(R.id.btnopcion3);
 opcion1.setVisibility(View.GONE);
 opcion2.setVisibility(View.GONE);
 opcion3.setVisibility(View.GONE);
-        final ModelSt [] mParrafos = new ModelSt[]{
 
+        final ModelSt [] mParrafos = new ModelSt[]{
                 new ModelSt(getString(R.string.parrafo1Cap1),1),
                 new ModelSt(getString(R.string.parrafo2Cap1),2),
                 new ModelSt(getString(R.string.parrafo3Cap1),3),
                 new ModelSt(getString(R.string.parrafo4Cap1),4),
                 new ModelSt(getString(R.string.parrafo5Cap1Decision),5),
                 new ModelSt(getString(R.string.resultadoOp3),6),
-                //  new ModelSt(getResources().getString(R.string.parrafo2Cap1),2)
         };
           next=v.findViewById(R.id.siguiente);
-     //     previ=v.findViewById(R.id.regresar);
            parrafo1=v.findViewById(R.id.txtparrafo1);
 
 
-        update();
 
         opcion2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,7 +110,6 @@ opcion3.setOnClickListener(new View.OnClickListener() {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                index =(index+1)%(mParrafos.length);
                 update();
             }
         });
@@ -125,6 +121,8 @@ opcion1.setOnClickListener(new View.OnClickListener() {
 });
 
 
+        background = v.findViewById(R.id.texto);
+        background.setBackgroundResource(R.drawable.escala);
 
         return v;
     }
@@ -146,11 +144,19 @@ opcion1.setOnClickListener(new View.OnClickListener() {
         parrafo1.setText(mParrafos[index].getParrafo());
 
         mod.gettext(mParrafos[index].getParrafo());
-
+        index =(index+1)%(mParrafos.length);
 
         if(parrafo1.getText() == getString(R.string.parrafo5Cap1Decision)){
             next.setVisibility(View.GONE);
             bootner();
+        }
+        switch (mParrafos[index].getId()){
+            case 4:
+                background.setBackgroundResource(R.drawable.niebla);
+                break;
+            case 5:
+                background.setBackgroundResource(R.drawable.niebla2);
+                break;
         }
     }
 
@@ -214,7 +220,7 @@ public void bootner(){
                 opcion2.startAnimation(anim);
  opcion2.setVisibility(View.VISIBLE);
             }
-        },2000);
+        },1500);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -222,7 +228,7 @@ public void bootner(){
                 opcion3.startAnimation(anim);
                 opcion3.setVisibility(View.VISIBLE);
             }
-        },3000);
+        },2000);
 }
 
 

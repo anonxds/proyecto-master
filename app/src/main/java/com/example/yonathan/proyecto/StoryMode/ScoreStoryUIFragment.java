@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.yonathan.proyecto.MenuActivity;
 import com.example.yonathan.proyecto.R;
 
 /**
@@ -27,7 +28,7 @@ String valor;
     ImageView heart1,heart2,heart3;
     TextView score;
     int total;
-    Button review;
+    Button review,salir;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,6 +40,7 @@ String valor;
         heart3=v.findViewById(R.id.hp3);
 score.setVisibility(View.INVISIBLE);
 review=v.findViewById(R.id.btnreview);
+        salir=v.findViewById(R.id.btnsalir);
 review.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
@@ -50,6 +52,13 @@ review.setOnClickListener(new View.OnClickListener() {
 
     }
 });
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),MenuActivity.class);
+                startActivity(i);
+            }
+        });
 
 
         return v;

@@ -1,6 +1,7 @@
 package com.example.yonathan.proyecto.StoryMode.Capitulo1;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.constraint.ConstraintLayout;
@@ -23,6 +24,7 @@ public class Page2Fragment extends Fragment {
     public Page2Fragment() {
         // Required empty public constructor
     }
+    Page1Fragment.Mod mod;
     TextView parrafo,ruta;
     int index =0;
     LinearLayout botones,btn2;
@@ -99,7 +101,7 @@ op2.setOnClickListener(new View.OnClickListener() {
         parrafo.setText("");
 
         siguiente.setVisibility(View.GONE);
-        sig2.setVisibility(View.INVISIBLE);
+        sig2.setVisibility(View.VISIBLE);
     }
 });
 op3.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +111,8 @@ op3.setOnClickListener(new View.OnClickListener() {
         btn2.setVisibility(View.GONE);
         ruta.setText("partir");
 sig2.setVisibility(View.VISIBLE);
+        mod.gettext(parrafo.getText().toString());
+;
     }
 });
 op4.setOnClickListener(new View.OnClickListener() {
@@ -118,16 +122,19 @@ op4.setOnClickListener(new View.OnClickListener() {
         btn2.setVisibility(View.GONE);
         ruta.setText("descanzar");
 sig2.setVisibility(View.INVISIBLE);
+        mod.gettext(parrafo.getText().toString());
     }
 });
         return v;
     }
     private void partir(){
         parrafo.setText(getString(R.string.ruta2parrafoEND));
+        mod.gettext(parrafo.getText().toString());
         btn2.setVisibility(View.GONE);
     }
     private void descanzar(){
         parrafo.setText(getString(R.string.ruta2parrafo11));
+        mod.gettext(parrafo.getText().toString());
         btn2.setVisibility(View.GONE);
     }
     private void update(){
@@ -136,6 +143,7 @@ sig2.setVisibility(View.INVISIBLE);
                 new ModelSt(getString(R.string.Ruta2Parrafo6),2),
                 new ModelSt(getString(R.string.Ruta2Dialogo1),3)
         };
+        mod.gettext(mParrados[index].getParrafo());
         parrafo.setText(mParrados[index].getParrafo());
         if(parrafo.getText() == getString(R.string.Ruta2Dialogo1)){
            botones.setVisibility(View.VISIBLE);
@@ -149,18 +157,19 @@ private int indice = 0;
           new ModelSt(getString(R.string.ruta2parrafo7_1),2),
           new ModelSt(getString(R.string.ruta2parrafo7_2),3),
           new ModelSt(getString(R.string.ruta2parrafo8),4),
-                new ModelSt("d",5),
+                new ModelSt(" ",5),
           new ModelSt(getString(R.string.ruta2parrafo9),6),
           new ModelSt(getString(R.string.ruta2parrafo10),7),
           new ModelSt(getString(R.string.ruta2parrafo10_1),8),
           new ModelSt(getString(R.string.ruta2parrafo10_2),9)
         };
-
-parrafo.append(mparrafo[indice].getParrafo()+"\n");
+        mod.gettext(mparrafo[indice].getParrafo());
+parrafo.append(mparrafo[indice].getParrafo()+"\n"+"\n");
         indice=(indice+1)%(mparrafo.length);
+
         if(mparrafo[indice].getId() >= 6){
             parrafo.setText(mparrafo[indice].getParrafo());
-
+          //  mod.gettext(mparrafo[indice].getParrafo());
         }
         if(mparrafo[indice].getId() == 9){
             sig2.setVisibility(View.GONE);
@@ -172,23 +181,31 @@ parrafo.append(mparrafo[indice].getParrafo()+"\n");
                 new ModelSt(getString(R.string.ruta2parrafo7_1),2),
                 new ModelSt(getString(R.string.ruta2parrafo7_2),3),
                 new ModelSt(getString(R.string.ruta2parrafo8),4),
-                new ModelSt("d",5),
+                new ModelSt(" ",5),
                 new ModelSt(getString(R.string.ruta2parrafo9),6),
                 new ModelSt(getString(R.string.ruta2parrafo10),7),
                 new ModelSt(getString(R.string.ruta2parrafo10_1),8),
                 new ModelSt(getString(R.string.ruta2parrafo10_2),9)
         };
-
-        parrafo.append(mparrafo[indice].getParrafo()+"\n");
+        mod.gettext(mparrafo[indice].getParrafo());
+        parrafo.append(mparrafo[indice].getParrafo()+"\n"+"\n");
         indice=(indice+1)%(mparrafo.length);
+
         if(mparrafo[indice].getId() >= 6){
             parrafo.setText(mparrafo[indice].getParrafo());
-
+        //    mod.gettext(mparrafo[indice].getParrafo());
         }
          if(mparrafo[indice].getId() == 9){
           sig2.setVisibility(View.GONE);
           btn2.setVisibility(View.VISIBLE);
         }
+    }
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            mod= (Page1Fragment.Mod) activity;
+        }
+        catch (Exception e){}
     }
 
 }
