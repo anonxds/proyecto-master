@@ -8,6 +8,8 @@ import android.support.constraint.ConstraintLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,7 +30,7 @@ public class Page2Fragment extends Fragment {
     TextView parrafo,ruta;
     int index =0;
     LinearLayout botones,btn2;
-    ConstraintLayout siguiente,sig2;
+    ConstraintLayout siguiente,sig2,background;
     Button op1,op2,op3,op4;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,16 +53,19 @@ public class Page2Fragment extends Fragment {
 btn2=v.findViewById(R.id.opciones2);
 btn2.setVisibility(View.GONE);
        botones.setVisibility(View.GONE);
+        background = v.findViewById(R.id.parrafo);
+      background.setBackgroundResource(R.drawable.puebo);
+        final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
+
         final ModelSt[] mParrados = new ModelSt[]{
                 new ModelSt(getString(R.string.Ruta2),1),
                 new ModelSt(getString(R.string.Ruta2Parrafo6),2),
                 new ModelSt(getString(R.string.Ruta2Dialogo1),3)
         };
-        update();
+     //   update();
 siguiente.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        index =(index+1)%(mParrados.length);
         update();
     }
 });
@@ -112,7 +117,7 @@ op3.setOnClickListener(new View.OnClickListener() {
         ruta.setText("partir");
 sig2.setVisibility(View.VISIBLE);
         mod.gettext(parrafo.getText().toString());
-;
+parrafo.startAnimation(anim);
     }
 });
 op4.setOnClickListener(new View.OnClickListener() {
@@ -123,6 +128,7 @@ op4.setOnClickListener(new View.OnClickListener() {
         ruta.setText("descanzar");
 sig2.setVisibility(View.INVISIBLE);
         mod.gettext(parrafo.getText().toString());
+        parrafo.startAnimation(anim);
     }
 });
         return v;
@@ -143,11 +149,25 @@ sig2.setVisibility(View.INVISIBLE);
                 new ModelSt(getString(R.string.Ruta2Parrafo6),2),
                 new ModelSt(getString(R.string.Ruta2Dialogo1),3)
         };
+        final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
+        parrafo.startAnimation(anim);
         mod.gettext(mParrados[index].getParrafo());
         parrafo.setText(mParrados[index].getParrafo());
+        index =(index+1)%(mParrados.length);
+
         if(parrafo.getText() == getString(R.string.Ruta2Dialogo1)){
            botones.setVisibility(View.VISIBLE);
             siguiente.setVisibility(View.GONE);
+        }
+
+        switch (mParrados[index].getId()){
+            case 2:
+               background.setBackgroundResource(R.drawable.niebla2);
+                    break;
+            case 3:
+                background.setBackgroundResource(R.drawable.niebla);
+                break;
+
         }
     }
 private int indice = 0;
@@ -163,18 +183,23 @@ private int indice = 0;
           new ModelSt(getString(R.string.ruta2parrafo10_1),8),
           new ModelSt(getString(R.string.ruta2parrafo10_2),9)
         };
+        final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
+parrafo.startAnimation(anim);
         mod.gettext(mparrafo[indice].getParrafo());
 parrafo.append(mparrafo[indice].getParrafo()+"\n"+"\n");
         indice=(indice+1)%(mparrafo.length);
 
         if(mparrafo[indice].getId() >= 6){
+            parrafo.startAnimation(anim);
             parrafo.setText(mparrafo[indice].getParrafo());
+
           //  mod.gettext(mparrafo[indice].getParrafo());
         }
         if(mparrafo[indice].getId() == 9){
             sig2.setVisibility(View.GONE);
             btn2.setVisibility(View.VISIBLE);
         }
+
     }
     private void gema(){
         ModelSt[] mparrafo = new ModelSt[]{
@@ -187,6 +212,8 @@ parrafo.append(mparrafo[indice].getParrafo()+"\n"+"\n");
                 new ModelSt(getString(R.string.ruta2parrafo10_1),8),
                 new ModelSt(getString(R.string.ruta2parrafo10_2),9)
         };
+        final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
+parrafo.startAnimation(anim);
         mod.gettext(mparrafo[indice].getParrafo());
         parrafo.append(mparrafo[indice].getParrafo()+"\n"+"\n");
         indice=(indice+1)%(mparrafo.length);

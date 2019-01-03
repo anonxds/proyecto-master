@@ -34,7 +34,7 @@ public class Ruta1Fragment extends Fragment {
 Button op1,op2,op3,op4,op5;
 LinearLayout botones,siguiente,botones2;
     TextView parrafo,nombreruta;
-    ConstraintLayout next2;
+    ConstraintLayout next2,background;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -146,18 +146,22 @@ else if(nombreruta.getText().equals("ira")){
 
     }
     });
+        background = v.findViewById(R.id.parrafo);
+        background.setBackgroundResource(R.drawable.niebla);
+
         return v;
     }
 
     private void FIN(){
         final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
-
+background.setBackgroundResource(R.drawable.abyss);
         botones.setVisibility(View.GONE);
         mod.gettext(getString(R.string.ruta1pregunta3));
         parrafo.setText(getString(R.string.ruta1pregunta3));
     parrafo.startAnimation(anim);
     }
     private void Retrocede(){
+
         FragmentManager manager = getFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         Page2Fragment ruta2 = new Page2Fragment();
@@ -182,6 +186,14 @@ private void update(){
         if(parrafo.getText() == getString(R.string.ruta1parrafo6)){
             siguiente.setVisibility(View.GONE);
 botones2.setVisibility(View.VISIBLE);
+
+        }
+        switch (mparrafo[index].getId()){
+            case 2:
+                background.setBackgroundResource(R.drawable.light);
+                break;
+            case 3:
+                background.setBackgroundResource(R.drawable.puebo);
         }
 }
 

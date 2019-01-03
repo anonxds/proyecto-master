@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.ClipData;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.constraint.ConstraintLayout;
@@ -80,7 +81,14 @@ opcion3=v.findViewById(R.id.btnopcion3);
 opcion1.setVisibility(View.GONE);
 opcion2.setVisibility(View.GONE);
 opcion3.setVisibility(View.GONE);
+        final MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.wind);
 
+    new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mp.start();
+            }
+        },2000);
         final ModelSt [] mParrafos = new ModelSt[]{
                 new ModelSt(getString(R.string.parrafo1Cap1),1),
                 new ModelSt(getString(R.string.parrafo2Cap1),2),

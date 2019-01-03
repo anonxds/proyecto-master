@@ -58,16 +58,16 @@
     <TextView
         android:id="@+id/txtparrafo1"
         android:layout_width="272dp"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
         android:layout_marginLeft="162dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="163dp"
         android:layout_marginRight="163dp"
         android:layout_marginBottom="408dp"
-        android:text=""
-
         android:background="@color/greetranspanrent"
+
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
