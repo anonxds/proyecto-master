@@ -10,6 +10,9 @@ import com.example.yonathan.proyecto.Blitz.Niveles.Nivel2Fragment;
 import com.example.yonathan.proyecto.Blitz.Niveles.Nivel3Fragment;
 import com.example.yonathan.proyecto.Blitz.Niveles.Nivel4Fragment;
 import com.example.yonathan.proyecto.Blitz.Niveles.Nivel5Fragment;
+import com.example.yonathan.proyecto.Blitz.Niveles.Nivel6Fragment;
+import com.example.yonathan.proyecto.Blitz.Niveles.Nivel7Fragment;
+import com.example.yonathan.proyecto.Blitz.Niveles.Nivel8Fragment;
 import com.example.yonathan.proyecto.Blitz.Niveles.randomizer;
 import com.example.yonathan.proyecto.R;
 
@@ -27,7 +30,7 @@ public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.O
         setContentView(R.layout.activity_blitz);
 
 
-        for (int i =1; i<=5;i++){
+        for (int i =1; i<=8;i++){
             n.add(new randomizer(i).getIndex());
             Collections.shuffle(n);
         }
@@ -38,8 +41,6 @@ public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.O
         transaction.replace(R.id.scorecontainer, score);
         transaction.addToBackStack(null);
         transaction.commit();
-
-
         changefragment();
 
     }
@@ -79,36 +80,28 @@ public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.O
         switch (dato) {
             case 0: {
                 Nivel1Fragment n1 = new Nivel1Fragment();
-
                 transaction.replace(R.id.gamecontainer, n1);
-
                 transaction.addToBackStack(null);
                 transaction.commit();
                 break;
             }
             case 1: {
                 Nivel2Fragment n2 = new Nivel2Fragment();
-
                 transaction.replace(R.id.gamecontainer, n2);
-
                 transaction.addToBackStack(null);
                 transaction.commit();
                 break;
             }
             case 2:{
                 Nivel3Fragment n3 = new Nivel3Fragment();
-
                 transaction.replace(R.id.gamecontainer, n3);
-
                 transaction.addToBackStack(null);
                 transaction.commit();
                 break;
             }
             case 3:{
                 Nivel4Fragment n4 = new Nivel4Fragment();
-
                 transaction.replace(R.id.gamecontainer, n4);
-
                 transaction.addToBackStack(null);
                 transaction.commit();
                 break;
@@ -119,6 +112,24 @@ public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.O
                 transaction.replace(R.id.gamecontainer, n5);
 
                 transaction.addToBackStack(null);
+                transaction.commit();
+                break;
+            }
+            case 5: {
+                Nivel6Fragment n6 = new Nivel6Fragment();
+                transaction.replace(R.id.gamecontainer, n6);
+                transaction.commit();
+                break;
+            }
+            case 6:{
+                Nivel7Fragment n7 = new Nivel7Fragment();
+                transaction.replace(R.id.gamecontainer,n7);
+                transaction.commit();
+                break;
+            }
+            case 7:{
+                Nivel8Fragment n8 = new Nivel8Fragment();
+                transaction.replace(R.id.gamecontainer,n8);
                 transaction.commit();
                 break;
             }

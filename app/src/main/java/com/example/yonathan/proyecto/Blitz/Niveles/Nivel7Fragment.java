@@ -71,16 +71,7 @@ private Button resp1, resp2;
     }
 
     private void changeFragment(){
-        Random r = new Random();
-        int num = r.nextInt(1);
-        switch (num){
-            case 0:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel8Fragment()).addToBackStack(null).commit();
-                break;
-            }
-
-
-        }
+      onScoreListener.changefragment();
 
     }
 

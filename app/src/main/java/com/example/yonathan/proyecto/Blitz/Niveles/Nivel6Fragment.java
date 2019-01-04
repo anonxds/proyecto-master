@@ -74,19 +74,7 @@ public class Nivel6Fragment extends Fragment {
         return v;
     }
     private void changeFragment(){
-        Random r = new Random();
-        int num = r.nextInt(2);
-        switch (num){
-            case 0:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel7Fragment()).addToBackStack(null).commit();
-                break;
-            }
-            case 1:{
-                getFragmentManager().beginTransaction().replace(R.id.gamecontainer,new Nivel8Fragment()).addToBackStack(null).commit();
-                break;
-            }
-
-        }
+     onScoreListener.changefragment();
 
     }
 

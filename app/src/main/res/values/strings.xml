@@ -78,56 +78,62 @@
     <!--story mode-->
 
     <string name="parrafo1Cap1">
-El viento helado golpea en la espalda de Slayer, el sentía que se podía dejar caer a lo más alto, pero al ver la cima se motivó a continuar.
+Un viento helado golpeo a la espalda de Slayer. Sentía que se podía dejar caer en cualquier momento, pero al ver la cima tan cercas lo motivo a continuar.
     </string>
     <string name="parrafo2Cap1">
-Primero subió su brazo, luego el otro, con los arrastro todo su cuerpo; respiraba profundamente, pero no podía perder tiempo y se levantó.
+Primero subió su brazo y luego el otro, con los dos arrastro su cuerpo. Respiraba profundamente, no podía perder tiempo y se levanto rápidamente.
     </string>
     <string name="parrafo3Cap1">
-En la cima estaba enfulf of fog estaba muy densa, Slayer lentamente empezó a caminar mientras tenía preparado su arma.
+En la cima había una niebla densa que cubría toda el área, Slayer empezó a caminar lentamente.
     </string>
 
     <string name="parrafo4Cap1">
 Escuchaba ruidos extraños; como gruñido, seguido por gritos de agonía y risas.
-“Nadie me dijo que esta montaña estaba maldita” rezongo Slayer.
-
+"\n" -Nadie me dijo que esta montaña estaba maldita- rezongo Slayer.
     </string>
 
     <string name="parrafo5Cap1Decision">
-        Seguía caminando la niebla se podían mas densa, hasta que llego un punto donde no podía ver sus brazos o sus piernas.
-    </string>
-
-    <string name="pregunta1">
-        ¿Qué debería ser Slayer?
+        Seguía caminando la niebla empezó a cubrir todo su cuerpo; hasta que llego un
+        punto que no podía ver sus brazos o piernas. Slayer se empezó a sentir extraño.
+"\n"
+¿Qué debería ser Slayer?
     </string>
 
     <string name="pregunta1Op1">
-        1. Correr como loco
+         Correr como loco
     </string>
     <string name="pregunta1Op2">
-        2. Mantener la calma
+         Mantener la calma
     </string>
     <string name="pregunta1Op3">
-       3. Sacar la espada y atacar como loco
+        Sacar la espada y atacar como loco
     </string>
 
     <string name="resultadoOp3">
-        Saca la espada y empieza a moverla como loco esperando que con todo el movimiento la niebla va a desaparecer, pero no resulto, entonces decidió:
+        Saco su espada y empieza a atacar como loco esperando que la niebla desaparecía. Pero no resulto.
+        "\n"
+¿Ahora que hará Slayer?
+
     </string>
 
     <string name="Ruta2">
-        Slayer mantuvo la calma y miro hacia arriba, en la niebla blanca noto una luz y empezó a caminar hacia el. Entre mas se acercaba esa luz o reflejo era solamente un metal gigante que estaba arriba de una torre, donde había una ciudad.
+        Slayer montuno la calma, miro hacia arriba y noto una luz. Empezó a caminar hacia el. La luz resulto ser un molino,
+        que era la construcción más alta de un pueblo chico, que sorprendente no estaba cubierta de niebla.
     </string>
 
     <string name="Ruta2Parrafo6">
-        Finalmente Slayer encontró la supuesta “ciudad de los cielos”. Al acercarse mas la niebla se desvaneció rápidamente, era un pueblo normal como cualquier otro, una persona se le acerco para darle la bienvenida.
+        Finalmente encontró la supuesta “ciudad de los cielos” la entrada había un arco
+        que tenía unos símbolos extraños y debajo ella había una persona que le dio la bienvenida a Slayer.
     </string>
     <string name="Ruta2Dialogo1">
-        Saludos viajero, ¿espero que la niebla no haya espantado?
+       Saludo viajero ¿espero que la niebla no haya espantado?
     </string>
 
     <string name="Ruta1">
-        Slayer tuvo pánico y empezó a correr, pensando que la niebla iba desaparecer, pero parecía un camino sin fin, se hinco de rodillas y se agarro la cabeza pensando en que podia hacer como:
+Slayer empezó a tener pánico y corrió, no sabía si la niebla le estaba haciendo un efecto extraño a él,
+        se hinco de rodilla y se agarró la cabeza.
+"\n"
+        - ¿Qué hago? -grito Slayer
     </string>
 
     <string name="pregunta2Op1">
@@ -145,19 +151,22 @@ Escuchaba ruidos extraños; como gruñido, seguido por gritos de agonía y risas
         Slayer tomo un respiro y retrocede sus pasos en su camino noto un
     </string>
     <string name="ruta1Pregunta2">
-        Slayer saca las gemas, le grita a ellas, culpándolas de todo el peligro que ha sufrido, ya no le importa salvar la ciudad, ya no le importa que le dicen las personas, prefiere que todas se mueran , cuando miro hacia arriba noto una luz blanca, ¿podia ser una salvación? Slayer corre hacia la luz.
+     Slayer saco sus gemas, le grita a ellas. Culpándolas de todo el peligro, “no me importa salvar a esa maldita ciudad hipócrita, no me importa salvar la vida de ningún humano hasta este punto, todo se pueden ir al infierno, no me importa que piensen de mi yo sé que soy un fenómeno igual a ellos”.
+"\n"
+Slayer miro hacia arriba y vio una luz corrió hacia ella. Llego a la entrada muy alterado y respirando como loco.
     </string>
     <string name="ruta1pregunta3">
         Slayer continúa corriendo, hasta que accidentalmente cae al abismo. E aquí el guerrero que fracaso salvar a su ciudad.
     </string>
 
     <string name="ruta1resp2">
-        Slayer saca las gemas, le grita a ellas, culpándolas de todo el peligro que ha sufrido, ya no le importa salvar la ciudad, ya no le importa que le dicen las personas, prefiere que todas se mueran , cuando miro hacia arriba noto una luz blanca, ¿podia ser una salvación? Slayer corre hacia la luz.
+    Slayer saco sus gemas, le grita a ellas. Culpándolas de todo el peligro, “no me importa salvar a esa maldita ciudad hipócrita, no me importa salvar la vida de ningún humano hasta este punto, todo se pueden ir al infierno, no me importa que piensen de mi yo sé que soy un fenómeno igual a ellos”.
+"\n"
+Slayer miro hacia arriba y vio una luz corrió hacia ella. Llego a la entrada muy alterado y respirando como loco.
     </string>
 
     <string name="ruta1parrafo6">
-        Vio un arco de entrada, andaba muy alterado, una persona rapidamente se le acerca.
-        “estas bien”-pregunto
+        Una persona se le acerco a preguntarle algo- ¿Te encuentras bien?, creo que la niebla te hizo efecto.
     </string>
 
 
@@ -212,41 +221,35 @@ Venia por una gema, pero realice que es una pérdida de tiempo, porque arriesgo 
 ¡vengo por la sexta gema!
     </string>
     <string name="ruta2parrafo7">
-“No lo se en verdad, será por la naturaleza de este lugar, esa es la razón por que se llama la ciudad de los cielos, por que esta cubierto de niebla”
-
+-No se en verdad, será por naturaleza, esa es la razón por que se llama aquí la “ciudad de los cielos” porque está cubierto de niebla- Respondió el residente.
     </string>
     <string name="ruta2parrafo7_1">
-        Vengo por un gema en especial, tiene una figura algo diferente sabes-le pregunto Slayer
+        Vengo por una gema en especial, tiene una figura diferente sabes-le pregunta Slayer.
     </string>
     <string name="ruta2parrafo7_2">
-       Te refieres a esta gema-la persona la saco de su bolso, la sexta gema finalmente estaba enfrente de los ojos de Slayer finamente podrá salvar la ciudad del ataque.
-
+       ¿Te refieres a esta gema? - la persona saco de su bolso una gema; finalmente la sexta y última gema ahora poder salvar la ciudad pensó Slayer.
     </string>
 <string name="ruta2botonop3">
 Tengo que partir a mi viaje, pero gracias.
 </string>
     <string name="ruta2botonop4">
-
-
 Puedo tomar un descanzo pequeño.
 
     </string>
     <string name="ruta2parrafo8">
-        Ten te la puedes llevar- la persona le da la gema en sus mano.
-“Es todo? No tengo que hacer ningún favor por ti, matar a alguien, robar, ir a lo mas profundo del mas ¡nada!”
+   Ten-la persona le avienta la gema a su mano.
+        "\n"
+- ¿Es todo? No tengo que hacer de ningún favor extraño por ti, escalar una montana, trabajar por ti, tratar de matar a alguien, ¡nada! – pregunto Slayer.
+
     </string>
     <string name="ruta2parrafo9">
-        Por supuesto que no, en este pueblo no necesitamos nada, mientras caminemos,
-        veamos y nuestro cuerpo funcione bien, no hay necesidad de cosas elegantes,
-        la personas de abajo se encierran en su propia fantasía, llenas de envidia porque no pueden tener esa cosa extra en su vida, como un carro, una casa, televisión o la mejor ropa. Solo para sentirse menos inseguros de si mismos, si hay una mentalidad del humano que nunca va cambiar es… que ellos nunca piensan
-        y solo quieren mejorar, pero esconden esas emociones y las disfrazan.
+        Por supuesto que no, en este pueblo no necesitamos nada, mientras caminemos, veamos y nuestro cuerpo funcione bien, no hay necesidad de cosas elegantes. Las personas modernizadas se encierran en su propia fantasía, llenas de ansia por que no pueden tener esa cosa extra, que los hace sentir menos inseguros de sí mismo como un carro, televisión, ropa, solo para evadir la crítica.
     </string>
     <string name="ruta2parrafo10">
-        La persona parecía que hablaba sin sentido, pero Slayer finamente tiene la ultima gema, es tiempo de regresar.
+       La persona continuaba hablando sin sentido, pero para Slayer era tiempo de regresar a su ciudad no había tiempo por perder.
     </string>
 <string name="ruta2parrafo10_1">
     -“Bueno es tiempo de partir tengo que hacer algo importante”-le respondió Slayer
-
 
 </string>
     <string name="ruta2parrafo10_2">

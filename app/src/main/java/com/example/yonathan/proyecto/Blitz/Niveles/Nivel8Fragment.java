@@ -37,9 +37,8 @@ private Button resp1, resp2;
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_nivel8, container, false);
         oracion1=v.findViewById(R.id.txtn3);
-        Typeface Architex = Typeface.createFromAsset(getActivity().getAssets(), "Architex.ttf");
-
-        oracion1.setTypeface(Architex);
+//        Typeface Architex = Typeface.createFromAsset(getActivity().getAssets(), "Architex.ttf");
+  //      oracion1.setTypeface(Architex);
         // Inflate the layout for this fragment
      resp1=v.findViewById(R.id.btncor1);
        resp2=v.findViewById(R.id.btncor1);

@@ -188,13 +188,7 @@ private void update(){
 botones2.setVisibility(View.VISIBLE);
 
         }
-        switch (mparrafo[index].getId()){
-            case 2:
-                background.setBackgroundResource(R.drawable.light);
-                break;
-            case 3:
-                background.setBackgroundResource(R.drawable.puebo);
-        }
+
 }
 
 private void update2(){
