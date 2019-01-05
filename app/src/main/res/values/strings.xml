@@ -210,10 +210,9 @@ Venia por una gema, pero realice que es una pérdida de tiempo, porque arriesgo 
     </string>
 
 
+    <!--ruta3-->
 
-<!--ruta3-->
-
-<string name="ruta2botonop1">
+    <string name="ruta2botonop1">
      ¿Por qué hay mucha niebla?
 </string>
 
@@ -229,7 +228,7 @@ Venia por una gema, pero realice que es una pérdida de tiempo, porque arriesgo 
     <string name="ruta2parrafo7_2">
        ¿Te refieres a esta gema? - la persona saco de su bolso una gema; finalmente la sexta y última gema ahora poder salvar la ciudad pensó Slayer.
     </string>
-<string name="ruta2botonop3">
+    <string name="ruta2botonop3">
 Tengo que partir a mi viaje, pero gracias.
 </string>
     <string name="ruta2botonop4">
@@ -248,7 +247,7 @@ Puedo tomar un descanzo pequeño.
     <string name="ruta2parrafo10">
        La persona continuaba hablando sin sentido, pero para Slayer era tiempo de regresar a su ciudad no había tiempo por perder.
     </string>
-<string name="ruta2parrafo10_1">
+    <string name="ruta2parrafo10_1">
     -“Bueno es tiempo de partir tengo que hacer algo importante”-le respondió Slayer
 
 </string>
@@ -256,7 +255,7 @@ Puedo tomar un descanzo pequeño.
    -No deseas quedarte por un rato, por tu actitud siento que has sufrido por un largo viaje, con mucho estrés y días sin descanso.
 
     </string>
-<string name="ruta2parrafoEND">
+    <string name="ruta2parrafoEND">
     Lo siento pero tengo que salvar una ciudad- Slayer se despide y entra de nuevo a la niebla espesa, para salvar su ciudad.
 </string>
     <string name="ruta2parrafo11">

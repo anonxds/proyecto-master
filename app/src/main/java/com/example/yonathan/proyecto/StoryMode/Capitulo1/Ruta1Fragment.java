@@ -154,7 +154,7 @@ else if(nombreruta.getText().equals("ira")){
 
     private void FIN(){
         final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
-background.setBackgroundResource(R.drawable.abyss);
+ background.setBackgroundResource(R.drawable.abyss);
         botones.setVisibility(View.GONE);
         mod.gettext(getString(R.string.ruta1pregunta3));
         parrafo.setText(getString(R.string.ruta1pregunta3));

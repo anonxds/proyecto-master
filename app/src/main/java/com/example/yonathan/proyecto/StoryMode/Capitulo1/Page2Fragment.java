@@ -54,7 +54,7 @@ btn2=v.findViewById(R.id.opciones2);
 btn2.setVisibility(View.GONE);
        botones.setVisibility(View.GONE);
         background = v.findViewById(R.id.parrafo);
-      background.setBackgroundResource(R.drawable.puebo);
+  //    background.setBackgroundResource(R.drawable.puebo);
         final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
 
         final ModelSt[] mParrados = new ModelSt[]{

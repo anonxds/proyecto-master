@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.yonathan.proyecto.Blitz.Extra.DiccionarioActivity;
 import com.example.yonathan.proyecto.MenuActivity;
 import com.example.yonathan.proyecto.R;
 import com.example.yonathan.proyecto.Blitz.model.triviamodel;
@@ -37,31 +38,37 @@ public class ExtrasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_extras);
-        info= findViewById(R.id.Plus);
-        list_trivia=findViewById(R.id.listatrivia);
-initializeFirebase();
-        listData();
+//        info= findViewById(R.id.Plus);
+//        list_trivia=findViewById(R.id.listatrivia);
+//initializeFirebase();
+//        listData();
+//
+//        list_trivia.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                selecttrivia = (triviamodel) adapterView.getItemAtPosition(i);
+//                info.setText(selecttrivia.getTrivia());
+//            }
+//        });
 
-        list_trivia.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                selecttrivia = (triviamodel) adapterView.getItemAtPosition(i);
-                info.setText(selecttrivia.getTrivia());
-            }
-        });
+
     }
-
-    private void initializeFirebase() {
-        FirebaseApp.initializeApp(this);
-        mFirebaseDatabase=FirebaseDatabase.getInstance();
-        //  mDatabaseReference=mFirebaseDatabase.getReference();
-        mDatabaseReference=mFirebaseDatabase.getReference();
-    }
-
-    public void regresar(View view ){
-        Intent i = new Intent(getApplicationContext(), MenuActivity.class);
+    public void diccionario(View view){
+        Intent i = new Intent(getApplicationContext(),DiccionarioActivity.class);
         startActivity(i);
     }
+
+//    private void initializeFirebase() {
+//        FirebaseApp.initializeApp(this);
+//        mFirebaseDatabase=FirebaseDatabase.getInstance();
+//        //  mDatabaseReference=mFirebaseDatabase.getReference();
+//        mDatabaseReference=mFirebaseDatabase.getReference();
+//    }
+//
+//    public void regresar(View view ){
+//        Intent i = new Intent(getApplicationContext(), MenuActivity.class);
+//        startActivity(i);
+//    }
 
     private void listData() {
         mDatabaseReference.child("trivia").addValueEventListener(new ValueEventListener() {

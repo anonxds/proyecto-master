@@ -6,4 +6,6 @@
     <color name="red">#ffff0000</color>
     <color name="black">#000000</color>
     <color name="greetranspanrent">#b92a143d</color>
+    <color name="tranparent">#002a143d</color>
+    <color name="flatcolor">#fcfabd</color>
 </resources>
