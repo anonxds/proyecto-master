@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pop_bg"
     tools:context="com.example.yonathan.proyecto.Blitz.Trivia.trivia3Activity">
 
 </android.support.constraint.ConstraintLayout>

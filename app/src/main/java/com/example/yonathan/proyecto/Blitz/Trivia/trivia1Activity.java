@@ -55,7 +55,6 @@ add();
         String uno = "haber";
         trival=findViewById(R.id.triva);
         String t1 = trival.getText().toString();
-
        triviamodel p = new triviamodel();
        p.setTrivia(t1);
        p.setUid(uno);

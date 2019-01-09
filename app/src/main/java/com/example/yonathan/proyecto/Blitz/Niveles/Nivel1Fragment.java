@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.yonathan.proyecto.Blitz.Trivia.trivia3Activity;
 import com.example.yonathan.proyecto.R;
 import com.example.yonathan.proyecto.Blitz.Trivia.trivia1Activity;
 
@@ -80,8 +81,8 @@ mhabian.setTypeface(BLUNT);
 
 
                 Toast.makeText(getActivity(), "mal", Toast.LENGTH_SHORT).show();
-
-
+           Intent i = new Intent(getActivity().getBaseContext(), trivia3Activity.class);
+           startActivity(i);
             }
         });
 

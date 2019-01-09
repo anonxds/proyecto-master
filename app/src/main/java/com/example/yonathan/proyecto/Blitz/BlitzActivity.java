@@ -30,7 +30,7 @@ public class BlitzActivity extends AppCompatActivity implements Nivel1Fragment.O
         setContentView(R.layout.activity_blitz);
 
 
-        for (int i =1; i<=8;i++){
+        for (int i =1; i<=7;i++){
             n.add(new randomizer(i).getIndex());
             Collections.shuffle(n);
         }
