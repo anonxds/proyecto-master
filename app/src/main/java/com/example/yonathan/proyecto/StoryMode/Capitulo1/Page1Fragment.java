@@ -61,6 +61,7 @@ LinearLayout opciones;
 public interface Mod{
     public void hearts(int i);
     public void gettext(String i);
+    void gethp(int i);
 }
 
 
@@ -124,6 +125,7 @@ opcion3.setOnClickListener(new View.OnClickListener() {
 opcion1.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+        mod.gethp(6);
         ruta1();
     }
 });
@@ -150,7 +152,7 @@ opcion1.setOnClickListener(new View.OnClickListener() {
         final Animation anim = AnimationUtils.loadAnimation(getActivity(),R.anim.alpha);
         parrafo1.startAnimation(anim);
         parrafo1.setText(mParrafos[index].getParrafo());
-
+     //   mod.gethp(-1);
         mod.gettext(mParrafos[index].getParrafo());
         index =(index+1)%(mParrafos.length);
 

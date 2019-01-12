@@ -11,6 +11,8 @@ import android.widget.ListView;
 import com.example.yonathan.proyecto.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -20,6 +22,9 @@ public class DiccionarioActivity extends AppCompatActivity {
     ListView diccionario;
     Button b;
     int clave;
+
+    FirebaseDatabase mFirebaseDatabase;
+    DatabaseReference mDatabaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +49,19 @@ public class DiccionarioActivity extends AppCompatActivity {
 //            }
 //        });
 
-      
+
+    }
+    private void data(){
+mDatabaseReference.child("trivia").addValueEventListener(new ValueEventListener() {
+    @Override
+    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+    }
+
+    @Override
+    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+    }
+});
     }
 }

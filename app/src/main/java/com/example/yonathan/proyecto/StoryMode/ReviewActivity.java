@@ -1,6 +1,7 @@
 package com.example.yonathan.proyecto.StoryMode;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -16,18 +17,19 @@ import com.example.yonathan.proyecto.R;
 
 public class ReviewActivity extends AppCompatActivity {
 TextView revisar;
+ConstraintLayout Background;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
 
         revisar=findViewById(R.id.txtreview);
-
+        Background=findViewById(R.id.background);
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         final Animation anim = AnimationUtils.loadAnimation(this,R.anim.alpha);
    String d = getIntent().getStringExtra("p1");
-
+Background.setBackgroundResource(R.drawable.niebla2);
 revisar.setMovementMethod(new ScrollingMovementMethod());
       revisar.append(String.valueOf(d));
 

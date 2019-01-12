@@ -24,71 +24,19 @@
         app:layout_constraintTop_toBottomOf="@+id/texto">
 
 
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="124dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="98dp"
-            android:layout_marginLeft="98dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="103dp"
-            android:layout_marginRight="103dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.702">
-
-            <ImageView
-                android:id="@+id/hp1"
-                android:layout_width="36dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/hp" />
-
-            <ImageView
-                android:id="@+id/hp2"
-                android:layout_width="38dp"
-                android:layout_height="39dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/hp1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/hp" />
-
-            <ImageView
-                android:id="@+id/hp3"
-                android:layout_width="35dp"
-                android:layout_height="39dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/hp2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.6"
-                app:srcCompat="@drawable/hp" />
-        </android.support.constraint.ConstraintLayout>
-
         <Button
             android:id="@+id/btnreview"
-            android:layout_width="62dp"
-            android:layout_height="wrap_content"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
             android:layout_marginTop="26dp"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="27dp"
+            android:background="@color/tranparent"
+            android:drawableTop="@drawable/open"
             android:text="Log"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/constraintLayout"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -117,5 +65,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/txthp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="114dp"
+            android:layout_marginLeft="114dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Hp:"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/Hpbar"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/Hpbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:max="99"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnreview"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.159" />
     </android.support.constraint.ConstraintLayout>
     
