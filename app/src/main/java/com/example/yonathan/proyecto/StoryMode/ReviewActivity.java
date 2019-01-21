@@ -29,7 +29,7 @@ ConstraintLayout Background;
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         final Animation anim = AnimationUtils.loadAnimation(this,R.anim.alpha);
    String d = getIntent().getStringExtra("p1");
-Background.setBackgroundResource(R.drawable.niebla2);
+
 revisar.setMovementMethod(new ScrollingMovementMethod());
       revisar.append(String.valueOf(d));
 
